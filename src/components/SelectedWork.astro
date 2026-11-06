@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import cleanlyCover from '../assets/projects/cleanly-cover.png';
+import hrBoostCover from '../assets/projects/hr-boost-cover.png';
+import fleetoCover from '../assets/projects/fleeto-preview-v2.png';
+import novaCover from '../assets/case-studies/nova-bank-0.png';
+import fitnessCover from '../assets/projects/steady-preview-v2.png';
+import { published } from '../content/projects';
+import ProjectFrame from './ProjectFrame.astro';
+const covers: Record<string, ImageMetadata> = { cleanly: cleanlyCover, 'hr-boost': hrBoostCover, fleeto: fleetoCover, 'nova-bank': novaCover, 'fitness-app': fitnessCover };
+const tones = ['lime', 'blue', 'pink', 'lime', 'lime'];
+---
+<section class="work section-shell" id="work" aria-labelledby="work-title">
+  <div class="section-heading"><h2 id="work-title"><span>Selected work</span></h2><p>A closer look at the thinking<br /> behind the interfaces</p></div>
+  {published.length > 0 ? <div class="project-grid">{published.map((project) => <article class:list={["project", `project-${project.slug}`]}>
+    <a class="project-card-link" href={`/projects/${project.slug}/`} aria-labelledby={`project-title-${project.slug}`}><div class:list={["project-artwork", `project-artwork-${project.slug}`, { "project-artwork-nova": project.slug === "nova-bank" }]}><Image src={covers[project.slug] ?? novaCover} alt="" widths={[480, 768, 1120, 1680].filter(width => width <= (covers[project.slug] ?? novaCover).width)} sizes="(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) 45vw, 560px" format="webp" quality={90} loading="lazy" /><p class="small-label project-category">{project.category}</p></div>
+    <div class="project-meta"><h3 id={`project-title-${project.slug}`}><span>{project.title}</span></h3><p>{project.summary}</p></div></a>
+  </article>)}</div> : <>
+    <div class="project-grid layout-previews" aria-label="Project layout previews">{tones.map((tone, index) => <article class:list={['project', { featured: index === 0 }]}><ProjectFrame tone={tone} /><div class="placeholder-caption"><h3>{index === 1 ? 'Featured case study placeholder' : 'Case study placeholder'}</h3><span>Development preview · No client work</span></div></article>)}</div>
+  </>}
+</section>

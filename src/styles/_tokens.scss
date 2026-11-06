@@ -1,0 +1,11 @@
+@mixin light-theme {
+  color-scheme: light;
+  --background: #FFFFFF; --text: #171717; --muted: #626262;
+  --blue: #2454E6; --sky: #C8E8FA; --lavender: #DCD2FA; --lime: #ACC653;
+  --forest: #3A5615; --pink: #EDA6BF; --cream: #FFFFFF;
+  --line: #e8e8e8; --soft: #f7f7f7; --accent-ink: #26341F; --contact: #f5faff;
+  --glass: #f5faffbd; --glass-rim: #ffffffd9; --glass-shadow: #3a56151c;
+  --glass-button: #e6f4ff; --glass-hover: #d1ecff;
+  --frame-paper: #f8fafdee; --frame-ink: #384443; --frame-muted: #66716f;
+}
+:root { @include light-theme; --page-width: 1120px; --page-gutter: clamp(1.25rem, 5vw, 5.5rem); }

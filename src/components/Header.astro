@@ -1,0 +1,46 @@
+---
+import { profile, navigation } from '../content/site';
+const home = Astro.url.pathname === '/';
+const href = (id: string) => home ? `#${id}` : `/#${id}`;
+---
+<header class="site-header">
+  <div class="header-identity"><a class="wordmark" href="/" aria-label="Nataliia Kot, home">{profile.wordmark}</a><span class="header-role">{profile.role}</span></div>
+  <nav class="desktop-nav" aria-label="Main navigation">
+    {navigation.map((item) => <a href={href(item.id)}>{item.label}</a>)}
+  </nav>
+  <div class="header-contact"><a class="header-email" href={`mailto:${profile.email}`}><span class="email-icon" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></span><span>{profile.email}</span></a><a class="header-linkedin" href={profile.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><span aria-hidden="true">in</span></a></div>
+  <div class="header-controls"><div class="language-toggle" role="group" aria-label="Language / Мова"><button type="button" data-language="uk" lang="uk" aria-label="Українська" aria-pressed="false">UA</button><button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="true">EN</button></div>
+    <details class="mobile-menu">
+      <summary aria-label="Main menu"><span class="menu-line"></span><span class="menu-line"></span></summary>
+      <nav aria-label="Mobile navigation">{navigation.map((item) => <a href={href(item.id)}>{item.label}</a>)}
+      </nav>
+    </details>
+  </div>
+</header>
+<script>
+  const header = document.querySelector<HTMLElement>('.site-header');
+  function syncHeader() {
+    header?.classList.toggle('is-scrolled', window.scrollY > 16);
+  }
+  syncHeader();
+  window.addEventListener('scroll', syncHeader, { passive: true });
+  if (header) {
+    new ResizeObserver(() => {
+      document.documentElement.style.setProperty('--header-height', `${header.offsetHeight}px`);
+    }).observe(header);
+  }
+  const menu = document.querySelector<HTMLDetailsElement>('.mobile-menu');
+  const summary = menu?.querySelector('summary');
+  menu?.querySelectorAll('nav a').forEach((link) => link.addEventListener('click', () => {
+    if (menu) menu.open = false;
+  }));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menu?.open) { menu.open = false; summary?.focus(); }
+  });
+  document.addEventListener('click', (event) => {
+    if (event.target instanceof Node && menu?.open && !menu.contains(event.target)) menu.open = false;
+  });
+  window.matchMedia('(min-width: 900px)').addEventListener('change', (event) => {
+    if (event.matches && menu) menu.open = false;
+  });
+</script>

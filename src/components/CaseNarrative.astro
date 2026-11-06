@@ -1,0 +1,52 @@
+---
+import CaseImage from './CaseImage.astro';
+import type { ImageMetadata } from 'astro';
+import CaseFlow from './CaseFlow.astro';
+import CaseOutcomes from './CaseOutcomes.astro';
+import type { CaseBlock } from '../content/projects';
+interface Props { blocks: CaseBlock[]; }
+const { blocks } = Astro.props;
+const assets = import.meta.glob<{ default: ImageMetadata }>('../assets/case-studies/*.png', { eager: true });
+function imageFor(name: string): ImageMetadata {
+  const image = assets[`../assets/case-studies/${name}`]?.default;
+  if (!image) throw new Error(`Missing case study image: ${name}`);
+  return image;
+}
+---
+<div class="case-narrative">
+  {blocks.map((block, index) => <Fragment>
+    {block.type === 'heading' && (block.level === 2 ? <h2 id={block.text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}><span>{block.text}</span></h2> : <h3>{block.text}</h3>)}
+    {block.type === 'paragraph' && <p class:list={{ 'case-note-label': ['Challenge', 'Solution'].includes(block.text), 'case-insight': block.emphasis }}>{block.text}</p>}
+    {block.type === 'flow' && <CaseFlow block={block} />}
+    {block.type === 'metrics' && <CaseOutcomes block={block} />}
+    {block.type === 'decision' && <section class="case-decision"><h3>{block.title}</h3><dl>{block.items.map(item => <div><dt>{item.label}</dt><dd>{item.text}</dd></div>)}</dl></section>}
+    {block.type === 'table' && <section class="case-research-table"><h3>{block.title}</h3><div class="case-table-scroll" tabindex="0" role="region" aria-label={block.title}><table><thead><tr>{block.columns.map(column => <th scope="col">{column}</th>)}</tr></thead><tbody>{block.rows.map(row => <tr>{row.map((cell, i) => i === 0 ? <th scope="row">{cell}</th> : <td><span class="case-cell-label">{block.columns[i]}</span><span>{cell}</span></td>)}</tr>)}</tbody></table></div></section>}
+    {block.type === 'evidence' && <section class="case-evidence"><h3>{block.title}</h3><div class="case-evidence-content"><CaseImage src={imageFor(block.image.src)} alt={block.image.alt} widths={[768, 1440, 2240].filter(width => width <= imageFor(block.image.src).width)} sizes="(max-width: 1200px) 90vw, 1120px" format="webp" quality={90} loading="lazy" /></div></section>}
+
+    {block.type === 'gallery' && <div class:list={['case-research-gallery', { 'case-screen-gallery': block.presentation === 'screens' }]}>{block.images.map(image => <figure><CaseImage src={imageFor(image.src)} alt={image.alt} widths={block.presentation === 'screens' ? [240, 383] : [480, 768, 1120]} sizes={block.presentation === 'screens' ? '(max-width: 720px) 80vw, 300px' : '(max-width: 720px) 90vw, (max-width: 1200px) 44vw, 550px'} format="webp" quality={90} loading="lazy" /></figure>)}</div>}
+    {block.type === 'list' && <ul>{block.items.map(item => <li>{item}</li>)}</ul>}
+    {block.type === 'image' && <figure class:list={{ 'case-bank-pair': block.image.src.startsWith('nova-bank-updated-') }}><CaseImage src={imageFor(block.image.src)} alt={block.image.alt} widths={[480, 768, 1120, 1680].filter(width => width <= imageFor(block.image.src).width)} sizes={block.image.src.startsWith('nova-bank-updated-') ? '(max-width: 640px) 90vw, 560px' : '(max-width: 1200px) 90vw, 1120px'} format="webp" quality={90} loading={index === 0 ? 'eager' : 'lazy'} fetchpriority={index === 0 ? 'high' : 'auto'} /></figure>}
+  </Fragment>)}
+</div>
+
+<style lang="scss">
+  .case-bank-pair { width: min(100%, 560px); margin-inline: auto; background: transparent; }
+  .case-bank-pair :global(img) { background: transparent; border-radius: 0; }
+  .case-research-gallery {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-block: 2.5rem;
+    > figure { margin: 0; min-width: 0; background: #f5f8fc; border-radius: 16px; overflow: hidden; }
+    :global(.case-image-link) { display: flex; align-items: center; justify-content: center; height: 100%; min-height: 220px; }
+    :global(img) { width: 100%; height: 320px; object-fit: contain; border-radius: 0; }
+  }
+  .case-screen-gallery {
+    width: min(100%, 42rem); margin-inline: auto; gap: clamp(24px, 5vw, 64px);
+    > figure { background: transparent; border-radius: 0; overflow: visible; }
+    :global(.case-image-link) { min-height: 0; height: auto; background: transparent; }
+    :global(img) { display: block; width: 100%; height: auto; max-width: 300px; margin-inline: auto; object-fit: contain; border-radius: 0; background: transparent; }
+  }
+  @media (max-width: 720px) {
+    .case-research-gallery { grid-template-columns: minmax(0, 1fr); gap: 16px; margin-block: 1.75rem; }
+    .case-research-gallery :global(img) { height: 260px; }
+    .case-screen-gallery :global(img) { height: auto; max-width: 280px; }
+  }
+</style>

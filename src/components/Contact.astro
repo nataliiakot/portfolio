@@ -1,0 +1,59 @@
+---
+import Emoji from './Emoji.astro';
+import { profile } from '../content/site';
+---
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="contact-copy"><h2 id="contact-title"><Emoji symbol="💬" /> <span>Have a product challenge, a project idea, or a role in mind? Let’s talk</span></h2>
+  <div class="actions contact-actions"><a class="button primary" href={profile.cvPath} target="_blank" rel="noopener noreferrer">CV<span class="sr-only"> (opens in a new tab)</span></a><a class="button" href={`mailto:${profile.email}`}>Email me</a></div>
+  </div><div class="contact-faq">
+    <details name="contact-faq"><summary>What does your design process involve?</summary><p>I combine analytical thinking, user research, and modern UI to solve user problems and support product goals.</p></details>
+    <details name="contact-faq"><summary>What domains have you worked in?</summary><p>Healthcare, petcare, transfer booking, banking, HR management, legal services, e-commerce, and restaurant reservations.</p></details>
+    <details name="contact-faq"><summary>What languages do you speak?</summary><p>Ukrainian — C2. English — B2+.</p></details>
+    <details name="contact-faq"><summary>What can you help with?</summary><p>Web and mobile UX/UI, user research, design systems, and AI-assisted design workflows.</p></details>
+  </div>
+</section>
+
+<script>
+  const faq = document.querySelector<HTMLElement>('.contact-faq');
+  if (faq) {
+    const items = [...faq.querySelectorAll('details')];
+    items.forEach(item => item.addEventListener('toggle', () => {
+      if (item.open) items.forEach(other => { if (other !== item) other.open = false; });
+    }));
+    let frame = 0;
+    let lastWidth = 0;
+    function reserveAnswerSpace() {
+      if (!faq) return;
+      const clone = faq.cloneNode(true) as HTMLElement;
+      clone.setAttribute('aria-hidden', 'true');
+      clone.inert = true;
+      Object.assign(clone.style, {
+        position: 'absolute', visibility: 'hidden', pointerEvents: 'none',
+        width: `${faq.getBoundingClientRect().width}px`, height: 'auto',
+        minHeight: '0', top: '0', left: '0',
+      });
+      const copies = [...clone.querySelectorAll('details')];
+      copies.forEach(item => { item.removeAttribute('name'); item.open = false; });
+      faq.parentElement?.append(clone);
+      let height = clone.getBoundingClientRect().height;
+      copies.forEach(item => {
+        item.open = true;
+        height = Math.max(height, clone.getBoundingClientRect().height);
+        item.open = false;
+      });
+      clone.remove();
+      faq.style.minHeight = `${Math.ceil(height)}px`;
+    }
+    function scheduleMeasurement() {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(reserveAnswerSpace);
+    }
+    new ResizeObserver(() => {
+      const width = faq.getBoundingClientRect().width;
+      if (width !== lastWidth) { lastWidth = width; scheduleMeasurement(); }
+    }).observe(faq);
+    document.addEventListener('portfolio:language-change', scheduleMeasurement);
+    document.fonts.ready.then(scheduleMeasurement);
+    scheduleMeasurement();
+  }
+</script>

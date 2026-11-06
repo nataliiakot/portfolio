@@ -1,0 +1,24 @@
+---
+import Emoji from './Emoji.astro';
+import SkillIcon from './SkillIcon.astro';
+import { expertise } from '../content/site';
+const expertiseLinks = [
+  '/projects/cleanly/#my-role-and-design-focus',
+  '/projects/hr-boost/#research-that-shaped-the-structure',
+  '/projects/hr-boost/#scale-the-system-not-just-the-screen-count',
+  '/projects/fitness-app/#keep-guidance-connected-to-the-routine',
+  '/projects/cleanly/#keep-the-conversation-in-context',
+];
+const tools = [{ label: 'Figma', icon: 'figma' }, { label: 'Adobe Photoshop', icon: 'photoshop' }, { label: 'ChatGPT', icon: 'openai' }, { label: 'Claude / Claude Code', icon: 'claude' }, { label: 'Codex', icon: 'codex' }];
+const languages = ['Ukrainian — C2', 'English — B2+'];
+---
+<section class="skills-overview" aria-labelledby="skills-title">
+  <h2 id="skills-title"><Emoji symbol="🛠️" /> <span>Skills</span></h2>
+  <div class="skills-group practice-group">
+    <div class="expertise" id="expertise" aria-label="Expertise">
+    <div class="expertise-list">{expertise.map((item, index) => <article class="skill-card" data-skill={index} data-cursor={item.title} data-cursor-color={['#ffc4e4', '#b9f080', '#d3baff', '#a7e9ff', '#ffd29b'][index]}><a class="skill-card-link" href={expertiseLinks[index]}><SkillIcon index={index} /><h3>{item.title}</h3><p>{item.description}</p><span class="skill-view">View case study</span></a></article>)}</div>
+  </div>
+  </div>
+  <div class="skills-group"><h3>Tools</h3><ul class="skill-pills tool-pills">{tools.map((tool, index) => <li style={`--pill-accent: ${['#7256e8', '#1267ce', '#16836d', '#b75131', '#445c9c'][index]}`}><img class="tool-logo" src={`/assets/tools/${tool.icon}.svg`} width="24" height="24" alt="" loading="lazy" /><span>{tool.label}</span></li>)}</ul></div>
+  <div class="skills-group"><h3>Languages</h3><ul class="skill-pills">{languages.map((label, index) => <li><Emoji symbol={index === 0 ? '🇺🇦' : '🇬🇧'} /><span>{label}</span></li>)}</ul></div>
+</section>

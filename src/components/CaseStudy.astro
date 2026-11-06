@@ -1,0 +1,26 @@
+---
+import type { Project } from '../content/projects';
+import Arrow from './Arrow.astro';
+import ImageLightbox from './ImageLightbox.astro';
+import ProjectCover from './ProjectCover.astro';
+import CaseNarrative from './CaseNarrative.astro';
+interface Props { project: Project; next?: Project; }
+const { project, next } = Astro.props;
+const facts = [['Role', project.role], ['Business domain', project.category]].filter(([, value]) => value);
+---
+<article class:list={['case-study', 'section-shell', `case-${project.slug}`]}>
+  <a class="text-link all-work" href="/#work"><span class="reverse-arrow"><Arrow /></span>All work</a>
+  <header class="case-heading"><h1><span>{project.title}</span></h1>{project.headline && <p class="case-intro">{project.headline}</p>}{!project.story?.length && <p class="case-summary">{project.summary}</p>}</header>
+  <dl class="case-facts">{facts.map(([label, value]) => <div><dt><span>{label}</span></dt><dd>{value}</dd></div>)}</dl>
+  {project.story?.length ? <CaseNarrative blocks={project.story} /> : <Fragment>
+  <ProjectCover project={project} />
+  {project.context?.length && <section class="case-section"><h2>The challenge</h2><div>{project.context.map(paragraph => <p>{paragraph}</p>)}</div></section>}
+  {project.solution?.length && <section class="case-section"><h2>The solution</h2><div>{project.solution.map(paragraph => <p>{paragraph}</p>)}</div></section>}
+  {project.approach?.length && <section class="case-section"><h2>Responsibilities</h2><ul class="case-responsibilities">{project.approach.map(item => <li>{item}</li>)}</ul></section>}
+  {project.features?.length && <section class="case-section"><h2>Core features</h2><ul class="case-responsibilities">{project.features.map(item => <li>{item}</li>)}</ul></section>}
+  {project.visuals?.length && <section aria-label="Project visuals" class="case-visuals">{project.visuals.map(image => <figure><img src={image.src} alt={image.alt} width={image.width} height={image.height} loading="lazy" /></figure>)}</section>}
+  {project.results?.length && <section class="case-section case-impact"><h2>Achievements</h2><div>{project.results.map(paragraph => <p>{paragraph}</p>)}</div></section>}
+  </Fragment>}
+  {next && <a class="next-project" href={`/projects/${next.slug}/`}><span>Next project</span><span>{next.title}<Arrow /></span></a>}
+</article>
+<ImageLightbox />

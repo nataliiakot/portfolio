@@ -1,0 +1,12 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CaseStudy from '../../components/CaseStudy.astro';
+import { published } from '../../content/projects';
+import type { Project } from '../../content/projects';
+export function getStaticPaths() {
+  return published.map((project, index) => ({ params: { slug: project.slug }, props: { project, next: published.length > 1 ? published[(index + 1) % published.length] : undefined } }));
+}
+interface Props { project: Project; next?: Project; }
+const { project, next } = Astro.props;
+---
+<Layout title={`${project.title} — Nataliia Kot`} description={project.summary}><CaseStudy project={project} next={next} /></Layout>

@@ -1,0 +1,38 @@
+---
+import { Image } from 'astro:assets';
+import portrait from '../assets/natalia-kot-portrait.jpg';
+import HeroIcons from '../components/HeroIcons.astro';
+import landscape from '../assets/landscape.png';
+import Footer from '../components/Footer.astro';
+import Layout from '../layouts/Layout.astro';
+import Contact from '../components/Contact.astro';
+import SelectedWork from '../components/SelectedWork.astro';
+import Skills from '../components/Skills.astro';
+import { profile } from '../content/site';
+
+const heroCopy = ['Analytical thinking', 'and considered visual approach'];
+
+---
+<Layout>
+  <section class="hero" aria-labelledby="hero-title">
+    <HeroIcons />
+    <div class="hero-content">
+      <h1 id="hero-title" class="hero-business-statement">{heroCopy.map((line, index) => <Fragment><span class:list={['hero-copy-line', { 'hero-copy-lead': index === 0 }]} data-hero-line>{line}</span>{index < heroCopy.length - 1 && ' '}</Fragment>)}</h1>
+      <div class="hero-dock"><a href={profile.cvPath} target="_blank" rel="noopener noreferrer" data-cursor="CV" data-cursor-color="#e4d5ff">CV<span class="sr-only"> (opens in a new tab)</span></a><a href="#work">Explore my work</a></div>
+    </div>
+  </section>
+  <SelectedWork />
+  <section class="about-section section-shell" id="about" aria-labelledby="about-title">
+    <div class="about-intro">
+      <div class="about-story">
+        <h2 id="about-title">Approach design as a business tool, combining analytical thinking and modern UI to create experiences that solve real problems and contribute to product growth</h2>
+      </div>
+      <Image class="about-portrait" src={portrait} alt="Nataliia Kot, UX/UI and Product Designer" widths={[480, 768, 1024]} sizes="(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) 45vw, 520px" format="webp" quality={90} loading="lazy" />
+    </div>
+  <Skills />
+  </section>
+  <div slot="closing" class="closing-scene"><Image class="closing-background" src={landscape} alt="" widths={[768, 1440, 2160]} sizes="100vw" format="webp" loading="lazy" /><div class="closing-content"><div class="closing-panel section-shell"><Contact /><Footer embedded /></div></div></div>
+</Layout>
+<script>
+  import('../scripts/motion').then(({ initMotion }) => initMotion()).catch(() => {});
+</script>

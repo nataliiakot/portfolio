@@ -1,0 +1,72 @@
+<dialog class="image-lightbox" aria-label="Full screen image">
+  <button class="image-lightbox-close" type="button" aria-label="Close image" autofocus>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+  </button>
+  <img class="image-lightbox-image" alt="" />
+</dialog>
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('.image-lightbox');
+  const preview = dialog?.querySelector<HTMLImageElement>('.image-lightbox-image');
+  const close = dialog?.querySelector<HTMLButtonElement>('.image-lightbox-close');
+  if (dialog && preview && close) {
+    let trigger: HTMLElement | null = null;
+    // Also support images in case studies that use the legacy template.
+    document.querySelectorAll<HTMLImageElement>('.case-study img').forEach(image => {
+      if (image.closest('[data-case-image], a, [aria-hidden="true"]')) return;
+      const link = document.createElement('a');
+      link.href = image.currentSrc || image.src;
+      link.dataset.caseImage = '';
+      link.className = 'case-image-link';
+      image.before(link);
+      link.append(image);
+    });
+    document.addEventListener('click', event => {
+      const link = event.target instanceof Element ? event.target.closest<HTMLAnchorElement>('[data-case-image]') : null;
+      if (!link || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      trigger = link;
+      preview.alt = link.querySelector('img')?.alt ?? '';
+      preview.src = link.href;
+      dialog.showModal();
+      document.documentElement.classList.add('image-lightbox-open');
+      document.documentElement.classList.remove('custom-cursor');
+    });
+    close.addEventListener('click', () => dialog.close());
+    let backdropPress = false;
+    dialog.addEventListener('pointerdown', event => { backdropPress = event.target === dialog; });
+    dialog.addEventListener('click', event => {
+      if (event.target === dialog && backdropPress) dialog.close();
+      backdropPress = false;
+    });
+    dialog.addEventListener('close', () => {
+      document.documentElement.classList.remove('image-lightbox-open');
+      preview.removeAttribute('src');
+      trigger?.focus({ preventScroll: true });
+    });
+  }
+</script>
+<style is:global lang="scss">
+  html.image-lightbox-open { overflow: hidden; }
+  .image-lightbox {
+    border: 0; padding: 4rem 1.5rem 1.5rem; margin: 0;
+    width: 100%; height: 100%; height: 100dvh; max-width: none; max-height: none;
+    box-sizing: border-box; background: rgba(12, 16, 20, .96); color: #fff;
+    overscroll-behavior: contain;
+    &[open] { display: flex; align-items: center; justify-content: center; }
+    &::backdrop { background: #0c1014; }
+  }
+  .image-lightbox-image { display: block; width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
+  .image-lightbox-close {
+    position: absolute; top: max(.75rem, env(safe-area-inset-top)); right: max(.75rem, env(safe-area-inset-right));
+    display: grid; place-items: center; width: 44px; height: 44px;
+    border: 1px solid #737b84; border-radius: 50%; color: #fff; background: #242a31; cursor: pointer;
+    &:hover { background: #414b57; }
+    &:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+  }
+  .case-study .case-image-link { display: block; cursor: zoom-in; }
+  .case-study .case-image-link:focus-visible { outline: 3px solid #1758ff; outline-offset: 5px; }
+  .image-lightbox-open .image-lightbox, .image-lightbox-open .image-lightbox * { cursor: auto !important; }
+  .image-lightbox-open .image-lightbox .image-lightbox-close, .image-lightbox-open .image-lightbox .image-lightbox-close * { cursor: pointer !important; }
+  html:has(.image-lightbox[open]) .context-cursor { display: none; }
+  @media (max-width: 600px) { .image-lightbox { padding: 4rem .5rem 1rem; } }
+</style>

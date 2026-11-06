@@ -1,0 +1,12 @@
+---
+import type { ProjectImage } from '../content/projects';
+interface Props { image?: ProjectImage; tone?: string; label?: string; }
+const { image, tone = 'blue', label = 'Project preview placeholder' } = Astro.props;
+---
+<div class:list={['project-frame', `frame-${tone}`]}>
+  <div class="browser-frame"><div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span><i></i></div>
+    <div class="browser-content">{image ? <img src={image.src} alt={image.alt} width={image.width} height={image.height} loading="lazy" decoding="async" /> : <div class="preview-skeleton" aria-label={label}><div class="skeleton-header" aria-hidden="true"><span></span><span></span></div><div class="skeleton-body"><span class="skeleton-block" aria-hidden="true"></span><p>Project preview</p><span class="skeleton-line" aria-hidden="true"></span><span class="skeleton-line short" aria-hidden="true"></span></div><div class="skeleton-footer" aria-hidden="true"><span></span><span></span><span></span></div></div>}</div>
+  </div>
+  <span class="design-tag tag-ux" aria-hidden="true"><svg viewBox="0 0 28 28" fill="currentColor"><path d="m4 3 20 12-9 2-4 8Z" /></svg>UX</span>
+  <span class="design-tag tag-ui" aria-hidden="true"><svg viewBox="0 0 28 28" fill="currentColor"><path d="m4 3 20 12-9 2-4 8Z" /></svg>UI</span>
+</div>

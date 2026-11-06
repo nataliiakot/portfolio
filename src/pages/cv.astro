@@ -1,0 +1,6 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {profile,experience,education,certifications,expertise} from '../content/site';
+---
+<Layout title="Nataliia Kot — CV"><article class="resume section-shell"><h1>{profile.name}</h1><p>{profile.role}</p><a href={`mailto:${profile.email}`}>{profile.email}</a><p>{profile.hero}</p><button class="button" id="print">Print / Save PDF</button><h2>Experience</h2>{experience.map(job=><section><h3>{job.role} · {job.company}</h3><p>{job.dates}</p><ul>{job.bullets.map(item=><li>{item}</li>)}</ul></section>)}<h2>Expertise</h2><p>{expertise.map(x=>x.title).join(' · ')}</p><h2>Education</h2>{education.map(x=><p>{x.title} — {x.institution} · {x.dates}</p>)}<h2>Certifications</h2>{certifications.map(x=><p>{x.title} — {x.institution}</p>)}</article></Layout>
+<script>document.querySelector('#print')?.addEventListener('click',()=>window.print());</script>

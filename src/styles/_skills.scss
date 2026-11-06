@@ -1,0 +1,39 @@
+@mixin styles {
+  .ios-emoji { display: inline-block; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif; font-weight: 400; font-style: normal; font-size: .8em; line-height: 1; vertical-align: .04em; letter-spacing: 0; flex: 0 0 auto; }
+  .expertise .expertise-list .skill-card .skill-emoji { display: grid; place-items: center; background: none; border: 0; box-shadow: none; }
+  .skill-emoji .ios-emoji { font-size: 76px; }
+  .skill-card[data-skill='0'] .skill-emoji .ios-emoji { font-size: 92px; }
+  .skill-card[data-skill='3'] .skill-emoji .ios-emoji { font-size: 62px; }
+  .skill-pills li { display: inline-flex; align-items: center; gap: 10px; }
+  .skill-pills .ios-emoji { font-size: 20px; }
+  .skill-pills li > span:not(.ios-emoji) { min-width: 0; overflow-wrap: anywhere; }
+  .tool-logo { width: 24px; height: 24px; object-fit: contain; flex: 0 0 24px; }
+  .skills-overview .tool-pills li { color: #23343e; }
+
+  .skills-overview { padding-top: clamp(64px, 7vw, 96px); }
+  .skills-overview > h2 { margin: 0 0 40px; font-size: clamp(32px, 3.5vw, 48px); font-weight: 700; line-height: 1.15; letter-spacing: -.03em; }
+  .skills-group + .skills-group { margin-top: 32px; }
+  .skills-group h3 { margin: 0 0 16px; font-size: 16px; line-height: 1.5; font-weight: 650; color: #52606c; }
+  .skill-pills { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; margin: 0; }
+  .skill-pills li { max-width: 100%; padding: 12px 20px; border: 1px solid #dce2e9; border-radius: 999px; background: linear-gradient(145deg, #ffffffd9, #eef4fa99); box-shadow: inset 0 1px 0 #fff; color: #23343e; font-size: 16px; line-height: 1.5; }
+  .tool-pills li { color: var(--pill-accent); border-color: color-mix(in srgb, var(--pill-accent) 24%, #e5eaf0); background: linear-gradient(145deg, #fff, color-mix(in srgb, var(--pill-accent) 5%, #fff)); font-weight: 650; }
+  @media(max-width: 600px) { .skills-overview > h2 { margin-bottom: 28px; }.skill-pills { gap: 8px; }.skill-pills li { font-size: 14px; padding: 10px 16px; }.skills-group + .skills-group { margin-top: 24px; } }
+
+  .about-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px; }
+  .about-actions a { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 24px; border: 1px solid #191c1b; border-radius: 999px; font-size: 14px; font-weight: 650; text-decoration: none; transition: background .2s, color .2s, transform .2s; }
+  .about-actions .about-cv { background: #191c1b; color: white; }
+  .about-actions .about-email { background: white; color: #191c1b; }
+  .about-actions a:focus-visible { outline: 3px solid #1758ff; outline-offset: 4px; }
+  .practice-group .expertise { margin-top: 40px; }
+  .skill-pills li { transition: transform .2s, box-shadow .2s, border-color .2s, background .2s; }
+  @media (hover: hover) {
+    .skill-pills li:hover { transform: translateY(-3px); border-color: var(--pill-accent, #8299ad); background: color-mix(in srgb, var(--pill-accent, #8299ad) 10%, white); box-shadow: 0 6px 16px #23343e12; }
+    .about-actions .about-cv:hover { background: #3c4543; transform: translateY(-2px); }
+    .about-actions .about-email:hover { background: #eef4fa; transform: translateY(-2px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .skill-pills li, .about-actions a { transition: none; }
+    .skill-pills li:hover, .about-actions a:hover { transform: none; }
+  }
+  .home-page .about-section { padding-bottom: calc(var(--section-space) + clamp(32px, 4vw, 56px)); }
+}

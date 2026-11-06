@@ -1,0 +1,7 @@
+---
+import Emoji from './Emoji.astro';
+import { expertiseEmoji } from '../content/visual-cues';
+interface Props { index: number; }
+const { index } = Astro.props;
+---
+<span class="skill-icon skill-emoji" aria-hidden="true"><Emoji symbol={expertiseEmoji[index] ?? '✨'} /></span>

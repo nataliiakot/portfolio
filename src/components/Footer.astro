@@ -1,0 +1,7 @@
+---
+import { profile } from '../content/site';
+import Arrow from './Arrow.astro';
+interface Props { embedded?: boolean; }
+const { embedded = false } = Astro.props;
+---
+<footer class:list={["site-footer", { "section-shell": !embedded }]}><span>© {new Date().getFullYear()} {profile.name}</span><a class="back-top" href="#top">Back to top <span><Arrow /></span></a></footer>

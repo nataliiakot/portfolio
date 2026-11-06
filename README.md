@@ -1,31 +1,41 @@
-# Natalia Kot — Portfolio
+# Nataliia Kot — Portfolio
 
-Fast, English-language UX/UI & Product Designer portfolio built with Astro static output, strict TypeScript, SCSS and GSAP. Lora and Manrope fonts are served locally. The site is light-only with English and Ukrainian language selection.
+Bilingual English/Ukrainian UX/UI & Product Designer portfolio. Built with Astro static output, strict TypeScript, SCSS, and GSAP; fonts and project imagery are hosted locally. Includes Cleanly, HR System, Fleeto, Nova Bank, and Steady case studies.
+
+## Development
+
+Use Node.js 24 LTS (see `.nvmrc`).
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Use Node.js 24 LTS. `npm test` checks project publication rules. `npm run build` runs Astro/TypeScript checks and generates `dist/`. `npm run preview` serves the production build.
+```sh
+npm test        # Content publication tests
+npm run build   # Astro/TypeScript checks and static build
+npm run preview # Preview dist/
+```
 
-## Content and architecture
+## Source
 
-- `src/content/site.ts` — supplied personal details, experience, expertise, education and contacts.
-- `src/content/projects.ts` — typed case studies and publication validation.
-- `src/pages/index.astro` — landing page.
-- `src/pages/projects/[slug].astro` — statically generated, directly linkable case study routes.
-- `src/components/CaseStudy.astro` — reusable case study template; missing sections are omitted.
-- `src/pages/404.astro` — not-found page.
-- `src/styles/` — SCSS, light-only tokens and local fonts.
-- `src/scripts/motion.ts` — dynamically loaded, reduced-motion-aware hero sequence.
-- `.agents/skills/` and `.specify/` — preserved agent skills and Spec Kit.
+- `src/pages/` — homepage, case routes, CV, and 404.
+- `src/content/` — project narratives, personal information, and translations.
+- `src/components/` — shared UI, case blocks, image lightbox, hero icons, and cursor.
+- `src/assets/` — source imagery; Astro generates responsive WebP assets.
+- `src/styles/` — shared typography, layout, and responsive styles.
+- `public/` — favicons, tool icons, and static files.
+- `docs/case-study-guidelines.md` — shared case structure and presentation rules.
+- `docs/` — content guidance and asset/evidence provenance.
 
-See [the content guide](docs/content-guide.md) for adding projects, CV, certificate links and deployment metadata. The original brief is in `docs/brief.txt`.
+The site uses a white theme, respects reduced motion, and supports keyboard navigation. Case images open in a full-screen viewer; Escape, the close button, or a click outside the image dismisses it.
 
-## Materials still needed
+## Deployment
 
-The CV PDF, a real portrait (optional), and actual project titles, imagery and case-study materials have not been supplied. Five visual references have been applied to the latest design. There are no invented client projects. Development-only layout placeholders are clearly labeled and have no dead links; production renders a contact invitation until real projects are added. The minimal name hero and liquid-glass controls follow the supplied references. A landscape band uses the user-supplied fourth image; provenance is documented in `docs/artwork.md`.
+```sh
+PUBLIC_SITE_URL=https://your-domain.example npm run build
+```
 
-Configure `PUBLIC_SITE_URL` with the real origin before deployment. No hosting or deployment is included.
-# portfolio
+Replace the example with the actual public origin for canonical and social URLs. Deploy `dist/` to a static host supporting directory indexes and `404.html`.
+
+Dependencies, generated output, environment secrets, local caches, and unused historical media are not required in the repository. Keep `.env.example` as the configuration template; never commit actual secrets.

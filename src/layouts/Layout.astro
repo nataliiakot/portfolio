@@ -1,0 +1,32 @@
+---
+import loraFont from '@fontsource-variable/lora/files/lora-latin-wght-normal.woff2?url';
+import manropeFont from '@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2?url';
+import '../styles/global.scss';
+import ContextCursor from '../components/ContextCursor.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { profile } from '../content/site';
+interface Props { title?: string; description?: string; noindex?: boolean; }
+const { title = profile.title, description = profile.description, noindex = false } = Astro.props;
+const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site) : undefined;
+const social = Astro.site ? new URL('/social.jpg', Astro.site) : undefined;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="preload" href={loraFont} as="font" type="font/woff2" crossorigin /><link rel="preload" href={manropeFont} as="font" type="font/woff2" crossorigin />
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} /><meta name="color-scheme" content="light" />
+    <title>{title}</title><link rel="icon" href="/favicon.ico?v=portrait-1" sizes="any" /><link rel="icon" type="image/png" sizes="32x32" href="/favicon-portrait-32.png" /><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    {canonical && <link rel="canonical" href={canonical} />}{noindex && <meta name="robots" content="noindex" />}
+    <meta property="og:type" content="website" /><meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Nataliia Kot" /><meta property="og:title" content={title} /><meta property="og:description" content={description} />
+    {canonical && <meta property="og:url" content={canonical} />}{social && <meta property="og:image" content={social} />}
+    <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={title} /><meta name="twitter:description" content={description} />
+    {social && <meta name="twitter:image" content={social} />}
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body id="top" class:list={{ 'home-page': Astro.url.pathname === '/' }}><a class="skip-link" href="#main">Skip to content</a><Header /><main id="main"><slot /></main><slot name="closing"><Footer /></slot><ContextCursor /></body>
+</html>
+
+<script>import '../scripts/language';</script>
