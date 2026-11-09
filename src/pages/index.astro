@@ -18,7 +18,7 @@ const heroCopy = ['Analytical thinking', 'and considered visual approach'];
     <HeroIcons />
     <div class="hero-content">
       <h1 id="hero-title" class="hero-business-statement">{heroCopy.map((line, index) => <Fragment><span class:list={['hero-copy-line', { 'hero-copy-lead': index === 0 }]} data-hero-line>{line}</span>{index < heroCopy.length - 1 && ' '}</Fragment>)}</h1>
-      <div class="hero-dock"><a href={profile.cvPath} target="_blank" rel="noopener noreferrer" data-cursor="CV" data-cursor-color="#e4d5ff">CV<span class="sr-only"> (opens in a new tab)</span></a><a href="#work">Explore my work</a></div>
+      <div class="hero-dock"><a href={profile.cvPath} target="_blank" rel="noopener noreferrer" data-cursor="CV" data-cursor-color="#e4d5ff">CV<span class="sr-only"> (opens in a new tab)</span></a><a href={profile.telegram} target="_blank" rel="noopener noreferrer" data-cursor="Telegram" data-cursor-color="#ccecff">Telegram<span class="sr-only"> (opens in a new tab)</span></a></div>
     </div>
   </section>
   <SelectedWork />
