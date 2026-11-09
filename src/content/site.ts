@@ -8,7 +8,7 @@ export const profile = {
   ],
   email: 'nataliiakotdesign@gmail.com', linkedin: 'https://www.linkedin.com/in/nataliia-kot-784569318/',
   phone: '+38 099 080 36 93', phoneHref: 'tel:+380990803693',
-  cvPath: 'https://drive.google.com/file/d/1oV_sj754TTBBHJFa8MPX9vAXAiSS_F6M/view?usp=sharing',
+  cvPath: 'https://drive.google.com/file/d/1ZkO7tM8xXRr6P7zr8eMA1x0SiUyDPmeN/view?usp=sharing',
   languages: [{ name: 'Ukrainian', level: 'C2' }, { name: 'English', level: 'B2+' }],
 };
 export const navigation = [
