@@ -6,7 +6,7 @@ export const profile = {
   about: [
     'I’m Natalia, a UX/UI & Product Designer working across web and mobile products. I approach design as a business tool: understanding the problem, shaping the experience, and creating interfaces that support both user needs and product goals.',
   ],
-  email: 'nataliiakot2004@gmail.com', linkedin: 'https://www.linkedin.com/in/nataliia-kot-784569318/',
+  email: 'nataliiakotdesign@gmail.com', linkedin: 'https://www.linkedin.com/in/nataliia-kot-784569318/',
   phone: '+38 099 080 36 93', phoneHref: 'tel:+380990803693',
   cvPath: 'https://drive.google.com/file/d/1oV_sj754TTBBHJFa8MPX9vAXAiSS_F6M/view?usp=sharing',
   languages: [{ name: 'Ukrainian', level: 'C2' }, { name: 'English', level: 'B2+' }],
