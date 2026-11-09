@@ -128,7 +128,7 @@ export const translations: Record<string, string> = {
   "Let’s shape your next": "Створімо ваш наступний",
   "digital experience.": "цифровий досвід.",
   "Have a product challenge, a project idea, or a role in mind? Let’s talk.": "Маєте продуктове завдання, ідею проєкту чи вакансію? Поговорімо.",
-  "Email me": "Написати мені",
+  "Telegram": "Telegram",
   "Connect on LinkedIn": "Зв’язатися в LinkedIn",
   "Email": "Ел. пошта",
   "Back to top": "Нагору",
