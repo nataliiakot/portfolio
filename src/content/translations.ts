@@ -68,7 +68,7 @@ export const translations: Record<string, string> = {
 "Ukrainian — C2": "Українська — C2",
 "English — B2+": "Англійська — B2+",
 
-"and considered visual approach": "та продуманий візуальний підхід",
+"and modern UI": "та сучасний UI",
 "Approach design as a business tool, combining analytical thinking and modern UI to create experiences that solve real problems and contribute to product growth": "Підходжу до дизайну як до бізнес-інструменту, поєднуючи аналітичне мислення та сучасний UI, щоб створювати досвід, який вирішує реальні проблеми та сприяє зростанню продукту",
 
 "Approach design as a business tool,":"Підходжу до дизайну як до бізнес-інструменту,","combining analytical thinking and modern UI":"поєднуючи аналітичне мислення та сучасний UI,","to create experiences that solve real problems":"щоб створювати досвід, який вирішує реальні проблеми","and contribute to product growth":"і сприяє зростанню продукту",
