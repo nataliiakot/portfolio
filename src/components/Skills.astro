@@ -10,15 +10,15 @@ const expertiseLinks = [
   '/projects/cleanly/#keep-the-conversation-in-context',
 ];
 const tools = [
-  { label: 'Figma', icon: 'figma', accent: '#7256e8' },
-  { label: 'Adobe Photoshop', icon: 'photoshop', accent: '#1267ce' },
-  { label: 'Adobe Illustrator', icon: 'illustrator', accent: '#b86600' },
-  { label: 'Miro', icon: 'miro', accent: '#807000' },
-  { label: 'Amplitude', icon: 'amplitude', accent: '#2463eb' },
-  { label: 'ChatGPT', icon: 'openai', accent: '#16836d' },
-  { label: 'Claude / Claude Code', icon: 'claude', accent: '#b75131' },
-  { label: 'Codex', icon: 'codex', accent: '#445c9c' },
-  { label: 'Magnific', icon: 'magnific', accent: '#6e48ad' },
+  { label: 'Figma', icon: 'figma.svg', accent: '#7256e8' },
+  { label: 'Adobe Photoshop', icon: 'photoshop.svg', accent: '#1267ce' },
+  { label: 'Adobe Illustrator', icon: 'illustrator.svg', accent: '#b86600' },
+  { label: 'Miro', icon: 'miro.svg', accent: '#807000' },
+  { label: 'Amplitude', icon: 'amplitude.png', accent: '#2463eb' },
+  { label: 'ChatGPT', icon: 'openai.svg', accent: '#16836d' },
+  { label: 'Claude / Claude Code', icon: 'claude.svg', accent: '#b75131' },
+  { label: 'Codex', icon: 'codex.svg', accent: '#445c9c' },
+  { label: 'Magnific', icon: 'magnific.svg', accent: '#6e48ad' },
 ];
 const languages = ['Ukrainian — C2', 'English — B2+'];
 ---
@@ -29,6 +29,6 @@ const languages = ['Ukrainian — C2', 'English — B2+'];
     <div class="expertise-list">{expertise.map((item, index) => <article class="skill-card" data-skill={index} data-cursor={item.title} data-cursor-color={['#ffc4e4', '#b9f080', '#d3baff', '#a7e9ff', '#ffd29b'][index]}><a class="skill-card-link" href={expertiseLinks[index]}><SkillIcon index={index} /><h3>{item.title}</h3><p>{item.description}</p><span class="skill-view">View case study</span></a></article>)}</div>
   </div>
   </div>
-  <div class="skills-group"><h3>Tools</h3><ul class="skill-pills tool-pills">{tools.map(tool => <li style={`--pill-accent: ${tool.accent}`}><img class="tool-logo" src={`/assets/tools/${tool.icon}.svg`} width="24" height="24" alt="" loading="lazy" /><span>{tool.label}</span></li>)}</ul></div>
+  <div class="skills-group"><h3>Tools</h3><ul class="skill-pills tool-pills">{tools.map(tool => <li style={`--pill-accent: ${tool.accent}`}><img class="tool-logo" src={`/assets/tools/${tool.icon}`} width="24" height="24" alt="" loading="lazy" /><span>{tool.label}</span></li>)}</ul></div>
   <div class="skills-group"><h3>Languages</h3><ul class="skill-pills">{languages.map((label, index) => <li><Emoji symbol={index === 0 ? '🇺🇦' : '🇬🇧'} /><span>{label}</span></li>)}</ul></div>
 </section>
