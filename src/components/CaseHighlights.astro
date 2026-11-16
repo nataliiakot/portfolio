@@ -1,0 +1,40 @@
+---
+import type { CaseHighlights } from '../content/case-highlights';
+interface Props { highlights: CaseHighlights; }
+const { highlights } = Astro.props;
+---
+<section class="case-highlights" aria-label="Results and my contribution">
+  <div class="case-contribution"><h2>My contribution</h2><p>{highlights.contribution}</p></div>
+  <dl class:list={['case-highlight-metrics', { 'has-three': highlights.metrics.length === 3 }]}>
+    {highlights.metrics.map(metric => <div class="case-highlight-metric">
+      <dt><span class="case-highlight-kind">{metric.kind}</span><span>{metric.label}</span></dt>
+      <dd><strong>{metric.value}</strong>{metric.note && <p>{metric.note}</p>}</dd>
+    </div>)}
+  </dl>
+</section>
+
+<style lang="scss">
+  .case-highlights { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 32px; margin-block: 24px 32px; align-items: start; }
+  .case-contribution h2 { font-size: 13px; line-height: 1.5; color: #52606c; font-weight: 650; margin: 0 0 8px; }
+  .case-contribution > p { font-size: 16px; line-height: 1.65; margin: 0; color: #414c55; }
+  .case-highlight-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 12px; margin: 0; }
+  .case-highlight-metric { display: flex; flex-direction: column; padding: 18px; border: 1px solid #dce2e8; border-radius: 18px; background: linear-gradient(145deg, #fff, #f4f8fc); }
+  .case-highlight-metric dt { display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.45; font-weight: 600; }
+  .case-highlight-kind { font-size: 11px; line-height: 1.5; font-weight: 500; color: #52606c; }
+  .case-highlight-metric dd { margin: 12px 0 0; }
+  .case-highlight-metric strong { display: block; font-size: 42px; line-height: 1.1; letter-spacing: -.035em; font-weight: 700; color: #193640; }
+  .case-highlight-metric p { font-size: 12px; line-height: 1.5; margin: 8px 0 0; color: #52606c; }
+  @media (max-width: 1000px) { .case-highlights { grid-template-columns: minmax(0, 1fr); gap: 20px; } }
+  @media (max-width: 720px) {
+    .case-highlights { margin-block: 16px 24px; gap: 16px; }
+    .case-contribution > p { font-size: 14px; line-height: 1.5; }
+    .case-highlight-metrics { gap: 8px; }
+    .case-highlight-metric { padding: 12px; border-radius: 14px; }
+    .case-highlight-metric dt { font-size: 12px; }
+    .case-highlight-metric strong { font-size: 32px; }
+    .case-highlight-metric p { font-size: 11px; }
+    .has-three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .has-three > :last-child { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 8px; }
+    .has-three > :last-child dd { margin: 0; }
+  }
+</style>

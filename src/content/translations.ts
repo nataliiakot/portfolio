@@ -1,3 +1,4 @@
+import { highlightTranslations } from './case-highlights';
 import { novaTranslations } from './nova-story.ts';
 import { steadyTranslations } from './steady-story.ts';
 import { fleetoTranslations } from './fleeto-story.ts';
@@ -187,5 +188,6 @@ export const translations: Record<string, string> = {
   "Nataliia Kot is a UX/UI & Product Designer creating end-to-end experiences for B2B and B2C web and mobile products.": "Nataliia Kot — UX/UI та продуктовий дизайнер, що створює повний користувацький досвід для B2B та B2C веб- і мобільних продуктів."
 ,
 ...novaTranslations,
-...steadyTranslations
+...steadyTranslations,
+...highlightTranslations
 };

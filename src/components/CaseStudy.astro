@@ -4,6 +4,8 @@ import Arrow from './Arrow.astro';
 import ImageLightbox from './ImageLightbox.astro';
 import ProjectCover from './ProjectCover.astro';
 import CaseNarrative from './CaseNarrative.astro';
+import CaseHighlights from './CaseHighlights.astro';
+import { caseHighlights } from '../content/case-highlights';
 interface Props { project: Project; next?: Project; }
 const { project, next } = Astro.props;
 const facts = [['Role', project.role], ['Business domain', project.category]].filter(([, value]) => value);
@@ -11,6 +13,7 @@ const facts = [['Role', project.role], ['Business domain', project.category]].fi
 <article class:list={['case-study', 'section-shell', `case-${project.slug}`]}>
   <a class="text-link all-work" href="/#work"><span class="reverse-arrow"><Arrow /></span>All work</a>
   <header class="case-heading"><h1><span>{project.title}</span></h1>{project.headline && <p class="case-intro">{project.headline}</p>}{!project.story?.length && <p class="case-summary">{project.summary}</p>}</header>
+  {caseHighlights[project.slug] && <CaseHighlights highlights={caseHighlights[project.slug]!} />}
   <dl class="case-facts">{facts.map(([label, value]) => <div><dt><span>{label}</span></dt><dd>{value}</dd></div>)}</dl>
   {project.story?.length ? <CaseNarrative blocks={project.story} /> : <Fragment>
   <ProjectCover project={project} />
