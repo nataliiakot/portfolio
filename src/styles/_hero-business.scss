@@ -23,17 +23,17 @@
   .hero-copy-line::after { content: ''; position: absolute; left: var(--selection); top: .08em; bottom: .08em; width: 2px; background: #008be5; opacity: var(--caret, 0); }
   .about-intro { max-width: 1000px; margin-inline: auto; }
   .about-intro .about-portrait { aspect-ratio: 1 / 1; height: auto; max-height: none; object-fit: cover; object-position: 50% 37%; }
-  .expertise .expertise-list .skill-card .skill-view { order: 3; display: inline-flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 16px; font-size: 14px; font-weight: 700; text-decoration: none; flex-shrink: 0; line-height: 1.5; }
+  .expertise .expertise-list .skill-card .skill-view { order: 3; display: inline-flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 8px; font-size: 14px; font-weight: 700; text-decoration: none; flex-shrink: 0; line-height: 1.5; }
   .expertise .expertise-list .skill-card h3, .expertise .expertise-list .skill-card p { flex-shrink: 0; }
-  .expertise .expertise-list .skill-card .skill-card-link { min-height: max-content; }
-  @media(min-width: 1051px) { .expertise .expertise-list { grid-template-rows: minmax(300px, auto) 32px minmax(272px, auto); } }
+  .expertise .expertise-list .skill-card .skill-card-link { min-height: 0; padding: 48px 24px 20px; gap: 10px; }
+  @media(min-width: 1051px) { .expertise .expertise-list { grid-template-rows: minmax(240px, auto) 24px minmax(216px, auto); } }
   @media(max-width: 1050px) {
-    .expertise .expertise-list { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; grid-auto-rows: minmax(320px, auto); }
+    .expertise .expertise-list { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; grid-auto-rows: minmax(260px, auto); }
     .expertise .expertise-list .skill-card[data-skill] { grid-column: auto; grid-row: auto; }
     .expertise .expertise-list .skill-card[data-skill='4'] { grid-column: 1 / -1; }
   }
   @media(max-width: 600px) {
-    .expertise .expertise-list { grid-template-columns: minmax(0, 1fr); }
+    .expertise .expertise-list { grid-template-columns: minmax(0, 1fr); grid-auto-rows: minmax(240px, auto); }
     .expertise .expertise-list .skill-card[data-skill] { grid-column: auto; grid-row: auto; }
   }
   .closing-scene .contact-copy #contact-title { font-size: clamp(28px, 2.65vw, 38px); line-height: 1.25; }
