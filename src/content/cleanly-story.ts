@@ -59,7 +59,18 @@ export const cleanlyTranslations: Record<string, string> = {
   "Two clear approval paths": "Два зрозумілі шляхи погодження",
   "Visual direction and inspiration": "Візуальний напрям і натхнення",
   "What I changed": "Що я змінила",
-  "What shaped my decisions": "Основа моїх рішень"
+  "What shaped my decisions": "Основа моїх рішень",
+  "The challenge was to support two needs at once: let cleaners choose suitable jobs, and let the company check new client relationships. I treated these as different decisions instead of making every request follow the same approval route.": "Завдання полягало в поєднанні двох потреб: дати клінерам змогу вибирати відповідну роботу й дозволити компанії перевіряти нових клієнтів. Я розділила ці рішення, замість того щоб вести кожен запит однаковим шляхом погодження.",
+  "I worked through the full request journey, including the moments between the main screens. Sending a request, waiting for a reply, receiving a decision, and handling an error each needed a clear message and a useful next step.": "Я опрацювала весь шлях заявки, включно з переходами між основними екранами. Надсилання, очікування відповіді, отримання рішення й обробка помилки потребували зрозумілого повідомлення та корисного наступного кроку.",
+  "The interviews covered cleaners. I used the role maps to include manager and client needs without treating them as extra interview findings. This kept the cleaner’s daily task central while still accounting for the approval and communication steps around it.": "Інтерв’ю проводилися з клінерами. Карти ролей допомогли врахувати потреби менеджера й клієнта, не подаючи їх як додаткові результати інтерв’ю. Так щоденна задача клінера залишилася в центрі, а погодження й спілкування — частиною процесу.",
+  "The review helped me separate common service-management patterns from Cleanly’s main design task. Lists and schedules organize work, but this product also needed to explain how a cleaner’s interest becomes a confirmed job. I used that question to guide the flow.": "Огляд допоміг відділити поширені патерни керування послугами від головної дизайн-задачі Cleanly. Списки й розклади організовують роботу, але продукт також мав пояснювати, як зацікавленість клінера стає підтвердженим завданням. Це питання визначило сценарій.",
+  "I used wireframes to connect the cleaner’s actions with the manager’s response. The key check was whether each role could understand the current state and the next step. This helped keep the business rule clear before adding visual detail.": "Я використала вайрфрейми, щоб пов’язати дії клінера з відповіддю менеджера. Головне — чи може кожна роль зрозуміти поточний стан і наступний крок. Це допомогло зробити бізнес-правило зрозумілим ще до візуального оформлення.",
+  "The important boundary is between showing interest and receiving permission to work with a new client. I kept that boundary visible: the cleaner can send a request, but the interface does not present it as an assigned job before the required confirmation.": "Важлива межа проходить між зацікавленістю й дозволом працювати з новим клієнтом. Я зробила її видимою: клінер може надіслати запит, але інтерфейс не показує його як призначену роботу до необхідного підтвердження.",
+  "I also separated a failed request from a rejected one. A sending error needs a retry action; a manager’s decision needs a clear status update. Using different messages helps users understand what happened without guessing whether the job is still available.": "Я також розділила невдале надсилання й відхилений запит. Помилка надсилання потребує повторної спроби, а рішення менеджера — зрозумілого оновлення статусу. Різні повідомлення пояснюють подію без здогадок про те, чи робота ще доступна.",
+  "The detail screen supports the decision before the visit as well as the work itself. Price and timing help assess the request; the address and access notes remain useful after confirmation. I kept both groups in the same place rather than splitting them across the flow.": "Екран деталей підтримує рішення до візиту й саму роботу. Ціна й час допомагають оцінити заявку, а адреса та інструкції доступу потрібні після підтвердження. Я залишила ці дані разом, замість того щоб розділяти їх між різними етапами.",
+  "This keeps communication linked to the reason for the conversation. A cleaner can check the request, ask a question, and return to the job details. The aim was to make coordination part of the service flow rather than a separate task.": "Так спілкування залишається пов’язаним із причиною звернення. Клінер може перевірити заявку, поставити питання й повернутися до деталей роботи. Мета — зробити координацію частиною сервісного процесу, а не окремим завданням.",
+  "The visual system also had to work across lists, job cards, approval screens, and chat. I reused spacing, buttons, and status patterns so each step felt connected. Decorative effects support the service theme, while the information stays easy to read.": "Візуальна система мала працювати у списках, картках робіт, погодженнях і чаті. Я повторно використовувала відступи, кнопки й патерни статусів, щоб кроки відчувалися пов’язаними. Декоративні ефекти підтримують тему сервісу, а інформація залишається читабельною.",
+  "The wider design result is a shared request flow for three roles. Cleaners can assess work, managers can review new clients, and clients can follow the request and contact the cleaner. The approval rule remains in place, with a clear state for each step.": "Ширший результат дизайну — спільний сценарій заявки для трьох ролей. Клінери можуть оцінити роботу, менеджери — перевірити нових клієнтів, а клієнти — стежити за заявкою й зв’язатися з клінером. Правило погодження збережене, а кожен крок має зрозумілий стан."
 };
 
 export const cleanlyStory: CaseBlock[] = [
@@ -80,6 +91,10 @@ export const cleanlyStory: CaseBlock[] = [
   {
     "type": "paragraph",
     "text": "Cleaners need to find work and know when a job is confirmed. The business requires manager approval for new clients outside the cleaner’s network."
+  },
+  {
+    "type": "paragraph",
+    "text": "The challenge was to support two needs at once: let cleaners choose suitable jobs, and let the company check new client relationships. I treated these as different decisions instead of making every request follow the same approval route."
   },
   {
     "type": "metrics",
@@ -110,6 +125,10 @@ export const cleanlyStory: CaseBlock[] = [
   {
     "type": "paragraph",
     "text": "I designed the research, user flows, mobile screens, prototypes, and UI system. My main task was to make the approval process clear for cleaners, managers, and clients."
+  },
+  {
+    "type": "paragraph",
+    "text": "I worked through the full request journey, including the moments between the main screens. Sending a request, waiting for a reply, receiving a decision, and handling an error each needed a clear message and a useful next step."
   },
   {
     "type": "heading",
@@ -148,6 +167,10 @@ export const cleanlyStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
+    "text": "The interviews covered cleaners. I used the role maps to include manager and client needs without treating them as extra interview findings. This kept the cleaner’s daily task central while still accounting for the approval and communication steps around it."
+  },
+  {
+    "type": "paragraph",
     "text": "Swept, TaskTor, Clean Scheduler, and KleanFlo informed my review of scheduling, job lists, and client records."
   },
   {
@@ -159,6 +182,10 @@ export const cleanlyStory: CaseBlock[] = [
       "width": 3840,
       "height": 1800
     }
+  },
+  {
+    "type": "paragraph",
+    "text": "The review helped me separate common service-management patterns from Cleanly’s main design task. Lists and schedules organize work, but this product also needed to explain how a cleaner’s interest becomes a confirmed job. I used that question to guide the flow."
   },
   {
     "type": "heading",
@@ -178,6 +205,10 @@ export const cleanlyStory: CaseBlock[] = [
       "width": 3840,
       "height": 1800
     }
+  },
+  {
+    "type": "paragraph",
+    "text": "I used wireframes to connect the cleaner’s actions with the manager’s response. The key check was whether each role could understand the current state and the next step. This helped keep the business rule clear before adding visual detail."
   },
   {
     "type": "evidence",
@@ -217,6 +248,10 @@ export const cleanlyStory: CaseBlock[] = [
     }
   },
   {
+    "type": "paragraph",
+    "text": "The important boundary is between showing interest and receiving permission to work with a new client. I kept that boundary visible: the cleaner can send a request, but the interface does not present it as an assigned job before the required confirmation."
+  },
+  {
     "type": "decision",
     "title": "Make waiting clear",
     "items": [
@@ -242,6 +277,10 @@ export const cleanlyStory: CaseBlock[] = [
       "width": 3840,
       "height": 1800
     }
+  },
+  {
+    "type": "paragraph",
+    "text": "I also separated a failed request from a rejected one. A sending error needs a retry action; a manager’s decision needs a clear status update. Using different messages helps users understand what happened without guessing whether the job is still available."
   },
   {
     "type": "decision",
@@ -271,6 +310,10 @@ export const cleanlyStory: CaseBlock[] = [
     }
   },
   {
+    "type": "paragraph",
+    "text": "The detail screen supports the decision before the visit as well as the work itself. Price and timing help assess the request; the address and access notes remain useful after confirmation. I kept both groups in the same place rather than splitting them across the flow."
+  },
+  {
     "type": "heading",
     "level": 2,
     "text": "A clear next action"
@@ -298,6 +341,10 @@ export const cleanlyStory: CaseBlock[] = [
     "text": "I linked chat, photos, and calls to the job, so access questions and cleaning notes stay with the assignment."
   },
   {
+    "type": "paragraph",
+    "text": "This keeps communication linked to the reason for the conversation. A cleaner can check the request, ask a question, and return to the job details. The aim was to make coordination part of the service flow rather than a separate task."
+  },
+  {
     "type": "heading",
     "level": 2,
     "text": "A clear visual system"
@@ -305,6 +352,10 @@ export const cleanlyStory: CaseBlock[] = [
   {
     "type": "paragraph",
     "text": "I used blue for actions and status, clear cards for job details, and glass-inspired effects to connect the UI with cleaning."
+  },
+  {
+    "type": "paragraph",
+    "text": "The visual system also had to work across lists, job cards, approval screens, and chat. I reused spacing, buttons, and status patterns so each step felt connected. Decorative effects support the service theme, while the information stays easy to read."
   },
   {
     "type": "evidence",
@@ -338,6 +389,10 @@ export const cleanlyStory: CaseBlock[] = [
   {
     "type": "paragraph",
     "text": "The project comparison reported 30% less time to find a job and receive confirmation than in other apps. This result applies to that task. My contribution was a connected flow with clear approval rules and next steps."
+  },
+  {
+    "type": "paragraph",
+    "text": "The wider design result is a shared request flow for three roles. Cleaners can assess work, managers can review new clients, and clients can follow the request and contact the cleaner. The approval rule remains in place, with a clear state for each step."
   },
   {
     "type": "image",

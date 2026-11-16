@@ -14,8 +14,7 @@ const facts = [['Role', project.role], ['Business domain', project.category]].fi
 <article class:list={['case-study', 'section-shell', `case-${project.slug}`]}>
   <a class="text-link all-work" href="/#work"><span class="reverse-arrow"><Arrow /></span>All work</a>
   <header class="case-heading"><h1><span>{project.title}</span></h1>{project.headline && <p class="case-intro">{project.headline}</p>}{!project.story?.length && <p class="case-summary">{project.summary}</p>}</header>
-  {highlights && <CaseHighlights highlights={highlights} />}
-  <dl class="case-facts">{facts.map(([label, value]) => <div><dt><span>{label}</span></dt><dd>{value}</dd></div>)}{highlights && <div class="case-contribution"><dt>My contribution</dt><dd>{highlights.contribution}</dd></div>}</dl>
+  {highlights ? <CaseHighlights highlights={highlights} facts={facts} /> : <dl class="case-facts">{facts.map(([label, value]) => <div><dt>{label}</dt><dd>{value}</dd></div>)}</dl>}
   {project.story?.length ? <CaseNarrative blocks={project.story} /> : <Fragment>
   <ProjectCover project={project} />
   {project.context?.length && <section class="case-section"><h2>The challenge</h2><div>{project.context.map(paragraph => <p>{paragraph}</p>)}</div></section>}

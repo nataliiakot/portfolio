@@ -37,3 +37,7 @@ Run `npm run build` after implementation, plus relevant existing tests. Inspect 
 - Keep paragraphs to one point, usually 20–40 words. Remove repeated feature lists and descriptions that the image already explains.
 - Preserve research facts and business rules. Do not claim an improvement was measured unless evidence supports it.
 - Keep Ukrainian copy aligned and end each case with its existing product images.
+
+## Opening summary
+
+Use one shared overview card below the title in every case. Put supported metrics at the top and Role, Business domain, and My contribution below a divider. Keep measured outcomes distinct from design scope counts. Cleanly and HR System retain fuller explanations of research, design tradeoffs, and state transitions in clear B2 English; brevity should not remove the reasoning behind their decisions.

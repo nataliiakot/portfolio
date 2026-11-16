@@ -39,7 +39,18 @@ export const hrTranslations: Record<string, string> = {
   "The case at a glance": "Кейс у цифрах",
   "The problem": "Проблема",
   "The schedule gives team context; reports provide the detail for a different task.": "Розклад дає командний контекст, а звіти — деталі для іншого завдання.",
-  "What I changed": "Що я змінила"
+  "What I changed": "Що я змінила",
+  "For example, an HR manager reviewing leave needs to see both the person’s balance and the team’s schedule. I designed around these connected tasks, rather than treating profiles, requests, and calendars as separate features with no clear path between them.": "Наприклад, HR-менеджеру для перевірки відпустки потрібні баланс людини й розклад команди. Я будувала дизайн навколо цих пов’язаних завдань, замість окремих профілів, запитів і календарів без зрозумілого переходу між ними.",
+  "At this scale, my role was also to keep decisions consistent across the product. A table, form, or status should be familiar when HR moves to another section. Shared components helped the team extend the system without redesigning every screen from the beginning.": "За такого масштабу я також відповідала за узгодженість рішень у продукті. Таблиця, форма чи статус мають бути знайомими при переході HR до іншого розділу. Спільні компоненти допомагали команді розширювати систему без створення кожного екрана з нуля.",
+  "I used the analysis board to connect feedback with specific product areas and possible changes. The HR requirements table added another level of detail: which pages, sections, and actions the system needed. Together, they helped turn a broad feature list into clear design tasks.": "Я використала дошку аналізу, щоб пов’язати відгуки з конкретними розділами й можливими змінами. Таблиця HR-вимог додала деталей: потрібні сторінки, секції й дії. Разом вони допомогли перетворити широкий список функцій на зрозумілі дизайн-задачі.",
+  "I worked from the main navigation to the detail of each section. The broad map helped explain the product to the team; the detailed structure showed where each page and action belonged. This gave us a common reference while building the UI.": "Я рухалася від основної навігації до деталей розділів. Загальна карта допомагала пояснити продукт команді, а детальна структура — визначити місце кожної сторінки й дії. Це стало спільною основою під час роботи над UI.",
+  "In the interface, I placed the leave balance and contact details above the longer employee record. Tabs keep actions, requests, and reports close without showing all their content at once. This balances quick reference with access to the full employee history.": "В інтерфейсі я розмістила баланс відпустки й контакти над довшим записом співробітника. Вкладки тримають дії, запити й звіти поруч, не показуючи весь вміст одночасно. Це поєднує швидкий огляд із доступом до повної історії людини.",
+  "A list works well for reviewing individual requests, but it does not show overlapping dates as clearly as a timeline. I used both views for different decisions. The timeline gives team context, while the list keeps request details and review actions easy to scan.": "Список зручний для перевірки окремих запитів, але перетини дат наочніші на шкалі часу. Я використала обидва представлення для різних рішень. Шкала дає командний контекст, а список — деталі запиту й дії для перевірки.",
+  "The role flow includes two choices that matter during setup: create a new role or copy a similar one, then add employees now or later. I made these options part of the flow so admins can prepare access rules before applying them to people.": "Сценарій ролей містить два важливі вибори: створити нову роль або скопіювати схожу, а потім додати людей одразу чи пізніше. Я включила ці опції в процес, щоб адміністратори могли підготувати правила до призначення співробітникам.",
+  "The journey map also covers temporary access and role removal. These steps helped me consider the full life of a role, not only its creation. The goal was to make changes to access understandable before they affect an employee.": "Карта шляху також охоплює тимчасові доступи й видалення ролей. Це допомогло врахувати весь життєвий цикл ролі, а не лише її створення. Мета — пояснювати зміни доступів до того, як вони вплинуть на співробітника.",
+  "A business process brings several pieces together: a document, a survey, and tasks assigned to people. Keeping those pieces reusable means the same template can support onboarding, a review, or another HR process. The process defines the order; the template defines the content.": "Бізнес-процес поєднує кілька елементів: документ, опитування й задачі для людей. Повторне використання дозволяє застосовувати той самий шаблон в онбордингу, оцінюванні чи іншому HR-процесі. Процес задає порядок, а шаблон — зміст.",
+  "The screens below show how this structure reaches other parts of the product. Template selection uses search and clear types; assets use structured fields; the knowledge base uses cards and filters. I kept shared patterns where they helped, while giving each task the layout it needed.": "Екрани нижче показують, як структура працює в інших частинах продукту. Вибір шаблону використовує пошук і чіткі типи, майно — структуровані поля, а база знань — картки й фільтри. Я зберігала спільні патерни там, де вони корисні, й адаптувала макет до завдання.",
+  "These project outcomes are separate from the research with 50 employees and the count of 450+ screens. My contribution was the design structure behind the daily work: employee context, clear steps, and reusable patterns that connect the platform’s many areas.": "Ці результати проєкту відокремлені від дослідження з 50 співробітниками й обсягу в 450+ екранів. Мій внесок — структура щоденної роботи: контекст співробітника, зрозумілі кроки й повторювані патерни, що пов’язують розділи платформи."
 };
 
 export const hrStory: CaseBlock[] = [
@@ -60,6 +71,10 @@ export const hrStory: CaseBlock[] = [
   {
     "type": "paragraph",
     "text": "HR tasks depend on connected information: a leave request needs dates and a balance; a planned action needs an owner. I focused on keeping this context together."
+  },
+  {
+    "type": "paragraph",
+    "text": "For example, an HR manager reviewing leave needs to see both the person’s balance and the team’s schedule. I designed around these connected tasks, rather than treating profiles, requests, and calendars as separate features with no clear path between them."
   },
   {
     "type": "table",
@@ -92,6 +107,10 @@ export const hrStory: CaseBlock[] = [
     "text": "I worked on research, navigation, user flows, web UI, the design system, and handoff. I also guided the design team across 450+ screens."
   },
   {
+    "type": "paragraph",
+    "text": "At this scale, my role was also to keep decisions consistent across the product. A table, form, or status should be familiar when HR moves to another section. Shared components helped the team extend the system without redesigning every screen from the beginning."
+  },
+  {
     "type": "heading",
     "level": 2,
     "text": "Research that shaped the structure"
@@ -99,6 +118,10 @@ export const hrStory: CaseBlock[] = [
   {
     "type": "paragraph",
     "text": "I grouped feedback from 50 employees by product area and ranked improvements by priority and effort. Separately, HR managers tested how easily and quickly they could complete tasks."
+  },
+  {
+    "type": "paragraph",
+    "text": "I used the analysis board to connect feedback with specific product areas and possible changes. The HR requirements table added another level of detail: which pages, sections, and actions the system needed. Together, they helped turn a broad feature list into clear design tasks."
   },
   {
     "type": "gallery",
@@ -125,6 +148,10 @@ export const hrStory: CaseBlock[] = [
   {
     "type": "paragraph",
     "text": "I mapped company data, documents, recruitment, time tracking, and settings into clear navigation groups. This gave the team a shared structure before detailed UI work."
+  },
+  {
+    "type": "paragraph",
+    "text": "I worked from the main navigation to the detail of each section. The broad map helped explain the product to the team; the detailed structure showed where each page and action belonged. This gave us a common reference while building the UI."
   },
   {
     "type": "gallery",
@@ -173,6 +200,10 @@ export const hrStory: CaseBlock[] = [
     ]
   },
   {
+    "type": "paragraph",
+    "text": "In the interface, I placed the leave balance and contact details above the longer employee record. Tabs keep actions, requests, and reports close without showing all their content at once. This balances quick reference with access to the full employee history."
+  },
+  {
     "type": "decision",
     "title": "Show the team behind each request",
     "items": [
@@ -198,6 +229,10 @@ export const hrStory: CaseBlock[] = [
       "width": 9440,
       "height": 2048
     }
+  },
+  {
+    "type": "paragraph",
+    "text": "A list works well for reviewing individual requests, but it does not show overlapping dates as clearly as a timeline. I used both views for different decisions. The timeline gives team context, while the list keeps request details and review actions easy to scan."
   },
   {
     "type": "paragraph",
@@ -248,6 +283,14 @@ export const hrStory: CaseBlock[] = [
     ]
   },
   {
+    "type": "paragraph",
+    "text": "The role flow includes two choices that matter during setup: create a new role or copy a similar one, then add employees now or later. I made these options part of the flow so admins can prepare access rules before applying them to people."
+  },
+  {
+    "type": "paragraph",
+    "text": "The journey map also covers temporary access and role removal. These steps helped me consider the full life of a role, not only its creation. The goal was to make changes to access understandable before they affect an employee."
+  },
+  {
     "type": "heading",
     "level": 2,
     "text": "Scale the system, not just the screen count"
@@ -280,6 +323,14 @@ export const hrStory: CaseBlock[] = [
         "height": 2400
       }
     ]
+  },
+  {
+    "type": "paragraph",
+    "text": "A business process brings several pieces together: a document, a survey, and tasks assigned to people. Keeping those pieces reusable means the same template can support onboarding, a review, or another HR process. The process defines the order; the template defines the content."
+  },
+  {
+    "type": "paragraph",
+    "text": "The screens below show how this structure reaches other parts of the product. Template selection uses search and clear types; assets use structured fields; the knowledge base uses cards and filters. I kept shared patterns where they helped, while giving each task the layout it needed."
   },
   {
     "type": "image",
@@ -319,6 +370,10 @@ export const hrStory: CaseBlock[] = [
   {
     "type": "paragraph",
     "text": "Project measurements recorded 45% less time on routine HR administration and 7% less time on onboarding. My design work connected daily HR tasks through shared profiles, flows, and UI patterns."
+  },
+  {
+    "type": "paragraph",
+    "text": "These project outcomes are separate from the research with 50 employees and the count of 450+ screens. My contribution was the design structure behind the daily work: employee context, clear steps, and reusable patterns that connect the platform’s many areas."
   },
   {
     "type": "image",
