@@ -50,7 +50,7 @@ export const projects: Project[] = [
     ],
     "textOnly": true,
     "story": cleanlyStory,
-    "headline": "mobile platform connecting cleaning company managers, clients, and employees in one operational network",
+    "headline": "A cleaning service app that makes the path from an available job to a confirmed assignment clear.",
     "role": "UX/UI & Product Designer"
   },
   {
@@ -78,7 +78,7 @@ export const projects: Project[] = [
     "textOnly": true,
     "story": hrStory,
 
-    "headline": "Making a large HR platform work as one connected workspace",
+    "headline": "Connecting employee information and daily decisions across a large HR workspace.",
     "role": "UX/UI & Product Designer"
   },
   {
@@ -106,7 +106,7 @@ export const projects: Project[] = [
     },
     "textOnly": true,
     "story": fleetoStory,
-    "headline": "Turning fleet data into decisions operators can act on",
+    "headline": "A fleet management workspace linking live vehicles, trips, shifts, and the decisions around them.",
     "role": "UX/UI & Product Designer"
   },
   {
@@ -137,7 +137,7 @@ export const projects: Project[] = [
 
     "textOnly": true,
     "story": novaStory,
-    "headline": "Making everyday banking easier to navigate without hiding security"
+    "headline": "A mobile banking app built around quick payments, clear checks, and control over accounts."
   },
   {
     "slug": "fitness-app",
@@ -146,7 +146,7 @@ export const projects: Project[] = [
     "summary": "A mobile fitness companion connecting approachable workouts, daily activity, nutrition, and AI guidance around sustainable habits.",
     "textOnly": true,
     "story": steadyStory,
-    "headline": "Build a routine that feels possible to repeat",
+    "headline": "A fitness app that turns the choice of a workout into a clear next step.",
     "role": "UX/UI & Product Designer"
   }
 ];

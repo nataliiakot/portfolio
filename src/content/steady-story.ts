@@ -57,7 +57,7 @@ export const steadyStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "Choosing a workout can mean checking time, level, equipment, and goals at once. I focused on a clear starting point and enough detail to decide before starting."
+    "text": "Before a workout begins, there is already a decision to make. Does the session fit the time available? Is the level right? Is equipment needed? Steady is a fitness app designed to help people answer those questions and take a manageable next step."
   },
   {
     "type": "heading",
@@ -66,7 +66,7 @@ export const steadyStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "As the lead designer, I worked with developers and the project manager. I designed the navigation, workout flow, progress views, and UI system across home, workouts, AI coach, nutrition, and profile."
+    "text": "As the lead designer, I worked with developers and the project manager on navigation, the workout flow, progress views, and the UI system. I connected home, workouts, AI coach, nutrition, and profile around the daily routine."
   },
   {
     "type": "table",
@@ -95,40 +95,30 @@ export const steadyStory: CaseBlock[] = [
     ]
   },
   {
-    "type": "decision",
-    "title": "Offer a starting point",
-    "items": [
-      {
-        "label": "Hypothesis",
-        "text": "A suggested workout could make starting simpler than browsing the full library first."
-      },
-      {
-        "label": "What I changed",
-        "text": "I brought today’s activity, the current plan, and a suggested workout onto the home screen."
-      },
-      {
-        "label": "Design result",
-        "text": "Users have a clear next option while keeping the full workout library available."
-      }
-    ]
+    "type": "heading",
+    "level": 3,
+    "text": "Give today a starting point"
   },
   {
-    "type": "decision",
-    "title": "Explain the workout before it starts",
-    "items": [
-      {
-        "label": "Hypothesis",
-        "text": "Showing time, level, and equipment before Start could help users judge whether a session fits."
-      },
-      {
-        "label": "What I changed",
-        "text": "I placed these details, the exercise list, and technique previews before the Start Workout action."
-      },
-      {
-        "label": "Design result",
-        "text": "Users can review the session before committing to it, with exercise guidance nearby."
-      }
-    ]
+    "type": "paragraph",
+    "text": "A full workout library offers choice, but it also asks people to choose before they can begin. I expected a suggested session on the home screen to offer a simpler first step."
+  },
+  {
+    "type": "paragraph",
+    "text": "I brought today’s activity, the current plan, and a suggested workout together. The library stays available, while the main view gives someone a concrete option for today."
+  },
+  {
+    "type": "heading",
+    "level": 3,
+    "text": "Explain the commitment before Start"
+  },
+  {
+    "type": "paragraph",
+    "text": "A suggestion is only useful if the person can judge whether it fits. I placed duration, level, equipment, the exercise list, and technique previews before the Start Workout action."
+  },
+  {
+    "type": "paragraph",
+    "text": "My hypothesis was that seeing the session in advance would support a more informed choice. Progress and beginner labels keep the plan visible without hiding what the actual workout involves."
   },
   {
     "type": "image",
@@ -146,22 +136,17 @@ export const steadyStory: CaseBlock[] = [
     "text": "Keep guidance connected to the routine"
   },
   {
-    "type": "decision",
-    "title": "Give support its own place",
-    "items": [
-      {
-        "label": "Hypothesis",
-        "text": "Separate coach and nutrition views could support the routine without distracting from starting a workout."
-      },
-      {
-        "label": "What I changed",
-        "text": "I added coach topics, daily nutrition targets, and profile settings for goals and equipment."
-      },
-      {
-        "label": "Design result",
-        "text": "Guidance and preferences remain available while workout actions stay clear."
-      }
-    ]
+    "type": "heading",
+    "level": 3,
+    "text": "Support the routine without taking it over"
+  },
+  {
+    "type": "paragraph",
+    "text": "Coaching and nutrition can support a workout, but they also add choices. I gave each its own view so the main workout path could stay focused."
+  },
+  {
+    "type": "paragraph",
+    "text": "Coach topics provide a place for questions; nutrition shows daily targets and meals; the profile holds goals, equipment, and preferences. I expected these separate entry points to keep support accessible without crowding the next workout action."
   },
   {
     "type": "image",
@@ -175,20 +160,20 @@ export const steadyStory: CaseBlock[] = [
   {
     "type": "heading",
     "level": 2,
-    "text": "Make the next action stand out"
+    "text": "Use visual focus to support the next step"
   },
   {
     "type": "paragraph",
-    "text": "I used lime for key actions, selected options, and progress. Shared cards and navigation keep the five areas consistent."
+    "text": "I used lime for primary actions, selected options, and progress against dark surfaces. Repeated cards and navigation connect the five areas. The visual system supports the same priority as the flow: make the next action easy to recognize."
   },
   {
     "type": "heading",
     "level": 2,
-    "text": "Design result"
+    "text": "From choosing a session to following a routine"
   },
   {
     "type": "paragraph",
-    "text": "I delivered five connected areas with a clear path from choosing a workout to reviewing progress. Shared navigation and cards keep the experience consistent."
+    "text": "I designed a path from a suggested workout to preparation, activity, and progress, with supporting guidance nearby. My contribution was to connect those moments around a manageable next step, so the user can see what to do today and where to return tomorrow."
   },
   {
     "type": "image",

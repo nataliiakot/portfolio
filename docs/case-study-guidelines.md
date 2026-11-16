@@ -45,3 +45,7 @@ Show each opening metric in its own card (two side by side for Cleanly). Below t
 All UI text must be at least 14px, including metadata, metric notes, captions, and mobile navigation. Let content wrap and adapt the layout; do not shrink text below this minimum.
 
 The public site is English-only as requested on 16 November 2026; do not show language controls or apply saved Ukrainian preferences.
+
+## Storytelling revision (16 November 2026)
+
+Each case follows a concrete task: a cleaner waiting for job confirmation; HR reviewing leave with employee and team context; a dispatcher moving from location to trip details; a bank customer checking a payment; a fitness user choosing a session. Introduce the product in the opening line. Explain the tension, the designer’s choice, and what the interface enables. Use short connected paragraphs instead of repeating Hypothesis / What I changed / Design result cards. Keep hypotheses as expectations, preserve supplied evidence, and do not add measured outcomes. Cleanly and HR retain deeper research and reasoning; other cases remain shorter. Keep all supplied visuals in their established order and preserve existing Skills navigation anchors.

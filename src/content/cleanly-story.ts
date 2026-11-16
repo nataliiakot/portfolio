@@ -90,11 +90,11 @@ export const cleanlyStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "Cleaners need to find work and know when a job is confirmed. The business requires manager approval for new clients outside the cleaner’s network."
+    "text": "A cleaner finds a suitable job and sends a request. But can they start planning the visit? For an existing client, confirmation can be direct. For a new client outside their network, a manager must approve the relationship first."
   },
   {
     "type": "paragraph",
-    "text": "The challenge was to support two needs at once: let cleaners choose suitable jobs, and let the company check new client relationships. I treated these as different decisions instead of making every request follow the same approval route."
+    "text": "This business rule shaped the whole product. I needed to give cleaners freedom to choose work while keeping company approval in place. The key was to make a request, a review, and a confirmed job feel clearly different."
   },
   {
     "type": "heading",
@@ -103,11 +103,11 @@ export const cleanlyStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "As the lead designer, I worked with developers and the project manager. I designed the research, user flows, mobile screens, prototypes, and UI system. My main task was to make the approval process clear for cleaners, managers, and clients."
+    "text": "As the lead designer, I worked with developers and the project manager from research to handoff. I designed the flows, prototypes, mobile UI, and shared components, with a focus on the handover between cleaner, manager, and client."
   },
   {
     "type": "paragraph",
-    "text": "I worked through the full request journey, including the moments between the main screens. Sending a request, waiting for a reply, receiving a decision, and handling an error each needed a clear message and a useful next step."
+    "text": "I started with a simple question: after each action, does the person know what happens next? That question guided the approval flow, waiting states, notifications, and job details."
   },
   {
     "type": "heading",
@@ -116,7 +116,7 @@ export const cleanlyStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "I interviewed three cleaners and reviewed four competing apps. The research and role maps helped me balance independent job search with company control over new clients."
+    "text": "I interviewed three cleaners and reviewed four competing apps. I used this work to explore how people find jobs, assess the details, and move toward confirmation. Role maps helped me consider the manager and client around that journey."
   },
   {
     "type": "table",
@@ -146,11 +146,11 @@ export const cleanlyStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "The interviews covered cleaners. I used the role maps to include manager and client needs without treating them as extra interview findings. This kept the cleaner’s daily task central while still accounting for the approval and communication steps around it."
+    "text": "Only cleaners took part in the interviews. Manager and client needs came from the role maps and business rules. This distinction mattered: one person could request the work, while another still had to confirm it."
   },
   {
     "type": "paragraph",
-    "text": "Swept, TaskTor, Clean Scheduler, and KleanFlo informed my review of scheduling, job lists, and client records."
+    "text": "I reviewed Swept, TaskTor, Clean Scheduler, and KleanFlo for scheduling, job lists, and client records. These patterns offered a starting point, but Cleanly needed a clearer answer to a different question: when does an available job become your job?"
   },
   {
     "type": "evidence",
@@ -164,16 +164,16 @@ export const cleanlyStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "The review helped me separate common service-management patterns from Cleanly’s main design task. Lists and schedules organize work, but this product also needed to explain how a cleaner’s interest becomes a confirmed job. I used that question to guide the flow."
+    "text": "That became the main thread of my design. I mapped the decisions first, before choosing how the screens should look."
   },
   {
     "type": "heading",
     "level": 2,
-    "text": "Two clear approval paths"
+    "text": "One request, two routes to confirmation"
   },
   {
     "type": "paragraph",
-    "text": "I mapped direct confirmation for existing network clients and manager review for new clients. Wireframes connected each step with its status, notification, and next action."
+    "text": "I split the journey by client relationship. Existing network clients followed direct confirmation; new clients went through manager review. Both routes needed a visible owner for the next decision."
   },
   {
     "type": "evidence",
@@ -187,7 +187,7 @@ export const cleanlyStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "I used wireframes to connect the cleaner’s actions with the manager’s response. The key check was whether each role could understand the current state and the next step. This helped keep the business rule clear before adding visual detail."
+    "text": "In the wireframes, I connected what the cleaner sees with what the manager needs to review. A change on one side had to make sense on the other, including the notification that brings someone back to the request."
   },
   {
     "type": "evidence",
@@ -200,22 +200,17 @@ export const cleanlyStory: CaseBlock[] = [
     }
   },
   {
-    "type": "decision",
-    "title": "Keep existing jobs moving",
-    "items": [
-      {
-        "label": "Hypothesis",
-        "text": "Separate approval paths could keep existing jobs simple while meeting the business rule for new clients."
-      },
-      {
-        "label": "What I changed",
-        "text": "I designed direct client confirmation and a separate manager review for clients outside the network."
-      },
-      {
-        "label": "Design result",
-        "text": "Each request shows who needs to confirm it before the cleaner is assigned."
-      }
-    ]
+    "type": "heading",
+    "level": 3,
+    "text": "Keep familiar work simple"
+  },
+  {
+    "type": "paragraph",
+    "text": "I expected separate routes to make existing client jobs easier to confirm without weakening the rule for new clients. A single approval path would make these two situations look the same."
+  },
+  {
+    "type": "paragraph",
+    "text": "I designed direct confirmation for one route and a focused manager review for the other. The cleaner can see who must respond before the job becomes an assignment."
   },
   {
     "type": "image",
@@ -228,25 +223,20 @@ export const cleanlyStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "The important boundary is between showing interest and receiving permission to work with a new client. I kept that boundary visible: the cleaner can send a request, but the interface does not present it as an assigned job before the required confirmation."
+    "text": "The review screen brings the cleaner, client, and job into one decision. It gives the manager the context for approval while keeping the request separate from the cleaner’s confirmed work."
   },
   {
-    "type": "decision",
-    "title": "Make waiting clear",
-    "items": [
-      {
-        "label": "Hypothesis",
-        "text": "A clear pending state could help cleaners understand that sending a request does not confirm a job."
-      },
-      {
-        "label": "What I changed",
-        "text": "I added pending, approved, and error states, with notifications and a retry action."
-      },
-      {
-        "label": "Design result",
-        "text": "The interface separates a sent request from an approved job and shows the next step."
-      }
-    ]
+    "type": "heading",
+    "level": 3,
+    "text": "Waiting is part of the experience"
+  },
+  {
+    "type": "paragraph",
+    "text": "Sending a request is progress, but it is not confirmation. I expected a clear pending state to make that difference easier to understand."
+  },
+  {
+    "type": "paragraph",
+    "text": "I designed pending, approved, and error states with relevant notifications and next actions. The interface explains whether the user needs to wait, continue, or try again."
   },
   {
     "type": "image",
@@ -259,25 +249,20 @@ export const cleanlyStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "I also separated a failed request from a rejected one. A sending error needs a retry action; a manager’s decision needs a clear status update. Using different messages helps users understand what happened without guessing whether the job is still available."
+    "text": "I also kept a sending error separate from a manager’s rejection. One needs a retry; the other needs a decision update. Treating both as a generic failure would leave the cleaner unsure what happened."
   },
   {
-    "type": "decision",
-    "title": "Help cleaners assess a job",
-    "items": [
-      {
-        "label": "Hypothesis",
-        "text": "Showing key details together could support a better-informed decision before accepting work."
-      },
-      {
-        "label": "What I changed",
-        "text": "I grouped price, time, address, access notes, and client details on the job screen."
-      },
-      {
-        "label": "Design result",
-        "text": "Cleaners can review the job and return to the same details during the assignment."
-      }
-    ]
+    "type": "heading",
+    "level": 3,
+    "text": "Help the cleaner decide before the visit"
+  },
+  {
+    "type": "paragraph",
+    "text": "Approval only solves part of the journey. Before requesting a job, a cleaner needs to judge whether the work fits their time and expectations."
+  },
+  {
+    "type": "paragraph",
+    "text": "I brought price, timing, address, access notes, and client details onto one job screen. My hypothesis was that keeping this context together would support a clearer decision and remain useful after confirmation."
   },
   {
     "type": "image",
@@ -290,16 +275,16 @@ export const cleanlyStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "The detail screen supports the decision before the visit as well as the work itself. Price and timing help assess the request; the address and access notes remain useful after confirmation. I kept both groups in the same place rather than splitting them across the flow."
+    "text": "The same screen serves two moments: deciding whether to take the job and preparing to do it. Details stay in place as the request moves forward, so the cleaner can return to them before the visit."
   },
   {
     "type": "heading",
     "level": 2,
-    "text": "A clear next action"
+    "text": "Make confirmed work easy to recognize"
   },
   {
     "type": "paragraph",
-    "text": "I separated new requests from active jobs and added client verification filters. Job history shows who accepted or approved the work."
+    "text": "I separated new requests from active jobs, added client verification filters, and kept acceptance and approval history visible. The aim was to show which jobs still need a response and which are ready to plan."
   },
   {
     "type": "image",
@@ -317,24 +302,24 @@ export const cleanlyStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "I linked chat, photos, and calls to the job, so access questions and cleaning notes stay with the assignment."
+    "text": "Once the job is confirmed, questions can still come up. I connected chat, photos, and calls to the assignment so the cleaner can discuss access or cleaning notes without losing the job context."
   },
   {
     "type": "paragraph",
-    "text": "This keeps communication linked to the reason for the conversation. A cleaner can check the request, ask a question, and return to the job details. The aim was to make coordination part of the service flow rather than a separate task."
+    "text": "This completes the same journey rather than adding a separate messaging feature: find the work, understand the decision, prepare for the visit, and contact the person involved."
   },
   {
     "type": "heading",
     "level": 2,
-    "text": "A clear visual system"
+    "text": "Give the whole journey one visual language"
   },
   {
     "type": "paragraph",
-    "text": "I used blue for actions and status, clear cards for job details, and glass-inspired effects to connect the UI with cleaning."
+    "text": "The flow crosses lists, job details, approval screens, and chat. I reused card layouts, buttons, spacing, and status patterns so each step felt part of the same service."
   },
   {
     "type": "paragraph",
-    "text": "The visual system also had to work across lists, job cards, approval screens, and chat. I reused spacing, buttons, and status patterns so each step felt connected. Decorative effects support the service theme, while the information stays easy to read."
+    "text": "Blue supports actions and status, while glass-inspired details connect the visual direction with cleaning. I kept those effects secondary to the information people need to act."
   },
   {
     "type": "evidence",
@@ -348,7 +333,7 @@ export const cleanlyStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "The moodboard contains external references used during visual exploration."
+    "text": "The moodboard records external references from the visual exploration. The annotated flow below brings that direction back to the actual request journey."
   },
   {
     "type": "evidence",
@@ -363,15 +348,15 @@ export const cleanlyStory: CaseBlock[] = [
   {
     "type": "heading",
     "level": 2,
-    "text": "Result"
+    "text": "From available work to a clear next step"
   },
   {
     "type": "paragraph",
-    "text": "The project comparison reported 30% less time to find a job and receive confirmation than in other apps. This result applies to that task. My contribution was a connected flow with clear approval rules and next steps."
+    "text": "The project comparison reported faster job discovery and confirmation than in other apps; the figure at the start applies to that specific task. It does not measure the cleaner’s whole working day."
   },
   {
     "type": "paragraph",
-    "text": "The wider design result is a shared request flow for three roles. Cleaners can assess work, managers can review new clients, and clients can follow the request and contact the cleaner. The approval rule remains in place, with a clear state for each step."
+    "text": "My contribution was to connect the decisions around the job. Cleaners can assess work, managers can review new clients, and clients can follow the request. The approval rule stays in place, with a clear next step for each person."
   },
   {
     "type": "image",
