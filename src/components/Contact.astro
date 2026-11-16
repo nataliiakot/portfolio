@@ -1,11 +1,10 @@
 ---
-import Emoji from './Emoji.astro';
 import { profile, contactFaq } from '../content/site';
 interface Props { showFaq?: boolean; }
 const { showFaq = true } = Astro.props;
 ---
 <section class="contact" id="contact" aria-labelledby="contact-title">
-  <div class="contact-copy"><h2 id="contact-title"><Emoji symbol="💬" /> <span>Have a product challenge, a project idea, or a role in mind? Let’s talk</span></h2>
+  <div class="contact-copy"><h2 id="contact-title"><span>Have a product challenge, a project idea, or a role in mind? Let’s talk</span></h2>
   <div class="actions contact-actions"><a class="button primary" href={profile.cvPath} target="_blank" rel="noopener noreferrer">CV<span class="sr-only"> (opens in a new tab)</span></a><a class="button" href={profile.telegram} target="_blank" rel="noopener noreferrer" data-cursor="Telegram" data-cursor-color="#ccecff">Telegram<span class="sr-only"> (opens in a new tab)</span></a></div>
   </div>{showFaq && <div class="contact-faq">
     {contactFaq.map(item => <details name="contact-faq"><summary>{item.question}</summary><p>{item.answer}</p></details>)}

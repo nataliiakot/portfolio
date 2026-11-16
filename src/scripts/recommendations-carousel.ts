@@ -14,10 +14,11 @@ export function initRecommendationsCarousel(): void {
   let hovered = false;
   let keyboardFocus = false;
   let touching = false;
+  let dialogOpen = false;
   let touchTimer = 0;
 
   function canRun() {
-    return visible && !document.hidden && !reducedMotion.matches && !hovered && !keyboardFocus && !touching;
+    return visible && !document.hidden && !reducedMotion.matches && !hovered && !keyboardFocus && !touching && !dialogOpen;
   }
   function tick(time: number) {
     frame = 0;
@@ -47,7 +48,48 @@ export function initRecommendationsCarousel(): void {
   function measure() {
     step = (track!.firstElementChild?.getBoundingClientRect().width ?? 0) + parseFloat(getComputedStyle(track!).columnGap);
     offset = viewport!.scrollLeft;
+    const heights = [...track!.querySelectorAll<HTMLElement>('.recommendation-quote')].map(quote => {
+      const first = quote.firstElementChild?.getBoundingClientRect();
+      const last = quote.lastElementChild?.getBoundingClientRect();
+      return first && last ? last.bottom - first.top : 0;
+    }).filter(height => height > 0);
+    if (heights.length) {
+      const previewHeight = Math.ceil(Math.min(...heights));
+      viewport!.style.setProperty('--recommendation-preview-height', `${previewHeight}px`);
+      track!.querySelectorAll<HTMLElement>('.recommendation-quote').forEach(quote => {
+        quote.classList.toggle('is-truncated', quote.scrollHeight > previewHeight + 1);
+      });
+    }
   }
+  const dialog = document.querySelector<HTMLDialogElement>('#recommendation-dialog');
+  const fullQuote = dialog?.querySelector<HTMLElement>('.recommendation-full-quote');
+  let trigger: HTMLButtonElement | null = null;
+  track.addEventListener('click', event => {
+    const card = event.target instanceof Element ? event.target.closest<HTMLButtonElement>('.recommendation-card') : null;
+    if (!card || !dialog || !fullQuote) return;
+    trigger = card;
+    fullQuote.replaceChildren(...[...card.querySelectorAll('.recommendation-paragraph')].map(source => {
+      const paragraph = document.createElement('p');
+      paragraph.textContent = source.textContent;
+      return paragraph;
+    }));
+    dialogOpen = true;
+    sync();
+    dialog.showModal();
+  }, options);
+  dialog?.querySelector('.recommendation-close')?.addEventListener('click', () => dialog.close(), options);
+  let backdropPress = false;
+  dialog?.addEventListener('pointerdown', event => { backdropPress = event.target === dialog; }, options);
+  dialog?.addEventListener('click', event => {
+    if (event.target === dialog && backdropPress) dialog.close();
+    backdropPress = false;
+  }, options);
+  dialog?.addEventListener('close', () => {
+    dialogOpen = false;
+    trigger?.focus({ preventScroll: true });
+    sync();
+  }, options);
+  void document.fonts.ready.then(() => { if (!controller.signal.aborted) measure(); });
   const resize = new ResizeObserver(measure);
   resize.observe(viewport);
   const intersection = new IntersectionObserver(([entry]) => { visible = entry?.isIntersecting ?? false; sync(); });
