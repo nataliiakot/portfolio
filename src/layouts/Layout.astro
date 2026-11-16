@@ -28,5 +28,3 @@ const social = Astro.site ? new URL('/social.jpg', Astro.site) : undefined;
   </head>
   <body id="top" class:list={{ 'home-page': Astro.url.pathname === '/' }}><a class="skip-link" href="#main">Skip to content</a><Header /><main id="main"><slot /></main><slot name="closing"><Footer /></slot><ContextCursor /></body>
 </html>
-
-<script>import '../scripts/language';</script>

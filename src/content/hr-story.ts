@@ -100,11 +100,11 @@ export const hrStory: CaseBlock[] = [
   {
     "type": "heading",
     "level": 2,
-    "text": "My role"
+    "text": "My role and design focus"
   },
   {
     "type": "paragraph",
-    "text": "I worked on research, navigation, user flows, web UI, the design system, and handoff. I also guided the design team across 450+ screens."
+    "text": "As the lead designer, I worked with developers and the project manager. I worked on research, navigation, user flows, web UI, the design system, and handoff. I also guided the design team across 450+ screens."
   },
   {
     "type": "paragraph",
@@ -345,27 +345,6 @@ export const hrStory: CaseBlock[] = [
     "type": "heading",
     "level": 2,
     "text": "Result"
-  },
-  {
-    "type": "metrics",
-    "title": "The case at a glance",
-    "items": [
-      {
-        "value": "−45%",
-        "label": "Routine HR administration time",
-        "detail": "Project measurement for routine HR tasks."
-      },
-      {
-        "value": "−7%",
-        "label": "Employee onboarding time",
-        "detail": "Project measurement for employee onboarding."
-      },
-      {
-        "value": "450+",
-        "label": "High-fidelity screens",
-        "detail": "A shared UI system across the HR platform."
-      }
-    ]
   },
   {
     "type": "paragraph",

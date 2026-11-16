@@ -38,6 +38,11 @@
     font-family: inherit; font-size: var(--case-section-title); font-weight: 700;
     line-height: 1.3; letter-spacing: -.025em; color: #17242b; text-wrap: pretty;
   }
+  .case-narrative > h2.case-problem-heading { color: #7b2941; }
+  .case-research-table thead .case-need { color: #7b2941; background: #fbf1f4; }
+  .case-research-table thead .case-response { color: #1d5345; background: #edf6f1; }
+  .case-research-table td.case-need .case-cell-label { color: #7b2941; }
+  .case-research-table td.case-response .case-cell-label { color: #1d5345; }
   .case-narrative > h3 {
     margin-top: 2rem; margin-bottom: 1rem;
     font-size: var(--case-subtitle); font-weight: 650;

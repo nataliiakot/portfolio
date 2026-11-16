@@ -68,11 +68,11 @@ export const novaStory: CaseBlock[] = [
   {
     "type": "heading",
     "level": 2,
-    "text": "My role"
+    "text": "My role and design focus"
   },
   {
     "type": "paragraph",
-    "text": "I designed the mobile experience from research and wireframes to final screens and reusable components for adults aged 18–50."
+    "text": "As the lead designer, I worked with developers and the project manager. I designed the mobile experience from research and wireframes to final screens and reusable components for adults aged 18–50."
   },
   {
     "type": "table",

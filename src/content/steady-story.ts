@@ -62,11 +62,11 @@ export const steadyStory: CaseBlock[] = [
   {
     "type": "heading",
     "level": 2,
-    "text": "My role"
+    "text": "My role and design focus"
   },
   {
     "type": "paragraph",
-    "text": "I designed the navigation, workout flow, progress views, and UI system across home, workouts, AI coach, nutrition, and profile."
+    "text": "As the lead designer, I worked with developers and the project manager. I designed the navigation, workout flow, progress views, and UI system across home, workouts, AI coach, nutrition, and profile."
   },
   {
     "type": "table",

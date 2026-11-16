@@ -63,11 +63,11 @@ export const fleetoStory: CaseBlock[] = [
   {
     "type": "heading",
     "level": 2,
-    "text": "My role"
+    "text": "My role and design focus"
   },
   {
     "type": "paragraph",
-    "text": "I designed the navigation, task flows, dashboards, tables, and reusable UI. I also guided the design team and prepared screens for development."
+    "text": "As the lead designer, I worked with developers and the project manager. I designed the navigation, task flows, dashboards, tables, and reusable UI. I also guided the design team and prepared screens for development."
   },
   {
     "type": "table",

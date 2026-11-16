@@ -97,34 +97,13 @@ export const cleanlyStory: CaseBlock[] = [
     "text": "The challenge was to support two needs at once: let cleaners choose suitable jobs, and let the company check new client relationships. I treated these as different decisions instead of making every request follow the same approval route."
   },
   {
-    "type": "metrics",
-    "title": "The case at a glance",
-    "items": [
-      {
-        "value": "3",
-        "label": "Cleaner interviews",
-        "detail": "I interviewed three cleaners."
-      },
-      {
-        "value": "4",
-        "label": "Products reviewed",
-        "detail": "I reviewed how four apps handle jobs and client records."
-      },
-      {
-        "value": "−30%",
-        "label": "Time to find and confirm a job",
-        "detail": "Reported comparison with other apps for finding and confirming a job."
-      }
-    ]
-  },
-  {
     "type": "heading",
     "level": 2,
     "text": "My role and design focus"
   },
   {
     "type": "paragraph",
-    "text": "I designed the research, user flows, mobile screens, prototypes, and UI system. My main task was to make the approval process clear for cleaners, managers, and clients."
+    "text": "As the lead designer, I worked with developers and the project manager. I designed the research, user flows, mobile screens, prototypes, and UI system. My main task was to make the approval process clear for cleaners, managers, and clients."
   },
   {
     "type": "paragraph",

@@ -1,6 +1,6 @@
 # Nataliia Kot — Portfolio
 
-Bilingual English/Ukrainian UX/UI & Product Designer portfolio. Built with Astro static output, strict TypeScript, SCSS, and GSAP; fonts and project imagery are hosted locally. Includes Cleanly, HR System, Fleeto, Nova Bank, and Steady case studies.
+English-language UX/UI & Product Designer portfolio. Built with Astro static output, strict TypeScript, SCSS, and GSAP; fonts and project imagery are hosted locally. Includes Cleanly, HR System, Fleeto, Nova Bank, and Steady case studies.
 
 ## Development
 

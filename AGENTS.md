@@ -62,7 +62,7 @@ Preserve this stack. Add frameworks, UI libraries, server services, and dependen
 - Preserve strict typing; do not use `any` or disable checks to hide errors.
 - Keep components and modules small with clear responsibilities. Avoid abstractions without a concrete need.
 - Do not invent the designer’s experience, clients, testimonials, results, or contact details. Clearly identify demonstration content.
-- Preserve language and content outside the task’s scope. Support English and Ukrainian using the header language toggle. Keep translations, metadata, accessibility labels, and the document language in sync. English is the default and explicit preferences persist.
+- Preserve language and content outside the task’s scope. The public site is English-only as requested on 16 November 2026. Do not show language controls or apply saved Ukrainian preferences. Keep metadata, accessibility labels, and the document language in English.
 - Never store secrets in code, documentation, or client-exposed environment variables.
 - Do not overwrite unrelated changes or update dependencies unnecessarily. Keep the lockfile consistent with `package.json`.
 
