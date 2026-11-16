@@ -1,3 +1,4 @@
+import { hrTranslations } from './hr-story.ts';
 import { highlightTranslations } from './case-highlights';
 import { novaTranslations } from './nova-story.ts';
 import { steadyTranslations } from './steady-story.ts';
@@ -189,5 +190,6 @@ export const translations: Record<string, string> = {
 ,
 ...novaTranslations,
 ...steadyTranslations,
-...highlightTranslations
+...highlightTranslations,
+...hrTranslations
 };

@@ -28,3 +28,12 @@ Established with the user on 5 November 2026. Cleanly is the accepted reference.
 ## Verification
 
 Run `npm run build` after implementation, plus relevant existing tests. Inspect desktop and mobile, both languages, metric layout, image corners, and full-screen closing behavior. Do not claim a measured performance or outcome without evidence.
+
+## Case writing standard (16 November 2026)
+
+- Use clear English around B2 level: short sentences, familiar words, and active first-person verbs.
+- Lead with the designer’s contribution and supported outcomes. Keep scope counts separate from measured results.
+- Explain selected decisions with a short hypothesis, what I changed, and the design result. A hypothesis is an expected effect, not evidence of a completed test.
+- Keep paragraphs to one point, usually 20–40 words. Remove repeated feature lists and descriptions that the image already explains.
+- Preserve research facts and business rules. Do not claim an improvement was measured unless evidence supports it.
+- Keep Ukrainian copy aligned and end each case with its existing product images.

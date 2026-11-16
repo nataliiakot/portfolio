@@ -1,18 +1,45 @@
 import type { CaseBlock } from './projects';
-export const steadyTranslations: Record<string,string> = {
-  "Choosing today’s session": "Вибір тренування на сьогодні",
-  "Decide whether a workout fits the available time and level.": "Зрозуміти, чи підходить тренування за часом і рівнем.",
+
+// Hypotheses explain the design intent; they are not claims of tested effects.
+export const steadyTranslations: Record<string, string> = {
   "A suggested session with beginner labels, duration, and a starter-plan entry point.": "Запропоноване тренування з позначкою рівня, тривалістю та переходом до стартової програми.",
-  "Preparing to start": "Підготовка до старту",
-  "Know what is involved before committing to a workout.": "Знати склад тренування перед початком.",
-  "Workout details with duration, equipment, exercise count, and technique previews.": "Деталі з тривалістю, обладнанням, кількістю вправ і підказками техніки.",
+  "A suggested workout could make starting simpler than browsing the full library first.": "Запропоноване тренування могло спростити старт порівняно з переглядом усієї бібліотеки.",
+  "Choosing a workout can mean checking time, level, equipment, and goals at once. I focused on a clear starting point and enough detail to decide before starting.": "Вибір тренування часто вимагає одночасно перевірити час, рівень, обладнання й цілі. Я зосередилася на зрозумілій відправній точці й деталях для рішення перед стартом.",
+  "Choosing today’s session": "Вибір тренування на сьогодні",
   "Continuing the routine": "Продовження рутини",
+  "Core need": "Ключова потреба",
+  "Decide whether a workout fits the available time and level.": "Зрозуміти, чи підходить тренування за часом і рівнем.",
+  "Design response": "Відповідь у дизайні",
+  "Design result": "Результат дизайну",
+  "Explain the workout before it starts": "Пояснити тренування до старту",
+  "Give support its own place": "Дати підтримці окреме місце",
+  "Guidance and preferences remain available while workout actions stay clear.": "Підтримка й уподобання залишаються доступними, а дії тренування — зрозумілими.",
+  "Hypothesis": "Гіпотеза",
+  "I added coach topics, daily nutrition targets, and profile settings for goals and equipment.": "Я додала теми для тренера, щоденні цілі харчування й налаштування цілей та обладнання в профілі.",
+  "I brought today’s activity, the current plan, and a suggested workout onto the home screen.": "Я об’єднала активність дня, поточну програму й запропоноване тренування на головному екрані.",
+  "I delivered five connected areas with a clear path from choosing a workout to reviewing progress. Shared navigation and cards keep the experience consistent.": "Я створила п’ять пов’язаних розділів зі зрозумілим шляхом від вибору тренування до перегляду прогресу. Спільні навігація й картки зберігають узгоджений досвід.",
+  "I designed the navigation, workout flow, progress views, and UI system across home, workouts, AI coach, nutrition, and profile.": "Я спроєктувала навігацію, сценарій тренування, перегляд прогресу й UI-систему для головної, тренувань, ШІ-тренера, харчування й профілю.",
+  "I placed these details, the exercise list, and technique previews before the Start Workout action.": "Я розмістила ці деталі, список вправ і підказки техніки перед кнопкою Start Workout.",
+  "I used lime for key actions, selected options, and progress. Shared cards and navigation keep the five areas consistent.": "Я використала лаймовий для головних дій, вибраних опцій і прогресу. Спільні картки й навігація об’єднують п’ять розділів.",
+  "Keep guidance connected to the routine": "Пов’язати підтримку зі щоденною рутиною",
   "Keep progress, preferences, and supporting guidance accessible.": "Мати доступ до прогресу, уподобань і додаткової підтримки.",
-  "Visible plan progress, a profile for goals and equipment, and dedicated nutrition and coach views.": "Видимий прогрес програми, профіль цілей та обладнання, окремі розділи харчування й тренера.",
+  "Know what is involved before committing to a workout.": "Знати склад тренування перед початком.",
+  "Make the next action stand out": "Виділити наступну дію",
+  "My role": "Моя роль",
+  "Offer a starting point": "Дати відправну точку",
   "One routine, three moments of decision": "Одна рутина — три моменти вибору",
+  "Preparing to start": "Підготовка до старту",
+  "Separate coach and nutrition views could support the routine without distracting from starting a workout.": "Окремі розділи тренера й харчування могли підтримувати рутину, не відволікаючи від старту тренування.",
+  "Showing time, level, and equipment before Start could help users judge whether a session fits.": "Час, рівень і обладнання перед стартом могли допомогти оцінити, чи підходить тренування.",
+  "The problem": "Проблема",
   "User context": "Контекст користувача",
-  "The opening home screen brings today’s activity, the current plan, and a suggested workout together. The aim is to offer a starting point before asking the user to browse the full workout library.": "Головний екран на початку кейсу поєднує активність дня, поточну програму й запропоноване тренування. Мета — дати відправну точку до того, як користувач почне переглядати всю бібліотеку."
+  "Users can review the session before committing to it, with exercise guidance nearby.": "Користувачі можуть оцінити тренування перед стартом і бачити підказки до вправ поруч.",
+  "Users have a clear next option while keeping the full workout library available.": "Користувачі мають зрозумілий наступний варіант і водночас доступ до всієї бібліотеки.",
+  "Visible plan progress, a profile for goals and equipment, and dedicated nutrition and coach views.": "Видимий прогрес програми, профіль цілей та обладнання, окремі розділи харчування й тренера.",
+  "What I changed": "Що я змінила",
+  "Workout details with duration, equipment, exercise count, and technique previews.": "Деталі з тривалістю, обладнанням, кількістю вправ і підказками техніки."
 };
+
 export const steadyStory: CaseBlock[] = [
   {
     "type": "image",
@@ -26,38 +53,20 @@ export const steadyStory: CaseBlock[] = [
   {
     "type": "heading",
     "level": 2,
-    "text": "The idea behind Steady"
+    "text": "The problem"
   },
   {
     "type": "paragraph",
-    "text": "Steady is a mobile fitness companion built around consistency. Workouts, daily activity, nutrition, and an AI coach share one workspace, helping the user move from deciding what to do to taking a manageable next step. The name reflects the direction of the experience: a routine that can be repeated, adjusted, and continued."
-  },
-  {
-    "type": "paragraph",
-    "text": "The product direction is simple: make starting clear, make progress visible, and keep the next session approachable.",
-    "emphasis": true
+    "text": "Choosing a workout can mean checking time, level, equipment, and goals at once. I focused on a clear starting point and enough detail to decide before starting."
   },
   {
     "type": "heading",
     "level": 2,
-    "text": "The design problem"
+    "text": "My role"
   },
   {
     "type": "paragraph",
-    "text": "A fitness experience asks people to make several decisions at once: which workout to choose, whether it matches their level, how long it takes, and how it fits with nutrition and activity. If those decisions arrive without a clear hierarchy, the planning can become more demanding than the first action."
-  },
-  {
-    "type": "paragraph",
-    "text": "I framed the interface around three questions: What should I do today? What will this session involve? How does it connect to my routine? These questions set the priorities for the home screen, workout details, and supporting guidance."
-  },
-  {
-    "type": "heading",
-    "level": 2,
-    "text": "My role as UX/UI & Product Designer"
-  },
-  {
-    "type": "paragraph",
-    "text": "As the UX/UI & Product Designer, I owned the design direction and the relationship between the core screens. My focus was the information hierarchy, navigation, workout discovery, progress presentation, and a consistent visual system across home, workouts, the AI coach, nutrition, and profile."
+    "text": "I designed the navigation, workout flow, progress views, and UI system across home, workouts, AI coach, nutrition, and profile."
   },
   {
     "type": "table",
@@ -86,30 +95,40 @@ export const steadyStory: CaseBlock[] = [
     ]
   },
   {
-    "type": "heading",
-    "level": 2,
-    "text": "A daily loop rather than disconnected features"
+    "type": "decision",
+    "title": "Offer a starting point",
+    "items": [
+      {
+        "label": "Hypothesis",
+        "text": "A suggested workout could make starting simpler than browsing the full library first."
+      },
+      {
+        "label": "What I changed",
+        "text": "I brought today’s activity, the current plan, and a suggested workout onto the home screen."
+      },
+      {
+        "label": "Design result",
+        "text": "Users have a clear next option while keeping the full workout library available."
+      }
+    ]
   },
   {
-    "type": "paragraph",
-    "text": "The opening home screen brings today’s activity, the current plan, and a suggested workout together. The aim is to offer a starting point before asking the user to browse the full workout library."
-  },
-  {
-    "type": "paragraph",
-    "text": "The home screen gives daily activity and a suggested workout a shared context. It offers a starting point without requiring the user to explore every section first. Navigation keeps workouts, guidance, nutrition, and profile available without giving every option equal visual weight."
-  },
-  {
-    "type": "heading",
-    "level": 2,
-    "text": "Explain the commitment before the start"
-  },
-  {
-    "type": "paragraph",
-    "text": "Workout discovery highlights a starter plan, progress, and beginner-oriented categories. The details screen brings together duration, level, equipment, exercise count, and the routine before the primary Start Workout action. The user can judge whether the session fits the time and resources available."
-  },
-  {
-    "type": "paragraph",
-    "text": "This hierarchy makes the decision concrete: first understand the session, then commit to it. Supporting technique cues stay with the relevant exercise rather than competing with the overall plan."
+    "type": "decision",
+    "title": "Explain the workout before it starts",
+    "items": [
+      {
+        "label": "Hypothesis",
+        "text": "Showing time, level, and equipment before Start could help users judge whether a session fits."
+      },
+      {
+        "label": "What I changed",
+        "text": "I placed these details, the exercise list, and technique previews before the Start Workout action."
+      },
+      {
+        "label": "Design result",
+        "text": "Users can review the session before committing to it, with exercise guidance nearby."
+      }
+    ]
   },
   {
     "type": "image",
@@ -127,12 +146,22 @@ export const steadyStory: CaseBlock[] = [
     "text": "Keep guidance connected to the routine"
   },
   {
-    "type": "paragraph",
-    "text": "The AI coach is presented as a place for questions about workouts and nutrition. Suggested topics make the entry point specific, while the conversation remains separate from the primary workout action. This gives guidance a clear place without turning every screen into a chat interface."
-  },
-  {
-    "type": "paragraph",
-    "text": "Nutrition shows the daily calorie target, macronutrients, and planned meals together. The profile holds goals, equipment, frequency, and preferences. These views keep the user’s broader routine available alongside individual sessions."
+    "type": "decision",
+    "title": "Give support its own place",
+    "items": [
+      {
+        "label": "Hypothesis",
+        "text": "Separate coach and nutrition views could support the routine without distracting from starting a workout."
+      },
+      {
+        "label": "What I changed",
+        "text": "I added coach topics, daily nutrition targets, and profile settings for goals and equipment."
+      },
+      {
+        "label": "Design result",
+        "text": "Guidance and preferences remain available while workout actions stay clear."
+      }
+    ]
   },
   {
     "type": "image",
@@ -146,29 +175,20 @@ export const steadyStory: CaseBlock[] = [
   {
     "type": "heading",
     "level": 2,
-    "text": "Use contrast to direct attention"
+    "text": "Make the next action stand out"
   },
   {
     "type": "paragraph",
-    "text": "Dark surfaces give the content a stable base. Lime identifies primary actions, selected options, and progress; white carries the main content, while quieter text supports secondary detail. Reusable cards, navigation, and action patterns connect the different sections into one system."
-  },
-  {
-    "type": "paragraph",
-    "text": "The same accent does not need to make every element prominent. Its job is to help the user distinguish the next action from the information that explains it.",
-    "emphasis": true
+    "text": "I used lime for key actions, selected options, and progress. Shared cards and navigation keep the five areas consistent."
   },
   {
     "type": "heading",
     "level": 2,
-    "text": "Design outcome"
+    "text": "Design result"
   },
   {
     "type": "paragraph",
-    "text": "Steady brings the daily overview, workout selection, session details, guidance, nutrition, and profile into a connected mobile experience. The design result is a clear route from intention to action, supported by visible progress and consistent interaction patterns."
-  },
-  {
-    "type": "paragraph",
-    "text": "The central principle is to make the routine feel repeatable. Each screen should answer the immediate question and make the next step easier to understand."
+    "text": "I delivered five connected areas with a clear path from choosing a workout to reviewing progress. Shared navigation and cards keep the experience consistent."
   },
   {
     "type": "image",

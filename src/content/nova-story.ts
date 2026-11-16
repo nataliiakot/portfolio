@@ -1,44 +1,51 @@
 import type { CaseBlock } from './projects';
-export const novaTranslations: Record<string,string> = {
-"As UX/UI & Product Designer, I owned the end-to-end mobile experience, from research and wireframes to high-fidelity UI and design system components. The product was designed for adults aged 18–50 who use mobile banking for personal finances, payments, transfers, and account management.": "Як UX/UI & Product Designer я відповідала за весь мобільний досвід — від досліджень і вайрфреймів до деталізованого UI та компонентів дизайн-системи. Продукт проєктувався для дорослих віком 18–50 років, які користуються мобільним банкінгом для особистих фінансів, платежів, переказів і керування рахунками.",
-"Research priorities that shaped the interface": "Дослідницькі пріоритети, що сформували інтерфейс",
-"I reviewed Monobank, Revolut, and Wise to understand established banking patterns and opportunities to improve the experience. User research focused on frequent financial tasks, navigation friction, and access to account information and security controls.": "Я проаналізувала Monobank, Revolut і Wise, щоб зрозуміти усталені банківські патерни та можливості покращення досвіду. Дослідження користувачів зосереджувалося на частих фінансових завданнях, труднощах навігації та доступі до інформації про рахунки й налаштувань безпеки.",
-"Five priorities guided the design: quick balance access, fewer required actions in transfers, searchable and scannable history, visible security controls, and analytics that explain spending. These priorities connect directly to the home, transfer, history, account, and analytics screens below.": "Дизайн спирався на п’ять пріоритетів: швидкий доступ до балансу, менше обов’язкових дій у переказах, історія з пошуком і зручним переглядом, видимі засоби керування безпекою та аналітика, що пояснює витрати. Ці пріоритети безпосередньо пов’язані з головним екраном, переказами, історією, рахунками й аналітикою нижче.",
-"I organized the architecture into clear financial modules and mapped the key flows for sending money, paying bills, and managing cards. That structure keeps the most common actions close while giving history, analytics, and settings dedicated places.": "Я впорядкувала архітектуру за фінансовими модулями й побудувала основні сценарії переказів, оплати рахунків і керування картками. Така структура тримає часті дії поруч, а історії, аналітиці й налаштуванням дає окремі місця.",
-"Design outcome and reflection": "Результат дизайну й висновки",
-"The deliverable brought the core banking modules into a consistent mobile experience, supported by a scalable design system. The main learning was to simplify routine interactions while keeping the information and controls that help people feel in charge of their finances.": "Результат роботи — цілісний мобільний досвід для основних банківських модулів, підтриманий масштабованою дизайн-системою. Головний висновок — спрощувати щоденні взаємодії, зберігаючи інформацію й засоби керування, що допомагають людині контролювати власні фінанси.",
 
-  "Everyday banking with a clear next step": "Щоденний банкінг зі зрозумілим наступним кроком",
-  "Nova Bank connects balances, transfers, payments, cards, and spending insights in a mobile interface. The design question was how to make a routine task easy to find while keeping the money, recipient, and account context visible.": "Nova Bank поєднує баланси, перекази, платежі, картки й аналіз витрат у мобільному інтерфейсі. Завдання дизайну — зробити щоденні операції доступними й водночас зберегти видимими суму, одержувача та контекст рахунку.",
-  "The main principle was to put the information needed for a decision next to the action it supports.": "Головний принцип — розміщувати потрібну для рішення інформацію поруч із відповідною дією.",
-  "My role and design focus": "Моя роль і фокус дизайну",
-  "As UX/UI & Product Designer, I worked on the mobile experience, information hierarchy, core task flows, high-fidelity screens, and reusable interface components. The case follows the decisions visible in the supplied product screens.": "Як UX/UI & Product Designer я працювала над мобільним досвідом, ієрархією інформації, основними сценаріями, деталізованими екранами й повторюваними компонентами. Кейс розкриває рішення, представлені на екранах продукту.",
-  "Making a payment": "Проведення платежу",
-  "Know the amount, recipient, and available balance before sending.": "Бачити суму, одержувача й доступний баланс перед відправленням.",
-  "Recipient selection, a prominent amount, and a send action naming both amount and recipient.": "Вибір одержувача, помітна сума й кнопка, що називає суму та одержувача.",
-  "Managing cards": "Керування картками",
-  "Find a card and reach its controls in context.": "Знайти картку та її налаштування у відповідному контексті.",
+// Hypotheses explain the design intent; they are not claims of tested effects.
+export const novaTranslations: Record<string, string> = {
   "Accounts and cards grouped with freezing, PIN, and spending-limit controls.": "Рахунки й картки поруч із заморожуванням, PIN і лімітами витрат.",
-  "Reviewing spending": "Перегляд витрат",
+  "Balance and payment shortcuts at the top could help users start common tasks without searching.": "Баланс і швидкі платежі нагорі могли допомогти починати часті завдання без пошуку.",
+  "Card settings beside account information could make security controls easier to find.": "Налаштування картки поруч із рахунком могли зробити керування безпекою доступнішим.",
+  "Charts and category budgets could help users see patterns that individual payments do not explain.": "Графіки й бюджети категорій могли показати закономірності, яких не видно з окремих платежів.",
+  "Core need": "Ключова потреба",
+  "Design response": "Відповідь у дизайні",
+  "Design result": "Результат дизайну",
+  "Everyday banking should make the next action easy to find without hiding money or security details. I focused on balances, transfers, card controls, and spending.": "Щоденний банкінг має робити наступну дію доступною, не приховуючи даних про гроші чи безпеку. Я зосередилася на балансах, переказах, керуванні картками й витратах.",
+  "Explain spending beyond a transaction list": "Пояснити витрати за межами списку операцій",
+  "Find a card and reach its controls in context.": "Знайти картку та її налаштування у відповідному контексті.",
+  "Give payments and settings separate places": "Відділити платежі від налаштувань",
+  "Hypothesis": "Гіпотеза",
+  "I added period filters, income and expense charts, budget progress, and short insight cards.": "Я додала фільтри періодів, графіки доходів і витрат, прогрес бюджетів і короткі підсумки.",
+  "I delivered three core flows—sending money, paying bills, and managing cards—with one UI system. Key details stay beside each action.": "Я створила три основні сценарії — перекази, оплату рахунків і керування картками — зі спільною UI-системою. Ключові деталі залишаються поруч із кожною дією.",
+  "I designed the mobile experience from research and wireframes to final screens and reusable components for adults aged 18–50.": "Я спроєктувала мобільний досвід від дослідження й вайрфреймів до фінальних екранів і повторюваних компонентів для людей 18–50 років.",
+  "I grouped Freeze Card, View PIN, Spending Limits, and International Use under Accounts and Cards.": "Я зібрала Freeze Card, View PIN, Spending Limits та International Use у розділі рахунків і карток.",
+  "I grouped bills, top-ups, saved recipients, and upcoming payments together. Amounts and due dates stay beside the action they explain.": "Я зібрала рахунки, поповнення, збережених одержувачів і майбутні платежі разом. Суми й терміни залишаються поруч із відповідною дією.",
+  "I kept personal details, security, notifications, and support in Profile, separate from daily payment tasks.": "Я залишила особисті дані, безпеку, сповіщення й підтримку в профілі, окремо від щоденних платежів.",
+  "I kept saved recipients above the amount and repeated both in the Send button. I added search and filters to history.": "Я залишила збережених одержувачів над сумою й повторила обидва значення в кнопці Send. До історії додала пошук і фільтри.",
+  "I placed the balance above Send, Receive, Pay Bills, and Scan QR. Cards and recent activity follow below.": "Я розмістила баланс над Send, Receive, Pay Bills і Scan QR. Картки й останні операції — нижче.",
+  "I reviewed Monobank, Revolut, and Wise. Research focused on common tasks and navigation. I used five priorities: visible balances, simple transfers, searchable history, clear security controls, and useful spending summaries.": "Я порівняла Monobank, Revolut і Wise. Дослідження стосувалося частих завдань і навігації. Основою стали п’ять пріоритетів: видимі баланси, прості перекази, історія з пошуком, зрозуміла безпека й корисні підсумки витрат.",
+  "Keep card controls with the card": "Залишити керування поруч із карткою",
+  "Keeping the recipient and amount visible together could support a clearer final check.": "Одержувач і сума поруч могли зробити фінальну перевірку зрозумілішою.",
+  "Know the amount, recipient, and available balance before sending.": "Бачити суму, одержувача й доступний баланс перед відправленням.",
+  "Make the transfer easy to check": "Спростити перевірку переказу",
+  "Making a payment": "Проведення платежу",
+  "Managing cards": "Керування картками",
   "Move from a transaction to the broader spending pattern.": "Перейти від окремої операції до загальної картини витрат.",
-  "Searchable history, time periods, category budgets, and spending summaries.": "Історія з пошуком, періоди, бюджети категорій і підсумки витрат.",
+  "My role": "Моя роль",
   "One customer, different financial tasks": "Один клієнт — різні фінансові завдання",
+  "Put common actions first": "Винести часті дії нагору",
+  "Recipient selection, a prominent amount, and a send action naming both amount and recipient.": "Вибір одержувача, помітна сума й кнопка, що називає суму та одержувача.",
+  "Reviewing spending": "Перегляд витрат",
+  "Searchable history, time periods, category budgets, and spending summaries.": "Історія з пошуком, періоди, бюджети категорій і підсумки витрат.",
+  "The home screen separates quick actions from the details users may want to review.": "Головний екран розділяє швидкі дії й деталі для перевірки.",
+  "The problem": "Проблема",
   "User context": "Контекст користувача",
-  "Give the home screen a clear hierarchy": "Задати головному екрану зрозумілу ієрархію",
-  "The total balance comes first, followed by Send, Receive, Pay Bills, and Scan QR. The card, monthly spending, and recent transactions sit below. This separates the next action from the information a customer may want to review before choosing it.": "Спочатку показано загальний баланс, далі — Send, Receive, Pay Bills і Scan QR. Нижче розташовані картка, місячні витрати й останні операції. Така структура відділяє наступну дію від інформації, яку клієнт може перевірити перед вибором.",
-  "Keep the recipient and amount in the same decision": "Поєднати одержувача й суму в одному рішенні",
-  "On Send Money, saved recipients remain visible above the amount. The available balance provides context; notes and scheduling are secondary options. The primary action repeats the amount and recipient, so the button describes the operation it will initiate.": "На Send Money збережені одержувачі залишаються над сумою. Доступний баланс дає контекст, а примітка й планування є другорядними опціями. Основна кнопка повторює суму й одержувача та називає операцію, яку вона розпочне.",
-  "The adjacent history view serves the review task: search and Income, Expense, and Transfer filters help locate a record, while date groups and signed amounts distinguish incoming and outgoing activity.": "Історія поруч підтримує перевірку операцій: пошук і фільтри Income, Expense та Transfer допомагають знайти запис, а групування за датами й суми зі знаком розрізняють надходження та витрати.",
-  "Put card controls where the card is": "Розмістити керування поруч із карткою",
-  "Accounts and Cards separates account balances from the cards used to access them. Freeze Card, View PIN, Spending Limits, and International Use sit in the same section, so account information and card settings have a shared location.": "Accounts and Cards розділяє баланси рахунків і картки для доступу до них. Freeze Card, View PIN, Spending Limits та International Use розміщені в цьому ж розділі: дані рахунку й налаштування картки мають спільне місце.",
-  "Explain spending at two levels": "Пояснити витрати на двох рівнях",
-  "Transaction history answers what happened to a particular payment. Analytics answers how spending is changing. Period selection, an income-versus-expenses chart, and category budgets provide the broader view; short insight cards summarize patterns without replacing the underlying numbers.": "Історія відповідає, що сталося з окремим платежем, а аналітика — як змінюються витрати. Вибір періоду, порівняння доходів і витрат та бюджети категорій дають загальний огляд. Короткі картки висновків підсумовують тенденції, не замінюючи числові дані.",
-  "Separate recurring payments from account settings": "Розділити регулярні платежі й налаштування облікового запису",
-  "Payments groups QR payment, bills, mobile top-ups, saved recipients, and upcoming payments. Amounts and due dates sit with each bill, while preset top-up amounts offer a specific starting point.": "Payments поєднує QR-оплату, рахунки, поповнення телефону, збережених одержувачів і майбутні платежі. Сума й термін розташовані біля кожного рахунку, а готові суми поповнення пропонують конкретну відправну точку.",
-  "Profile groups personal details, biometric and two-factor settings, connected devices, notifications, and support. Keeping these controls in a dedicated area separates account preferences from everyday payment actions.": "Профіль об’єднує особисті дані, біометрію та двофакторну автентифікацію, підключені пристрої, сповіщення й підтримку. Окремий розділ відділяє налаштування облікового запису від щоденних платіжних дій.",
-  "Design outcome": "Результат дизайну",
-  "The interface connects everyday transactions with the context needed to understand them: balances beside actions, recipients beside amounts, card controls beside cards, and summaries beside detailed activity. Consistent navigation and components carry those relationships across the product.": "Інтерфейс поєднує щоденні операції з потрібним контекстом: баланси поруч із діями, одержувачі поруч із сумами, налаштування поруч із картками, підсумки поруч із деталями активності. Спільна навігація й компоненти зберігають ці зв’язки між розділами."
+  "Users can check who receives the money and review past transfers in a separate view.": "Користувачі можуть перевірити одержувача й переглянути попередні перекази в окремому розділі.",
+  "Users can review a card and reach its controls from the same section.": "Користувачі можуть переглянути картку й перейти до її налаштувань в одному розділі.",
+  "Users have both detailed payment history and a wider view of their spending.": "Користувачі мають детальну історію платежів і загальну картину витрат.",
+  "What I changed": "Що я змінила",
+  "What shaped my decisions": "Основа моїх рішень"
 };
+
 export const novaStory: CaseBlock[] = [
   {
     "type": "image",
@@ -52,25 +59,20 @@ export const novaStory: CaseBlock[] = [
   {
     "type": "heading",
     "level": 2,
-    "text": "Everyday banking with a clear next step"
+    "text": "The problem"
   },
   {
     "type": "paragraph",
-    "text": "Nova Bank connects balances, transfers, payments, cards, and spending insights in a mobile interface. The design question was how to make a routine task easy to find while keeping the money, recipient, and account context visible."
-  },
-  {
-    "type": "paragraph",
-    "text": "The main principle was to put the information needed for a decision next to the action it supports.",
-    "emphasis": true
+    "text": "Everyday banking should make the next action easy to find without hiding money or security details. I focused on balances, transfers, card controls, and spending."
   },
   {
     "type": "heading",
     "level": 2,
-    "text": "My role and design focus"
+    "text": "My role"
   },
   {
     "type": "paragraph",
-    "text": "As UX/UI & Product Designer, I owned the end-to-end mobile experience, from research and wireframes to high-fidelity UI and design system components. The product was designed for adults aged 18–50 who use mobile banking for personal finances, payments, transfers, and account management."
+    "text": "I designed the mobile experience from research and wireframes to final screens and reusable components for adults aged 18–50."
   },
   {
     "type": "table",
@@ -101,28 +103,29 @@ export const novaStory: CaseBlock[] = [
   {
     "type": "heading",
     "level": 2,
-    "text": "Research priorities that shaped the interface"
+    "text": "What shaped my decisions"
   },
   {
     "type": "paragraph",
-    "text": "I reviewed Monobank, Revolut, and Wise to understand established banking patterns and opportunities to improve the experience. User research focused on frequent financial tasks, navigation friction, and access to account information and security controls."
+    "text": "I reviewed Monobank, Revolut, and Wise. Research focused on common tasks and navigation. I used five priorities: visible balances, simple transfers, searchable history, clear security controls, and useful spending summaries."
   },
   {
-    "type": "paragraph",
-    "text": "Five priorities guided the design: quick balance access, fewer required actions in transfers, searchable and scannable history, visible security controls, and analytics that explain spending. These priorities connect directly to the home, transfer, history, account, and analytics screens below."
-  },
-  {
-    "type": "paragraph",
-    "text": "I organized the architecture into clear financial modules and mapped the key flows for sending money, paying bills, and managing cards. That structure keeps the most common actions close while giving history, analytics, and settings dedicated places."
-  },
-  {
-    "type": "heading",
-    "level": 2,
-    "text": "Give the home screen a clear hierarchy"
-  },
-  {
-    "type": "paragraph",
-    "text": "The total balance comes first, followed by Send, Receive, Pay Bills, and Scan QR. The card, monthly spending, and recent transactions sit below. This separates the next action from the information a customer may want to review before choosing it."
+    "type": "decision",
+    "title": "Put common actions first",
+    "items": [
+      {
+        "label": "Hypothesis",
+        "text": "Balance and payment shortcuts at the top could help users start common tasks without searching."
+      },
+      {
+        "label": "What I changed",
+        "text": "I placed the balance above Send, Receive, Pay Bills, and Scan QR. Cards and recent activity follow below."
+      },
+      {
+        "label": "Design result",
+        "text": "The home screen separates quick actions from the details users may want to review."
+      }
+    ]
   },
   {
     "type": "image",
@@ -134,17 +137,22 @@ export const novaStory: CaseBlock[] = [
     }
   },
   {
-    "type": "heading",
-    "level": 2,
-    "text": "Keep the recipient and amount in the same decision"
-  },
-  {
-    "type": "paragraph",
-    "text": "On Send Money, saved recipients remain visible above the amount. The available balance provides context; notes and scheduling are secondary options. The primary action repeats the amount and recipient, so the button describes the operation it will initiate."
-  },
-  {
-    "type": "paragraph",
-    "text": "The adjacent history view serves the review task: search and Income, Expense, and Transfer filters help locate a record, while date groups and signed amounts distinguish incoming and outgoing activity."
+    "type": "decision",
+    "title": "Make the transfer easy to check",
+    "items": [
+      {
+        "label": "Hypothesis",
+        "text": "Keeping the recipient and amount visible together could support a clearer final check."
+      },
+      {
+        "label": "What I changed",
+        "text": "I kept saved recipients above the amount and repeated both in the Send button. I added search and filters to history."
+      },
+      {
+        "label": "Design result",
+        "text": "Users can check who receives the money and review past transfers in a separate view."
+      }
+    ]
   },
   {
     "type": "image",
@@ -156,13 +164,22 @@ export const novaStory: CaseBlock[] = [
     }
   },
   {
-    "type": "heading",
-    "level": 2,
-    "text": "Put card controls where the card is"
-  },
-  {
-    "type": "paragraph",
-    "text": "Accounts and Cards separates account balances from the cards used to access them. Freeze Card, View PIN, Spending Limits, and International Use sit in the same section, so account information and card settings have a shared location."
+    "type": "decision",
+    "title": "Keep card controls with the card",
+    "items": [
+      {
+        "label": "Hypothesis",
+        "text": "Card settings beside account information could make security controls easier to find."
+      },
+      {
+        "label": "What I changed",
+        "text": "I grouped Freeze Card, View PIN, Spending Limits, and International Use under Accounts and Cards."
+      },
+      {
+        "label": "Design result",
+        "text": "Users can review a card and reach its controls from the same section."
+      }
+    ]
   },
   {
     "type": "image",
@@ -174,13 +191,22 @@ export const novaStory: CaseBlock[] = [
     }
   },
   {
-    "type": "heading",
-    "level": 2,
-    "text": "Explain spending at two levels"
-  },
-  {
-    "type": "paragraph",
-    "text": "Transaction history answers what happened to a particular payment. Analytics answers how spending is changing. Period selection, an income-versus-expenses chart, and category budgets provide the broader view; short insight cards summarize patterns without replacing the underlying numbers."
+    "type": "decision",
+    "title": "Explain spending beyond a transaction list",
+    "items": [
+      {
+        "label": "Hypothesis",
+        "text": "Charts and category budgets could help users see patterns that individual payments do not explain."
+      },
+      {
+        "label": "What I changed",
+        "text": "I added period filters, income and expense charts, budget progress, and short insight cards."
+      },
+      {
+        "label": "Design result",
+        "text": "Users have both detailed payment history and a wider view of their spending."
+      }
+    ]
   },
   {
     "type": "image",
@@ -194,11 +220,11 @@ export const novaStory: CaseBlock[] = [
   {
     "type": "heading",
     "level": 2,
-    "text": "Separate recurring payments from account settings"
+    "text": "Give payments and settings separate places"
   },
   {
     "type": "paragraph",
-    "text": "Payments groups QR payment, bills, mobile top-ups, saved recipients, and upcoming payments. Amounts and due dates sit with each bill, while preset top-up amounts offer a specific starting point."
+    "text": "I grouped bills, top-ups, saved recipients, and upcoming payments together. Amounts and due dates stay beside the action they explain."
   },
   {
     "type": "image",
@@ -211,7 +237,7 @@ export const novaStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "Profile groups personal details, biometric and two-factor settings, connected devices, notifications, and support. Keeping these controls in a dedicated area separates account preferences from everyday payment actions."
+    "text": "I kept personal details, security, notifications, and support in Profile, separate from daily payment tasks."
   },
   {
     "type": "image",
@@ -225,15 +251,11 @@ export const novaStory: CaseBlock[] = [
   {
     "type": "heading",
     "level": 2,
-    "text": "Design outcome and reflection"
+    "text": "Design result"
   },
   {
     "type": "paragraph",
-    "text": "The interface connects everyday transactions with the context needed to understand them: balances beside actions, recipients beside amounts, card controls beside cards, and summaries beside detailed activity. Consistent navigation and components carry those relationships across the product."
-  },
-  {
-    "type": "paragraph",
-    "text": "The deliverable brought the core banking modules into a consistent mobile experience, supported by a scalable design system. The main learning was to simplify routine interactions while keeping the information and controls that help people feel in charge of their finances."
+    "text": "I delivered three core flows—sending money, paying bills, and managing cards—with one UI system. Key details stay beside each action."
   },
   {
     "type": "image",
