@@ -42,5 +42,15 @@ const icons = [{ name: 'figma', src: figma }, { name: 'photoshop', src: photosho
     .hero-app-codex { bottom: 75px; right: 3%; }
     .hero-app-chatgpt { bottom: 35px; left: calc(50% - 50px); }
   }
+  @media (max-width: 360px) {
+    .hero-app-icon { width: 84px; }
+    .hero-app-figma, .hero-app-codex { bottom: 60px; }
+    .hero-app-chatgpt { bottom: 20px; left: calc(50% - 42px); }
+  }
+  @media (min-width: 721px) and (max-height: 800px) {
+    .hero-app-icon { width: 128px; }
+    .hero-app-claude, .hero-app-photoshop { top: 110px; }
+    .hero-app-chatgpt { width: 100px; left: calc(50% - 50px); bottom: 12px; }
+  }
   @media (prefers-reduced-motion: reduce) { .hero-app-icon { animation: none; } }
 </style>
