@@ -11,7 +11,7 @@
   .skills-overview .tool-pills li { color: #23343e; }
 
   .home-page { --home-section-gap: calc(var(--section-space) + clamp(32px, 4vw, 56px)); }
-  .home-page .work { padding-block: var(--home-section-gap); }
+  .home-page .work { padding-top: clamp(24px, 3vw, 48px); padding-bottom: var(--home-section-gap); }
   .skills-section { padding-bottom: var(--home-section-gap, var(--section-space)); }
   .skills-section .skills-overview { padding-top: 0; }
   .skills-overview .expertise { padding: 0; border: 0; }
