@@ -67,7 +67,7 @@ export const translations: Record<string, string> = {
 "Data visualization": "Візуалізація даних",
 "Design handoff": "Передача дизайну в розробку",
 "Ukrainian — C2": "Українська — C2",
-"English — B2+": "Англійська — B2+",
+"English — C1": "Англійська — C1",
 
 "and modern UI": "та сучасний UI",
 "Approach design as a business tool, combining analytical thinking and modern UI to create experiences that solve real problems and contribute to product growth": "Підходжу до дизайну як до бізнес-інструменту, поєднуючи аналітичне мислення та сучасний UI, щоб створювати досвід, який вирішує реальні проблеми та сприяє зростанню продукту",
@@ -95,7 +95,7 @@ export const translations: Record<string, string> = {
 "Case study placeholder": "Макет кейсу",
 "Development preview · No client work": "Демонстраційний макет · Не клієнтська робота",
 
-"What does your design process involve?":"Який у тебе дизайн-процес?","I combine analytical thinking, user research, and modern UI to solve user problems and support product goals.":"Поєдную аналітичне мислення, дослідження користувачів та сучасний UI, щоб розв’язувати проблеми користувачів і підтримувати цілі продукту.","What domains have you worked in?":"У яких сферах ти працювала?","Healthcare, petcare, transfer booking, banking, HR management, legal services, e-commerce, and restaurant reservations.":"Медицина, догляд за тваринами, бронювання трансферів, банкінг, HR, юридичні послуги, електронна комерція та бронювання ресторанів.","What languages do you speak?":"Якими мовами ти спілкуєшся?","Ukrainian — C2. English — B2+.":"Українська — C2. Англійська — B2+.","What can you help with?":"З чим ти можеш допомогти?","Web and mobile UX/UI, user research, design systems, and AI-assisted design workflows.":"UX/UI веб- і мобільних продуктів, дослідження користувачів, дизайн-системи та дизайн-процеси з ШІ.","View my portfolio":"Переглянути портфоліо",
+"What does your design process involve?":"Який у тебе дизайн-процес?","I combine analytical thinking, user research, and modern UI to solve user problems and support product goals.":"Поєдную аналітичне мислення, дослідження користувачів та сучасний UI, щоб розв’язувати проблеми користувачів і підтримувати цілі продукту.","What domains have you worked in?":"У яких сферах ти працювала?","Healthcare, petcare, transfer booking, banking, HR management, legal services, e-commerce, and restaurant reservations.":"Медицина, догляд за тваринами, бронювання трансферів, банкінг, HR, юридичні послуги, електронна комерція та бронювання ресторанів.","What languages do you speak?":"Якими мовами ти спілкуєшся?","Ukrainian — C2. English — C1.":"Українська — C2. Англійська — C1.","What can you help with?":"З чим ти можеш допомогти?","Web and mobile UX/UI, user research, design systems, and AI-assisted design workflows.":"UX/UI веб- і мобільних продуктів, дослідження користувачів, дизайн-системи та дизайн-процеси з ШІ.","View my portfolio":"Переглянути портфоліо",
   "LinkedIn (opens in a new tab)": "LinkedIn (відкриється в новій вкладці)",
   "Work": "Проєкти",
   "About": "Про мене",

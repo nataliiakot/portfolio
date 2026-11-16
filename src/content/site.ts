@@ -10,7 +10,7 @@ export const profile = {
   phone: '+38 099 080 36 93', phoneHref: 'tel:+380990803693',
   telegram: 'https://t.me/NataKot',
   cvPath: 'https://drive.google.com/file/d/1ZkO7tM8xXRr6P7zr8eMA1x0SiUyDPmeN/view?usp=sharing',
-  languages: [{ name: 'Ukrainian', level: 'C2' }, { name: 'English', level: 'B2+' }],
+  languages: [{ name: 'Ukrainian', level: 'C2' }, { name: 'English', level: 'C1' }],
 };
 export const navigation = [
   { label: 'Work', id: 'work' }, { label: 'About', id: 'about' },
