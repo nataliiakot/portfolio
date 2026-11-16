@@ -8,4 +8,4 @@
   --glass-button: #e6f4ff; --glass-hover: #d1ecff;
   --frame-paper: #f8fafdee; --frame-ink: #384443; --frame-muted: #66716f;
 }
-:root { @include light-theme; --page-width: 1120px; --page-gutter: clamp(1.25rem, 5vw, 5.5rem); }
+:root { @include light-theme; --page-width: 1040px; --page-gutter: clamp(1.25rem, 5vw, 5.5rem); }

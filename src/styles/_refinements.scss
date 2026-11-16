@@ -427,7 +427,6 @@
   .site-header .language-toggle button:hover { background:#ffffff99; }
   @supports not (backdrop-filter:blur(16px)) { .site-header .header-email,.site-header .language-toggle { background:#f2f7fd; } }
   .site-header {
-    width:min(calc(100% - 32px),1040px);
     min-height:76px;
     top:12px;
     padding:12px 20px;
@@ -441,7 +440,7 @@
   }
   .closing-panel .site-footer { border-top:0; }
   .contact-faq { overflow-anchor:none; }
-  @media(max-width:899px) { .site-header { width:calc(100% - 24px); padding:12px; gap:8px; } }
+  @media(max-width:899px) { .site-header { padding:12px; gap:8px; } }
   .closing-panel .contact { padding-bottom:8px; }
   .closing-panel .site-footer { padding-top:12px; padding-bottom:20px; }
 

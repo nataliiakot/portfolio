@@ -7,7 +7,7 @@
   button, .button, .home-page .hero-dock a, .closing-scene .contact-actions a { font-weight: 700; }
   .button:not(.primary), .home-page .hero-dock a:not(:first-child), .closing-scene .contact-actions a:not(:first-child) { border: 1px solid #171717; }
   .contact-icon { flex: 0 0 auto; }
-  .home-page .hero-content { width: 100%; max-width: 1040px; }
+  .home-page .hero-content { width: 100%; max-width: var(--page-width); }
   .hero-business-statement {
     margin: 0 0 32px; width: 100%; font-family: 'Manrope Variable', sans-serif;
     font-size: clamp(42px, 4.45vw, 64px); font-weight: 700;
@@ -21,7 +21,7 @@
     -webkit-box-decoration-break: clone; box-decoration-break: clone;
   }
   .hero-copy-line::after { content: ''; position: absolute; left: var(--selection); top: .08em; bottom: .08em; width: 2px; background: #008be5; opacity: var(--caret, 0); }
-  .about-intro { max-width: 1000px; margin-inline: auto; }
+  .about-intro { width: 100%; margin-inline: auto; }
   .about-intro .about-portrait { aspect-ratio: 1 / 1; height: auto; max-height: none; object-fit: cover; object-position: 50% 37%; }
   .expertise .expertise-list .skill-card .skill-view { order: 3; display: inline-flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 8px; font-size: 14px; font-weight: 700; text-decoration: none; flex-shrink: 0; line-height: 1.5; }
   .expertise .expertise-list .skill-card h3, .expertise .expertise-list .skill-card p { flex-shrink: 0; }
@@ -36,7 +36,6 @@
     .expertise .expertise-list { grid-template-columns: minmax(0, 1fr); grid-auto-rows: minmax(240px, auto); }
     .expertise .expertise-list .skill-card[data-skill] { grid-column: auto; grid-row: auto; }
   }
-  .home-page .closing-panel { max-width: 1040px; }
   .home-page .closing-panel .contact { padding: 32px 32px 8px; gap: 32px; }
   .home-page .closing-panel .contact-copy #contact-title { font-size: clamp(26px, 2.35vw, 34px); }
   .home-page .closing-panel .contact-faq { gap: 10px; }
@@ -72,7 +71,7 @@
     .home-page .hero-dock a, .closing-scene .contact-actions a { padding: 15px 24px; font-size: 16px; gap: 12px; }
     .home-page .hero-scroll { bottom: 24px; }
     .home-page .work { padding-top: 32px; }
-    .about-intro .about-portrait { width: min(100%, 320px); margin-inline: auto; }
+    .about-intro .about-portrait { width: 100%; }
   }
   @media (max-width: 360px) {
     .home-page .hero { padding-inline: 16px; }
