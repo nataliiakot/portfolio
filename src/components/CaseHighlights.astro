@@ -17,31 +17,32 @@ const { highlights, facts } = Astro.props;
 </section>
 
 <style lang="scss">
-  .case-highlights { margin-block: 24px 32px; display: grid; gap: 16px; }
-  .case-highlight-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 24px; margin: 0; padding: 24px; border: 1px solid #dce2e8; border-radius: 24px; background: #f7f9fc; }
-  .case-highlight-metric { display: flex; flex-direction: column; min-width: 0; }
-  .case-highlight-metric + .case-highlight-metric { padding-left: 24px; border-left: 1px solid #dce2e8; }
+  .case-highlights { margin-block: 24px 32px; display: grid; gap: 24px; }
+  .case-highlight-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 16px; margin: 0; padding: 0; }
+  .case-highlight-metric { display: flex; flex-direction: column; min-width: 0; padding: 24px; border: 1px solid #dce2e8; border-radius: 24px; background: #f7f9fc; }
   .case-highlight-metric dt { display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.45; font-weight: 600; }
   .case-highlight-kind { font-size: 14px; line-height: 1.5; font-weight: 500; color: #52606c; }
   .case-highlight-metric dd { margin: 12px 0 0; }
   .case-highlight-metric strong { display: block; font-size: 42px; line-height: 1.1; letter-spacing: -.035em; font-weight: 700; color: #193640; }
   .case-highlight-metric p { font-size: 14px; line-height: 1.5; margin: 8px 0 0; color: #52606c; }
-  .case-highlights .case-facts { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr); gap: 24px; margin: 0; padding: 24px; border: 1px solid #e3e7ec; border-radius: 24px; background: #fff; }
+  .case-highlights .case-facts { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr); gap: 24px; margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; }
   @media (max-width: 800px) {
     .case-highlights .case-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
     .case-facts .case-contribution { grid-column: 1 / -1; }
     .case-highlights .case-facts dd { font-size: 14px; line-height: 1.5; }
   }
   @media (max-width: 720px) {
-    .case-highlights { margin-block: 16px 24px; gap: 12px; }
-    .case-highlight-metrics { gap: 12px; padding: 16px; border-radius: 18px; }
-    .case-highlight-metric + .case-highlight-metric { padding-left: 12px; }
+    .case-highlights { margin-block: 16px 24px; gap: 24px; }
+    .case-highlight-metrics { gap: 12px; }
+    .case-highlight-metric { padding: 16px; border-radius: 18px; }
     .case-highlight-metric dt { font-size: 14px; }
     .case-highlight-metric strong { font-size: 32px; }
     .case-highlight-metric p { font-size: 14px; }
     .has-three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .has-three > :last-child { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 8px; padding: 12px 0 0; border-left: 0; border-top: 1px solid #dce2e8; }
-    .has-three > :last-child dd { margin: 0; }
-    .case-highlights .case-facts { padding: 16px; border-radius: 18px; }
+    .has-three > :last-child { grid-column: 1 / -1; }
+    .case-highlights .case-facts { padding: 0; }
+  }
+  @media (max-width: 540px) {
+    .case-highlight-metrics, .has-three { grid-template-columns: minmax(0, 1fr); }
   }
 </style>

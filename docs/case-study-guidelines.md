@@ -40,7 +40,7 @@ Run `npm run build` after implementation, plus relevant existing tests. Inspect 
 
 ## Opening summary
 
-Use two separate overview panels below the title in every case: supported metrics first, then Role, Business domain, and My contribution. State the lead designer role and collaboration with developers and the project manager. Do not repeat opening metrics in a second “The case at a glance” block. Use burgundy for The problem and Core need labels, and dark green for Design response labels. Keep measured outcomes distinct from design scope counts. Cleanly and HR System retain fuller explanations of research, design tradeoffs, and state transitions in clear B2 English; brevity should not remove the reasoning behind their decisions.
+Show each opening metric in its own card (two side by side for Cleanly). Below the cards, show Role, Business domain, and My contribution as plain text without a panel, border, or background. Stack metric cards on narrow mobile screens. State the lead designer role and collaboration with developers and the project manager. Do not repeat opening metrics in a second “The case at a glance” block. Use burgundy for The problem and Core need labels, and dark green for Design response labels. Keep measured outcomes distinct from design scope counts. Cleanly and HR System retain fuller explanations of research, design tradeoffs, and state transitions in clear B2 English; brevity should not remove the reasoning behind their decisions.
 
 All UI text must be at least 14px, including metadata, metric notes, captions, and mobile navigation. Let content wrap and adapt the layout; do not shrink text below this minimum.
 
