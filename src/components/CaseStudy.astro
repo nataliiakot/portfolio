@@ -8,13 +8,14 @@ import CaseHighlights from './CaseHighlights.astro';
 import { caseHighlights } from '../content/case-highlights';
 interface Props { project: Project; next?: Project; }
 const { project, next } = Astro.props;
+const highlights = caseHighlights[project.slug];
 const facts = [['Role', project.role], ['Business domain', project.category]].filter(([, value]) => value);
 ---
 <article class:list={['case-study', 'section-shell', `case-${project.slug}`]}>
   <a class="text-link all-work" href="/#work"><span class="reverse-arrow"><Arrow /></span>All work</a>
   <header class="case-heading"><h1><span>{project.title}</span></h1>{project.headline && <p class="case-intro">{project.headline}</p>}{!project.story?.length && <p class="case-summary">{project.summary}</p>}</header>
-  {caseHighlights[project.slug] && <CaseHighlights highlights={caseHighlights[project.slug]!} />}
-  <dl class="case-facts">{facts.map(([label, value]) => <div><dt><span>{label}</span></dt><dd>{value}</dd></div>)}</dl>
+  {highlights && <CaseHighlights highlights={highlights} />}
+  <dl class="case-facts">{facts.map(([label, value]) => <div><dt><span>{label}</span></dt><dd>{value}</dd></div>)}{highlights && <div class="case-contribution"><dt>My contribution</dt><dd>{highlights.contribution}</dd></div>}</dl>
   {project.story?.length ? <CaseNarrative blocks={project.story} /> : <Fragment>
   <ProjectCover project={project} />
   {project.context?.length && <section class="case-section"><h2>The challenge</h2><div>{project.context.map(paragraph => <p>{paragraph}</p>)}</div></section>}

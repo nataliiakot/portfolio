@@ -7,7 +7,7 @@ const t = (en: string, uk: string) => { highlightTranslations[en] = uk; return e
 const outcome = t('Reported outcome', 'Заявлений результат');
 const scope = t('Design scope', 'Обсяг дизайну');
 t('My contribution', 'Мій внесок');
-t('Results and my contribution', 'Результати та мій внесок');
+t('Project highlights', 'Ключові показники проєкту');
 export const caseHighlights: Record<string, CaseHighlights> = {
   cleanly: {
     contribution: t('I connected job search, client checks, and manager approval so each role can see what happens next.', 'Я пов’язала пошук роботи, перевірку клієнтів і погодження менеджером, щоб кожна роль бачила наступний крок.'),
