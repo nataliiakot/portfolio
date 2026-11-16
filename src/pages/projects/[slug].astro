@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import landscape from '../../assets/landscape.png';
 import Layout from '../../layouts/Layout.astro';
 import CaseStudy from '../../components/CaseStudy.astro';
 import Contact from '../../components/Contact.astro';
@@ -13,6 +15,7 @@ const { project, next } = Astro.props;
 ---
 <Layout title={`${project.title} — Nataliia Kot`} description={project.summary}><CaseStudy project={project} next={next} />
   <div slot="closing" class="closing-scene case-closing">
+    <Image class="closing-background" src={landscape} alt="" widths={[768, 1440, 2160]} sizes="100vw" format="webp" loading="lazy" />
     <div class="closing-panel section-shell">
       <Contact showFaq={false} />
       <Footer embedded />
@@ -21,7 +24,6 @@ const { project, next } = Astro.props;
 </Layout>
 
 <style lang="scss">
-  .case-closing { background: #fff; }
   .case-closing :global(.contact) { grid-template-columns: minmax(0, 1fr); }
   .case-closing :global(.contact-copy) { max-width: 760px; }
 </style>

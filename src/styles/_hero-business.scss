@@ -35,7 +35,7 @@
     .expertise .expertise-list .skill-card[data-skill] { grid-column: auto; grid-row: auto; }
   }
   .closing-scene .contact-copy #contact-title { font-size: clamp(28px, 2.65vw, 38px); line-height: 1.25; }
-  .home-page .hero-dock a, .closing-scene .contact-actions a { min-height: 48px; padding: 12px 24px; font-size: 14px; line-height: 1.5; gap: 16px; border: 1px solid #171717; }
+  .home-page .hero-dock a, .closing-scene .contact-actions a { min-height: 56px; padding: 15px 28px; font-size: 16px; line-height: 1.5; gap: 16px; border: 1px solid #171717; }
   .home-page .hero-dock a:not(:first-child), .closing-scene .contact-actions a:not(:first-child) { background: #ffffffa6; backdrop-filter: blur(12px); }
   .home-page .hero-dock a:not(:first-child) { background: #fff; backdrop-filter: none; }
   .home-page .hero-dock a:not(:first-child):hover, .closing-scene .contact-actions a:not(:first-child):hover { background: #ffffffd9; }
@@ -55,7 +55,7 @@
     .hero-copy-lead { font-size: inherit; line-height: inherit; margin-bottom: 0; }
     .hero-copy-line { padding-inline: 0; }
     .home-page .hero-dock { gap: 10px; flex-direction: row; }
-    .home-page .hero-dock a, .closing-scene .contact-actions a { padding: 12px 20px; font-size: 14px; gap: 12px; }
+    .home-page .hero-dock a, .closing-scene .contact-actions a { padding: 15px 24px; font-size: 16px; gap: 12px; }
     .home-page .hero-scroll { bottom: 24px; }
   }
   @media (max-width: 360px) {
