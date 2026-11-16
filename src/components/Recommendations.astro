@@ -3,8 +3,8 @@ import Arrow from './Arrow.astro';
 import { profile } from '../content/site';
 import { recommendations } from '../content/recommendations';
 ---
-{recommendations.length > 0 && <section id="recommendations" class="recommendations section-shell" aria-labelledby="recommendations-title">
-  <div class="recommendation-heading">
+{recommendations.length > 0 && <section id="recommendations" class="recommendations" aria-labelledby="recommendations-title">
+  <div class="recommendation-heading section-shell">
     <h2 id="recommendations-title">Recommendations</h2>
   </div>
   <div id="recommendations-carousel" class="recommendation-carousel" tabindex="0" role="region" aria-label="LinkedIn recommendations">
