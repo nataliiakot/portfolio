@@ -5,6 +5,8 @@ import { steadyTranslations } from './steady-story.ts';
 import { fleetoTranslations } from './fleeto-story.ts';
 import { cleanlyTranslations } from './cleanly-story.ts';
 export const translations: Record<string, string> = {
+  "Previous project": "Попередній проєкт",
+  "Case study navigation": "Навігація між кейсами",
   "Are you open to full-time roles or project work?": "Ти розглядаєш постійну роботу чи окремі проєкти?",
   "I’m open to both. I can join a product team in a full-time role or work on a specific project, from a new product to improvements in an existing one.": "Розглядаю обидва формати. Можу приєднатися до продуктової команди на постійній основі або працювати над окремим проєктом — від нового продукту до покращення наявного.",
   "What does working with you look like?": "Як побудована робота з тобою?",

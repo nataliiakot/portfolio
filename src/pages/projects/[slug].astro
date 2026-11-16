@@ -8,12 +8,12 @@ import Footer from '../../components/Footer.astro';
 import { published } from '../../content/projects';
 import type { Project } from '../../content/projects';
 export function getStaticPaths() {
-  return published.map((project, index) => ({ params: { slug: project.slug }, props: { project, next: published.length > 1 ? published[(index + 1) % published.length] : undefined } }));
+  return published.map((project, index) => ({ params: { slug: project.slug }, props: { project, previous: published.length > 1 ? published[(index - 1 + published.length) % published.length] : undefined, next: published.length > 1 ? published[(index + 1) % published.length] : undefined } }));
 }
-interface Props { project: Project; next?: Project; }
-const { project, next } = Astro.props;
+interface Props { project: Project; previous?: Project; next?: Project; }
+const { project, previous, next } = Astro.props;
 ---
-<Layout title={`${project.title} — Nataliia Kot`} description={project.summary}><CaseStudy project={project} next={next} />
+<Layout title={`${project.title} — Nataliia Kot`} description={project.summary}><CaseStudy project={project} previous={previous} next={next} />
   <div slot="closing" class="closing-scene case-closing">
     <Image class="closing-background" src={landscape} alt="" widths={[768, 1440, 2160]} sizes="100vw" format="webp" loading="lazy" />
     <div class="closing-panel section-shell">
