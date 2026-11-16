@@ -42,6 +42,8 @@ Preserve this stack. Add frameworks, UI libraries, server services, and dependen
 
 ### Styles and Themes
 
+- Keep all website UI text at least 14px at every breakpoint, including labels, captions, navigation, and metadata. Adjust wrapping and layout instead of shrinking text below this minimum.
+
 - Write styles in SCSS and use `@use` for shared modules.
 - Use semantic CSS variables for component colors; use the light-only palette.
 - The site is light-only with a white background, including when the operating system uses dark mode. Do not reintroduce a theme switch or saved theme preference.

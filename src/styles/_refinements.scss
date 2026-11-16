@@ -8,7 +8,7 @@
     --space-8: 32px;
     --space-12: 48px;
     --section-space: clamp(64px, 7vw, 104px);
-    --text-small: .8125rem;
+    --text-small: 14px;
     --text-body: .9375rem;
     --text-card: 1.125rem;
     --text-heading: clamp(2rem, 3.6vw, 3rem);
@@ -114,7 +114,7 @@
       color:#20302e;
       border:2px solid #ffffff80;
       box-shadow:inset 0 1px 2px #ffffffb0,0 5px 10px #20302e24;
-      font-size:13px;
+      font-size:14px;
       font-weight:600;
       line-height:1.4;
     }

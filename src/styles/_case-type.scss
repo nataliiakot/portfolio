@@ -80,7 +80,7 @@
   .case-metric:last-child:nth-child(odd) { grid-column: 1 / -1; }
   .case-metric dt { font-size: 1rem; font-weight: 600; line-height: 1.5; }
   .case-metric p { font-size: .9375rem; line-height: 1.65; letter-spacing: 0; }
-  .case-facts dt { font-size: .8125rem; font-weight: 500; line-height: 1.5; }
+  .case-facts dt { font-size: 14px; font-weight: 500; line-height: 1.5; }
   .case-facts dd { font-size: .9375rem; font-weight: 500; line-height: 1.6; margin-inline-start: 0; }
   .case-contact h2 { margin: 0; }
   .case-decision, .case-research-table { margin: 1.5rem auto 2.5rem; }
@@ -94,7 +94,7 @@
     margin: 0 0 1.5rem; letter-spacing: -.015em;
   }
   .case-decision dl { display: grid; gap: 1.25rem; margin: 0; }
-  .case-decision dt { font-size: .8125rem; font-weight: 700; color: #35618a; margin-bottom: .375rem; }
+  .case-decision dt { font-size: 14px; font-weight: 700; color: #35618a; margin-bottom: .375rem; }
   .case-decision dd { margin: 0; font-size: var(--case-body); line-height: 1.75; color: #414c55; }
   .case-research-table { max-width: 56rem; }
   .case-table-scroll { overflow-x: auto; border: 1px solid #dbe3ed; border-radius: 1.25rem; }
@@ -128,7 +128,7 @@
     .case-research-table tbody th, .case-research-table td { display: block; width: 100%; padding: 0; border: 0; }
     .case-research-table tbody th { font-size: 1.0625rem; margin-bottom: 1rem; }
     .case-research-table td + td { margin-top: 1rem; }
-    .case-cell-label { display: block; font-size: .8125rem; font-weight: 650; color: #35618a; margin-bottom: .25rem; }
+    .case-cell-label { display: block; font-size: 14px; font-weight: 650; color: #35618a; margin-bottom: .25rem; }
     .case-heading .case-intro, .case-summary { font-size: 1.125rem; }
     .case-narrative > h2 { margin-bottom: 1rem; }
     .case-narrative > h3 { margin-top: 1.75rem; }

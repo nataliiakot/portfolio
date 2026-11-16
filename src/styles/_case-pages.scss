@@ -3,9 +3,9 @@
   .project-stage-hr-boost { background:#eee9ff; color:#392b67; }
   .project-stage-fleeto { background:#eeebff; color:#392174; }
   .project-stage-nova-bank { background:#e2f1ff; color:#113a61; }
-  .project-stage-domain { font-size:13px; font-weight:500; max-width:65%; }
+  .project-stage-domain { font-size:14px; font-weight:500; max-width:65%; }
   .project-stage-title { font-size:clamp(2.6rem,5vw,4.5rem); line-height:1; font-weight:600; letter-spacing:-.04em; max-width:90%; }
-  .project-stage-type { font-size:13px; font-weight:500; margin-top:24px; }
+  .project-stage-type { font-size:14px; font-weight:500; margin-top:24px; }
   .featured .project-stage { min-height:400px; }
   .project-cover-link { display:block; text-decoration:none; border-radius:24px; }
   .project-cover-link .project-stage { transition:box-shadow .25s; }
@@ -20,7 +20,7 @@
   .case-heading h1 { font-size:clamp(3rem,7vw,6rem); margin:16px 0 24px; line-height:1.05; }
   .case-summary { font-size:1.125rem; color:#414c55; max-width:70ch; }
   .case-facts { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:24px; margin:40px 0; padding:24px; background:#f5f8fb; border:0; border-radius:16px; }
-  .case-facts dt { font-size:13px; color:#5c6872; }
+  .case-facts dt { font-size:14px; color:#5c6872; }
   .case-facts dd { margin-top:8px; font-size:15px; line-height:1.6; overflow-wrap:anywhere; }
   .case-study > .project-stage { min-height:320px; margin-bottom:24px; }
   .case-study > .project-stage-fleeto { align-items:center; text-align:center; }
@@ -112,7 +112,7 @@
     border: 1px solid #dce2e8; border-radius: 999px;
     background: #fffffff0; box-shadow: inset 0 1px 0 #fff;
     -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
-    color: #39434f; font-size: 12px; font-weight: 550; line-height: 1.5;
+    color: #39434f; font-size: 14px; font-weight: 550; line-height: 1.5;
   }
   .work .project-meta h3 { margin: 0; font-size: clamp(24px, 2.2vw, 28px); font-weight: 700; line-height: 1.25; }
   .work .project-meta > p:not(.small-label) { color: #505b65; margin-block: 12px 0; }

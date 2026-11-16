@@ -7,6 +7,13 @@
   button, .button, .home-page .hero-dock a, .closing-scene .contact-actions a { font-weight: 700; }
   .button:not(.primary), .home-page .hero-dock a:not(:first-child), .closing-scene .contact-actions a:not(:first-child) { border: 1px solid #171717; }
   .contact-icon { flex: 0 0 auto; }
+  .header-identity, .header-contact, .header-email, .header-email > span:last-child { min-width: 0; }
+  .header-email > span:last-child { overflow-wrap: anywhere; }
+  .header-email .email-icon { flex-shrink: 0; }
+  @media (max-width: 899px) {
+    .header-role { white-space: normal; }
+    .header-email { max-width: calc(100% - 54px); }
+  }
   .home-page .hero-content { width: 100%; max-width: var(--page-width); }
   .hero-business-statement {
     margin: 0 0 32px; width: 100%; font-family: 'Manrope Variable', sans-serif;
@@ -62,7 +69,7 @@
     .home-page .hero-content { max-width: 680px; }
   }
   @media (max-width: 720px) {
-    .home-page .hero { min-height: 620px; height: max(620px, calc(100svh - 144px)); padding: 220px 24px 160px; }
+    .home-page .hero { min-height: 680px; height: max(680px, calc(100svh - 144px)); padding: 270px 24px 140px; }
       .home-page .hero-content { padding: 20px 8px; border-radius: 24px; background: transparent; }
     .hero-business-statement { font-size: 38px; line-height: 1.2; margin-bottom: 24px; }
     .hero-copy-lead { font-size: inherit; line-height: inherit; margin-bottom: 0; }
