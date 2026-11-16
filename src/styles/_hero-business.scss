@@ -1,6 +1,6 @@
 @mixin styles {
   .home-page .hero {
-    min-height: 520px; height: clamp(520px, calc(100svh - 160px), 760px); padding: 140px 24px 100px;
+    min-height: 440px; height: clamp(440px, calc(100svh - 240px), 680px); padding: 140px 24px 100px;
     background: #fff;
   }
   .home-page .work { padding-top: 48px; }
@@ -75,7 +75,7 @@
     .home-page .hero-content { max-width: 680px; }
   }
   @media (max-width: 720px) {
-    .home-page .hero { min-height: 680px; height: max(680px, calc(100svh - 144px)); padding: 270px 24px 140px; }
+    .home-page .hero { min-height: 620px; height: max(620px, calc(100svh - 204px)); padding: 240px 24px 110px; }
       .home-page .hero-content { padding: 20px 8px; border-radius: 24px; background: transparent; }
     .hero-business-statement { font-size: 38px; line-height: 1.2; margin-bottom: 24px; }
     .hero-copy-lead { font-size: inherit; line-height: inherit; margin-bottom: 0; }
