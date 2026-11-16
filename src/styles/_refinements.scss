@@ -137,8 +137,8 @@
   @media(prefers-reduced-motion:reduce) { .skill-icon, .expertise .expertise-list .skill-card { transition:none; }.skill-card:hover .skill-icon, .skill-card:focus-within .skill-icon { transform:none; } }
   @media print { .context-cursor { display:none; } }
   html { scroll-padding-top:calc(var(--header-height, 100px) + var(--space-6)); }
-  .site-header { position:sticky; top:0; isolation:isolate; z-index:100; }
-  .home-page .site-header { position:fixed; }
+  .site-header { position:fixed; left:50%; transform:translateX(-50%); isolation:isolate; z-index:100; }
+  body:not(.home-page) #main { padding-top:var(--header-height, 76px); }
   .site-header::before {
     content:'';
     position:absolute;
@@ -150,7 +150,7 @@
     z-index:-1;
     pointer-events:none;
   }
-  .home-page .site-header::before { background:transparent; transition:background .2s,box-shadow .2s; }
+  .site-header::before { transition:background .2s,box-shadow .2s; }
   .site-header.is-scrolled::before { background:#fffffff5; box-shadow:0 4px 16px #17252d0d; backdrop-filter:blur(16px); }
   .site-header.is-scrolled .header-role { color:#555; }
   .home-page .hero-dock a, .closing-scene .contact-actions a {
@@ -361,7 +361,7 @@
   .expertise .expertise-list .skill-card[data-skill='0'] .skill-icon { align-self:center; }
   @media(max-width:1050px) { .expertise .expertise-list { grid-template-rows:none; grid-auto-rows:minmax(380px,auto); } }
   @media(max-width:600px) { .expertise .expertise-list { grid-auto-rows:minmax(380px,auto); } }
-  .site-header::before, .home-page .site-header::before, .site-header.is-scrolled::before {
+  .site-header::before, .site-header.is-scrolled::before {
     background:linear-gradient(120deg,#ffffffd9,#f1f7ffb8);
     -webkit-backdrop-filter:blur(24px) saturate(1.25);
     backdrop-filter:blur(24px) saturate(1.25);
@@ -407,7 +407,7 @@
   }
   @supports not (backdrop-filter:blur(18px)) {
     .expertise .expertise-list .skill-card { background:#f2f5f9; }
-    .site-header::before,.home-page .site-header::before,.site-header.is-scrolled::before { background:#f8fbff; }
+    .site-header::before,.site-header.is-scrolled::before { background:#f8fbff; }
   }
   .site-header .header-email, .site-header .language-toggle {
     background:linear-gradient(135deg,#ffffffb8,#eaf3ff66);
@@ -435,8 +435,7 @@
     border:0;
     border-radius:22px;
   }
-  .home-page .site-header { top:12px; }
-  .site-header::before, .home-page .site-header::before, .site-header.is-scrolled::before {
+  .site-header::before, .site-header.is-scrolled::before {
     left:0; right:0; width:auto; border-radius:inherit;
     border:1px solid #ffffffc9;
   }
