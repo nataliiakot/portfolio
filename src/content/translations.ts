@@ -5,6 +5,9 @@ import { steadyTranslations } from './steady-story.ts';
 import { fleetoTranslations } from './fleeto-story.ts';
 import { cleanlyTranslations } from './cleanly-story.ts';
 export const translations: Record<string, string> = {
+  "Recommendations": "Рекомендації",
+  "LinkedIn recommendation": "Рекомендація з LinkedIn",
+  "Read on LinkedIn": "Читати в LinkedIn",
   "Previous project": "Попередній проєкт",
   "Case study navigation": "Навігація між кейсами",
   "Are you open to full-time roles or project work?": "Ти розглядаєш постійну роботу чи окремі проєкти?",

@@ -8,6 +8,7 @@ import Layout from '../layouts/Layout.astro';
 import Contact from '../components/Contact.astro';
 import SelectedWork from '../components/SelectedWork.astro';
 import Skills from '../components/Skills.astro';
+import Recommendations from '../components/Recommendations.astro';
 import { profile } from '../content/site';
 
 const heroCopy = ['Analytical thinking', 'and modern UI'];
@@ -31,6 +32,7 @@ const heroCopy = ['Analytical thinking', 'and modern UI'];
     </div>
   <Skills />
   </section>
+  <Recommendations />
   <div slot="closing" class="closing-scene"><Image class="closing-background" src={landscape} alt="" widths={[768, 1440, 2160]} sizes="100vw" format="webp" loading="lazy" /><div class="closing-content"><div class="closing-panel section-shell"><Contact /><Footer embedded /></div></div></div>
 </Layout>
 <script>
