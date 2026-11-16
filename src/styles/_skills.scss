@@ -10,6 +10,9 @@
   .tool-logo { width: 24px; height: 24px; object-fit: contain; flex: 0 0 24px; }
   .skills-overview .tool-pills li { color: #23343e; }
 
+  .skills-section { padding-bottom: var(--section-space); }
+  .skills-section .skills-overview { padding-top: 0; }
+  .skills-overview .expertise { padding: 0; border: 0; }
   .skills-overview { padding-top: clamp(64px, 7vw, 96px); }
   .skills-overview > h2 { margin: 0 0 40px; font-size: clamp(32px, 3.5vw, 48px); font-weight: 700; line-height: 1.15; letter-spacing: -.03em; }
   .skills-group + .skills-group { margin-top: 32px; }
@@ -35,5 +38,6 @@
     .skill-pills li, .about-actions a { transition: none; }
     .skill-pills li:hover, .about-actions a:hover { transform: none; }
   }
-  .home-page .about-section { padding-bottom: calc(var(--section-space) + clamp(32px, 4vw, 56px)); }
+  .home-page .about-section .about-intro { margin-bottom: 0; }
+  .home-page .about-section { padding-top: 0; padding-bottom: calc(var(--section-space) + clamp(32px, 4vw, 56px)); }
 }

@@ -23,6 +23,8 @@ const heroCopy = ['Analytical thinking', 'and modern UI'];
     </div>
   </section>
   <SelectedWork />
+  <div class="skills-section section-shell"><Skills /></div>
+  <Recommendations />
   <section class="about-section section-shell" id="about" aria-labelledby="about-title">
     <div class="about-intro">
       <div class="about-story">
@@ -30,9 +32,7 @@ const heroCopy = ['Analytical thinking', 'and modern UI'];
       </div>
       <Image class="about-portrait" src={portrait} alt="Nataliia Kot, UX/UI and Product Designer" widths={[480, 768, 1024]} sizes="(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) 45vw, 520px" format="webp" quality={90} loading="lazy" />
     </div>
-  <Skills />
   </section>
-  <Recommendations />
   <div slot="closing" class="closing-scene"><Image class="closing-background" src={landscape} alt="" widths={[768, 1440, 2160]} sizes="100vw" format="webp" loading="lazy" /><div class="closing-content"><div class="closing-panel section-shell"><Contact /><Footer embedded /></div></div></div>
 </Layout>
 <script>
