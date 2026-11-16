@@ -53,3 +53,22 @@ export const certifications: Credential[] = [
   { title: 'UX/UI Design', institution: 'Creative Practice' },
   { title: 'UX/UI Design', institution: 'Genius.Space' },
 ];
+
+export const contactFaq = [
+  {
+    "question": "Are you open to full-time roles or project work?",
+    "answer": "I’m open to both. I can join a product team in a full-time role or work on a specific project, from a new product to improvements in an existing one."
+  },
+  {
+    "question": "What does working with you look like?",
+    "answer": "I start with business goals, user research, and competitor analysis. Then I map user flows, create wireframes and UI, test prototypes, and prepare the design for development. I adjust the steps to the project’s needs."
+  },
+  {
+    "question": "What can you help with?",
+    "answer": "I design B2B and B2C web and mobile products. I can help turn an idea into clear user flows and screens, improve an existing experience, or build a design system."
+  },
+  {
+    "question": "What are your strengths as a designer?",
+    "answer": "I make complex product logic easier to use, connect design choices to business goals, and build clear, reusable UI systems. My focus is on how the product works as well as how it looks."
+  }
+];
