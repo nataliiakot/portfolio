@@ -14,7 +14,8 @@ export const profile = {
   languages: [{ name: 'Ukrainian', level: 'C2' }, { name: 'English', level: 'C1' }],
 };
 export const navigation = [
-  { label: 'Work', id: 'work' }, { label: 'About', id: 'about' },
+  { label: 'Work', id: 'work' }, { label: 'Skills', id: 'skills' },
+  { label: 'Recommendations', id: 'recommendations' }, { label: 'About', id: 'about' },
 ];
 export const experience = [
   { role: 'UX/UI & Product Designer', company: 'BandaPixels', dates: 'Jan 2025 – Oct 2026', bullets: [

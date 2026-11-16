@@ -7,6 +7,12 @@
   button, .button, .home-page .hero-dock a, .closing-scene .contact-actions a { font-weight: 700; }
   .button:not(.primary), .home-page .hero-dock a:not(:first-child), .closing-scene .contact-actions a:not(:first-child) { border: 1px solid #171717; }
   .contact-icon { flex: 0 0 auto; }
+  .header-identity { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .site-header .desktop-nav { gap: 16px; }
+  @media (min-width: 900px) and (max-width: 1199px) {
+    .header-email { padding: 6px; }
+    .header-email > span:last-child { display: none; }
+  }
   .header-identity, .header-contact, .header-email, .header-email > span:last-child { min-width: 0; }
   .header-email > span:last-child { overflow-wrap: anywhere; }
   .header-email .email-icon { flex-shrink: 0; }

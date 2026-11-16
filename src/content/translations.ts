@@ -5,6 +5,9 @@ import { steadyTranslations } from './steady-story.ts';
 import { fleetoTranslations } from './fleeto-story.ts';
 import { cleanlyTranslations } from './cleanly-story.ts';
 export const translations: Record<string, string> = {
+  "Pause": "Пауза",
+  "Resume": "Продовжити",
+  "LinkedIn recommendations": "Рекомендації з LinkedIn",
   "Recommendations": "Рекомендації",
   "LinkedIn recommendation": "Рекомендація з LinkedIn",
   "Read on LinkedIn": "Читати в LinkedIn",
