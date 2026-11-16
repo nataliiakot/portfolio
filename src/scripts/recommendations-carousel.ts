@@ -1,8 +1,7 @@
 export function initRecommendationsCarousel(): void {
   const viewport = document.querySelector<HTMLElement>('.recommendation-carousel');
   const track = viewport?.querySelector<HTMLElement>('.recommendation-track');
-  const toggle = document.querySelector<HTMLButtonElement>('.recommendation-toggle');
-  if (!viewport || !track || !toggle || track.children.length < 2) return;
+  if (!viewport || !track || track.children.length < 2) return;
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const controller = new AbortController();
@@ -15,17 +14,16 @@ export function initRecommendationsCarousel(): void {
   let hovered = false;
   let keyboardFocus = false;
   let touching = false;
-  let userPaused = false;
   let touchTimer = 0;
 
   function canRun() {
-    return visible && !document.hidden && !reducedMotion.matches && !hovered && !keyboardFocus && !touching && !userPaused;
+    return visible && !document.hidden && !reducedMotion.matches && !hovered && !keyboardFocus && !touching;
   }
   function tick(time: number) {
     frame = 0;
     if (!viewport || !track || !canRun()) return;
     if (lastTime && step > 0) {
-      offset += Math.min(time - lastTime, 64) * .024;
+      offset += Math.min(time - lastTime, 64) * .032;
       // Reuse the same five cards: no duplicate quotes or hidden links.
       while (offset >= step && track.firstElementChild) {
         track.append(track.firstElementChild);
@@ -68,18 +66,10 @@ export function initRecommendationsCarousel(): void {
   };
   viewport.addEventListener('pointerup', releaseTouch, options);
   viewport.addEventListener('pointercancel', releaseTouch, options);
-  toggle.addEventListener('click', () => {
-    userPaused = !userPaused;
-    toggle.setAttribute('aria-pressed', String(userPaused));
-    toggle.querySelector<HTMLElement>('[data-pause-label]')!.hidden = userPaused;
-    toggle.querySelector<HTMLElement>('[data-resume-label]')!.hidden = !userPaused;
-    sync();
-  }, options);
-  function motionPreference() { toggle!.hidden = reducedMotion.matches; sync(); }
-  reducedMotion.addEventListener('change', motionPreference, options);
+  reducedMotion.addEventListener('change', sync, options);
   document.addEventListener('visibilitychange', sync, options);
   document.addEventListener('portfolio:language-change', measure, options);
-  motionPreference();
+  sync();
   measure();
   document.addEventListener('astro:before-swap', () => {
     controller.abort(); cancelAnimationFrame(frame); clearTimeout(touchTimer); resize.disconnect(); intersection.disconnect();
