@@ -104,7 +104,7 @@ export const hrStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "As the lead designer, I worked with developers and the project manager across research, flows, web UI, and handoff. I also guided the design team across 450+ screens, keeping shared patterns consistent as the product grew."
+    "text": "As the lead designer, I worked with four developers and the project manager across research, flows, web UI, and handoff. I also guided the design team across 450+ screens, keeping shared patterns consistent as the product grew."
   },
   {
     "type": "paragraph",

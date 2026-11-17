@@ -103,7 +103,7 @@ export const cleanlyStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "As the lead designer, I worked with developers and the project manager from research to handoff. I designed the flows, prototypes, mobile UI, and shared components, with a focus on the handover between cleaner, manager, and client."
+    "text": "As the lead designer, I worked with one developer and the project manager from research to handoff. I designed the flows, prototypes, mobile UI, and shared components, with a focus on the handover between cleaner, manager, and client."
   },
   {
     "type": "paragraph",

@@ -53,3 +53,7 @@ Each case follows a concrete task: a cleaner waiting for job confirmation; HR re
 ## Responsive text wrapping
 
 Apply the shared `caseText` formatter to displayed case copy at render time. Keep single-letter English words attached to the following word, counts attached to their descriptions, and short final words with a preceding word when the phrase stays compact. Use `text-wrap: pretty` for body text and preserve the shared heading styles. Do not insert manual line breaks for a specific viewport or alter source wording, image paths, or anchor IDs to control wrapping. Verify narrow mobile widths and desktop tables for overflow.
+
+## Team details (17 November 2026)
+
+Include Team with the opening project facts, without a background panel. Confirmed Cleanly team: one designer, one project manager, one developer. Confirmed HR System team: three designers, one project manager, four developers. Fleeto records two designers; include the already confirmed project manager and developers without adding an unsupported engineering headcount. Nova Bank and Steady list the lead designer, project manager, and developers without headcounts. Cleanly product visuals are capped at 880px and research evidence at 800px on desktop; retain available width on mobile and full-screen viewing.

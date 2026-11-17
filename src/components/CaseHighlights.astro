@@ -11,7 +11,7 @@ const { highlights, facts } = Astro.props;
       <dd><strong>{metric.value}</strong>{metric.note && <p>{caseText(metric.note)}</p>}</dd>
     </div>)}
   </dl>
-  <dl class="case-facts" aria-label="Role and contribution">
+  <dl class="case-facts" aria-label="Project details">
     {facts.map(([label, value]) => <div><dt>{caseText(label)}</dt><dd>{caseText(value)}</dd></div>)}
     <div class="case-contribution"><dt>My contribution</dt><dd>{caseText(highlights.contribution)}</dd></div>
   </dl>
@@ -25,12 +25,13 @@ const { highlights, facts } = Astro.props;
   .case-highlight-metric dd { margin: 12px 0 0; }
   .case-highlight-metric strong { display: block; font-size: 42px; line-height: 1.1; letter-spacing: -.035em; font-weight: 700; color: #17242b; }
   .case-highlight-metric p { font-size: 16px; line-height: 1.5; font-weight: 400; margin: 8px 0 0; color: #414c55; }
-  .case-highlights .case-facts { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr); gap: 24px; margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; }
+  .case-highlights .case-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; }
+  .case-highlights .case-contribution { grid-column: 1 / -1; max-width: 46rem; }
   .case-highlights .case-facts dt { font-size: 14px; line-height: 1.5; font-weight: 400; color: #52606c; }
   .case-highlights .case-facts dd { font-size: 16px; line-height: 1.5; font-weight: 400; color: #414c55; }
   @media (max-width: 800px) {
     .case-highlights .case-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-    .case-facts .case-contribution { grid-column: 1 / -1; }
+    .case-facts > div:nth-child(3), .case-facts .case-contribution { grid-column: 1 / -1; }
   }
   @media (max-width: 720px) {
     .case-highlights { margin-block: 16px 24px; gap: 24px; }

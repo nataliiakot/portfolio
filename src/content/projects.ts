@@ -22,7 +22,7 @@ export interface Project {
   story?: CaseBlock[];
   slug: string; title: string; category: string; summary: string; draft?: boolean;
   textOnly?: boolean; solution?: string[]; features?: string[]; sourceUrl?: string;
-  cover?: ProjectImage; role?: string; scope?: string; year?: string; duration?: string;
+  cover?: ProjectImage; role?: string; scope?: string; team?: string; year?: string; duration?: string;
   context?: string[]; approach?: string[]; visuals?: ProjectImage[]; results?: string[];
 }
 
@@ -30,6 +30,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     "slug": "cleanly",
+    "team": "1 designer, 1 project manager, 1 developer.",
     "title": "Cleanly",
     "category": "Facility Services Management",
     "summary": "A mobile service management platform and marketplace that connects cleaners, clients, and managers in one workflow. Cleaners can discover requests, review job and location details, manage assignments, and communicate with clients. Managers approve requests from unverified clients before assignment, keeping new client relationships under company control.",
@@ -55,6 +56,7 @@ export const projects: Project[] = [
   },
   {
     "slug": "hr-boost",
+    "team": "3 designers, 1 project manager, 4 developers.",
     "title": "HR System",
     "category": "Human resources, Employee management",
     "summary": "An HR management platform that centralizes employee information and supports everyday people operations. Users can manage employee profiles, recruitment and onboarding, attendance and leave, performance reviews, and company structure through a unified workspace.",
@@ -83,6 +85,7 @@ export const projects: Project[] = [
   },
   {
     "slug": "fleeto",
+    "team": "2 designers, a project manager, and developers.",
     "title": "Fleeto",
     "category": "Transportation, Logistics",
     "summary": "A web platform that helps businesses manage fleet operations in one place. Users can monitor vehicle locations, manage drivers and trips, track maintenance and fuel usage, and review operational performance through dashboards and reports.",
@@ -111,6 +114,7 @@ export const projects: Project[] = [
   },
   {
     "slug": "nova-bank",
+    "team": "Lead designer, project manager, and developers.",
     "title": "Nova Bank",
     "category": "Mobile banking",
     "summary": "Nova Bank is a modern mobile banking application designed to help users manage their finances quickly, securely, and effortlessly. The app combines everyday banking features such as money transfers, bill payments, card management, and spending analytics into one intuitive experience.",
@@ -141,6 +145,7 @@ export const projects: Project[] = [
   },
   {
     "slug": "fitness-app",
+    "team": "Lead designer, project manager, and developers.",
     "title": "Steady",
     "category": "Fitness",
     "summary": "A mobile fitness companion connecting approachable workouts, daily activity, nutrition, and AI guidance around sustainable habits.",
