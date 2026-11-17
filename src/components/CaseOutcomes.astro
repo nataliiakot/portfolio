@@ -1,9 +1,10 @@
 ---
+import { caseText } from '../utils/case-typography';
 import type { CaseBlock } from '../content/projects';
 interface Props { block: Extract<CaseBlock, { type: 'metrics' }>; }
 const { block } = Astro.props;
 ---
-<section class="case-outcomes" aria-label={block.title}>
-  <h3><span>{block.title}</span></h3>
-  <dl class="case-metric-grid">{block.items.map(item => <div class="case-metric"><dt>{item.label}</dt><dd><span class="case-metric-value">{item.value}</span><p>{item.detail}</p></dd></div>)}</dl>
+<section class="case-outcomes" aria-label={caseText(block.title)}>
+  <h3><span>{caseText(block.title)}</span></h3>
+  <dl class="case-metric-grid">{block.items.map(item => <div class="case-metric"><dt>{caseText(item.label)}</dt><dd><span class="case-metric-value">{item.value}</span><p>{caseText(item.detail)}</p></dd></div>)}</dl>
 </section>

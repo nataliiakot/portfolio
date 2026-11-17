@@ -1,4 +1,5 @@
 ---
+import { caseText } from '../utils/case-typography';
 import type { CaseHighlights } from '../content/case-highlights';
 interface Props { highlights: CaseHighlights; facts: (string | undefined)[][]; }
 const { highlights, facts } = Astro.props;
@@ -6,13 +7,13 @@ const { highlights, facts } = Astro.props;
 <section class="case-highlights" aria-label="Project highlights">
   <dl class:list={['case-highlight-metrics', { 'has-three': highlights.metrics.length === 3 }]}>
     {highlights.metrics.map(metric => <div class="case-highlight-metric">
-      <dt>{metric.label}</dt>
-      <dd><strong>{metric.value}</strong>{metric.note && <p>{metric.note}</p>}</dd>
+      <dt>{caseText(metric.label)}</dt>
+      <dd><strong>{metric.value}</strong>{metric.note && <p>{caseText(metric.note)}</p>}</dd>
     </div>)}
   </dl>
   <dl class="case-facts" aria-label="Role and contribution">
-    {facts.map(([label, value]) => <div><dt>{label}</dt><dd>{value}</dd></div>)}
-    <div class="case-contribution"><dt>My contribution</dt><dd>{highlights.contribution}</dd></div>
+    {facts.map(([label, value]) => <div><dt>{caseText(label)}</dt><dd>{caseText(value)}</dd></div>)}
+    <div class="case-contribution"><dt>My contribution</dt><dd>{caseText(highlights.contribution)}</dd></div>
   </dl>
 </section>
 

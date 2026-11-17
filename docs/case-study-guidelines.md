@@ -49,3 +49,7 @@ The public site is English-only as requested on 16 November 2026; do not show la
 ## Storytelling revision (16 November 2026)
 
 Each case follows a concrete task: a cleaner waiting for job confirmation; HR reviewing leave with employee and team context; a dispatcher moving from location to trip details; a bank customer checking a payment; a fitness user choosing a session. Introduce the product in the opening line. Explain the tension, the designer’s choice, and what the interface enables. Use short connected paragraphs instead of repeating Hypothesis / What I changed / Design result cards. Keep hypotheses as expectations, preserve supplied evidence, and do not add measured outcomes. Cleanly and HR retain deeper research and reasoning; other cases remain shorter. Keep all supplied visuals in their established order and preserve existing Skills navigation anchors.
+
+## Responsive text wrapping
+
+Apply the shared `caseText` formatter to displayed case copy at render time. Keep single-letter English words attached to the following word, counts attached to their descriptions, and short final words with a preceding word when the phrase stays compact. Use `text-wrap: pretty` for body text and preserve the shared heading styles. Do not insert manual line breaks for a specific viewport or alter source wording, image paths, or anchor IDs to control wrapping. Verify narrow mobile widths and desktop tables for overflow.

@@ -11,6 +11,10 @@
     font-family: 'Manrope Variable', sans-serif;
     color: #17242b;
   }
+  .case-study :is(p, li, dd, dt, th, td, figcaption) {
+    text-wrap: pretty;
+    hyphens: none;
+  }
   .case-study:has(.case-highlights) { padding-top: 24px; }
   .case-study:has(.case-highlights) .all-work { margin-bottom: 16px; }
   .case-study:has(.case-highlights) .case-heading { margin-bottom: 0; }

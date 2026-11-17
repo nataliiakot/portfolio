@@ -1,14 +1,15 @@
 ---
+import { caseText } from '../utils/case-typography';
 import type { CaseBlock } from '../content/projects';
 interface Props { block: Extract<CaseBlock, { type: 'flow' }>; }
 const { block } = Astro.props;
 ---
 <figure class:list={['case-flow', `case-flow-${block.layout}`]} style={`--flow-columns:${block.items.length}`}>
-  <figcaption><h3><span>{block.title}</span></h3></figcaption>
-  {block.start && <p class="flow-terminal">{block.start}</p>}
+  <figcaption><h3><span>{caseText(block.title)}</span></h3></figcaption>
+  {block.start && <p class="flow-terminal">{caseText(block.start)}</p>}
   <div class="flow-branches">
-    {block.items.map(item => <section class="flow-path"><h4>{item.title}</h4><ol>{item.steps.map(step => <li>{step}</li>)}</ol></section>)}
+    {block.items.map(item => <section class="flow-path"><h4>{caseText(item.title)}</h4><ol>{item.steps.map(step => <li>{caseText(step)}</li>)}</ol></section>)}
   </div>
-  {block.end && <p class="flow-terminal flow-end">{block.end}</p>}
-  {block.note && <p class="flow-note">{block.note}</p>}
+  {block.end && <p class="flow-terminal flow-end">{caseText(block.end)}</p>}
+  {block.note && <p class="flow-note">{caseText(block.note)}</p>}
 </figure>
