@@ -51,7 +51,7 @@ export const projects: Project[] = [
     ],
     "textOnly": true,
     "story": cleanlyStory,
-    "headline": "A cleaning service app that makes the path from an available job to a confirmed assignment clear.",
+    "headline": "Cleaning service management",
     "role": "UX/UI & Product Designer"
   },
   {
@@ -80,7 +80,7 @@ export const projects: Project[] = [
     "textOnly": true,
     "story": hrStory,
 
-    "headline": "Connecting employee information and daily decisions across a large HR workspace.",
+    "headline": "One workspace for daily HR tasks",
     "role": "UX/UI & Product Designer"
   },
   {
@@ -109,7 +109,7 @@ export const projects: Project[] = [
     },
     "textOnly": true,
     "story": fleetoStory,
-    "headline": "A fleet management workspace linking live vehicles, trips, shifts, and the decisions around them.",
+    "headline": "Fleet operations in one workspace",
     "role": "UX/UI & Product Designer"
   },
   {
@@ -141,7 +141,7 @@ export const projects: Project[] = [
 
     "textOnly": true,
     "story": novaStory,
-    "headline": "A mobile banking app built around quick payments, clear checks, and control over accounts."
+    "headline": "Everyday banking made clear"
   },
   {
     "slug": "fitness-app",
@@ -151,7 +151,7 @@ export const projects: Project[] = [
     "summary": "A mobile fitness companion connecting approachable workouts, daily activity, nutrition, and AI guidance around sustainable habits.",
     "textOnly": true,
     "story": steadyStory,
-    "headline": "A fitness app that turns the choice of a workout into a clear next step.",
+    "headline": "A fitness app for daily routines",
     "role": "UX/UI & Product Designer"
   }
 ];
