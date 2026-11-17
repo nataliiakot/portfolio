@@ -56,4 +56,14 @@ Apply the shared `caseText` formatter to displayed case copy at render time. Kee
 
 ## Team details (17 November 2026)
 
-Include Team as one of the three opening project tags. Confirmed Cleanly team: one designer, one project manager, one developer. Confirmed HR System team: three designers, one project manager, four developers. Fleeto records two designers; include the already confirmed project manager and developers without adding an unsupported engineering headcount. Nova Bank and Steady list the lead designer, project manager, and developers without headcounts. Cleanly product visuals are capped at 880px and research evidence at 800px on desktop; retain available width on mobile and full-screen viewing.
+Include Team as one of the three opening project tags. Confirmed Cleanly team: one designer, one project manager, one developer. Latest user correction: Nataliia was the sole designer on every project. HR System has one designer, one project manager, and four developers. Fleeto, Nova Bank and Steady each list one designer, a project manager, and developers without an engineering headcount. Cleanly product visuals are capped at 880px and research evidence at 800px on desktop; retain available width on mobile and full-screen viewing.
+
+
+## Process and writing alignment — 17 November 2026
+
+The user extended the accepted Cleanly approach to all other cases, explicitly including the writing. Keep supplied research and planning before final UI, aside from the opening and closing product images. Group related evidence in compact rows. Explain a concrete task, the supported insight or design rationale, the designer’s choice, and what the screens enable in connected B2 English. Avoid repeated feature inventories and ritual hypothesis paragraphs. Where research evidence is unavailable, describe design planning without inventing interviews, tests, findings, or validation. Preserve confirmed outcomes and distinguish them from design deliverables.
+
+
+## Designer count correction — 17 November 2026
+
+The user explicitly confirmed she was the only designer on all projects. This supersedes every earlier reference to two or three designers or supervising a design team in a case study. Use Sole UX/UI & Product Designer in the role tag, one designer in Team, and sole ownership in narratives. Preserve confirmed project manager/developer counts and unrelated employment or testimonial history.

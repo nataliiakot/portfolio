@@ -11,7 +11,8 @@ export type CaseBlock =
   | { type: 'paragraph'; text: string; emphasis?: boolean }
   | { type: 'list'; items: string[] }
   | { type: 'image'; image: ProjectImage }
-  | { type: 'gallery'; images: ProjectImage[]; presentation?: 'screens' }
+  | { type: 'video'; src: string; poster: string; title: string; width: number; height: number }
+  | { type: 'gallery'; images: ProjectImage[]; presentation?: 'screens' | 'comparison' }
   | { type: 'evidence'; title: string; image: ProjectImage }
   | { type: 'table'; title: string; columns: string[]; rows: string[][] }
   | { type: 'decision'; title: string; items: { label: string; text: string }[] }
@@ -52,18 +53,17 @@ export const projects: Project[] = [
     "textOnly": true,
     "story": cleanlyStory,
     "headline": "A cleaning app built around client trust",
-    "role": "UX/UI & Product Designer"
+    "role": "Sole UX/UI & Product Designer"
   },
   {
     "slug": "hr-boost",
-    "team": "3 designers, 1 project manager, 4 developers.",
+    "team": "1 designer, 1 project manager, 4 developers.",
     "title": "HR System",
     "category": "Human resources, Employee management",
     "summary": "An HR platform built from scratch to bring work from two systems, spreadsheets, and notes into one workspace. I led the design of connected employee records and HR workflows, with roles and permissions defining what each person sees.",
-    "scope": "3 designers",
+    "scope": "1 designer",
     "approach": [
-      "Supervising and mentoring the design team",
-      "UX research",
+            "UX research",
       "Information architecture",
       "User flows",
       "Wireframing",
@@ -81,18 +81,17 @@ export const projects: Project[] = [
     "story": hrStory,
 
     "headline": "One workspace, focused by role",
-    "role": "UX/UI & Product Designer"
+    "role": "Sole UX/UI & Product Designer"
   },
   {
     "slug": "fleeto",
-    "team": "2 designers, a project manager, and developers.",
+    "team": "1 designer, a project manager, and developers.",
     "title": "Fleeto",
     "category": "Transportation, Logistics",
     "summary": "A web platform that helps businesses manage fleet operations in one place. Users can monitor vehicle locations, manage drivers and trips, track maintenance and fuel usage, and review operational performance through dashboards and reports.",
-    "scope": "2 designers",
+    "scope": "1 designer",
     "approach": [
-      "Supervising and mentoring the design team",
-      "Information architecture",
+            "Information architecture",
       "User flows",
       "Wireframing",
       "UI web app design",
@@ -110,15 +109,15 @@ export const projects: Project[] = [
     "textOnly": true,
     "story": fleetoStory,
     "headline": "Fleet operations in one workspace",
-    "role": "UX/UI & Product Designer"
+    "role": "Sole UX/UI & Product Designer"
   },
   {
     "slug": "nova-bank",
-    "team": "Lead designer, project manager, and developers.",
+    "team": "1 designer, a project manager, and developers.",
     "title": "Nova Bank",
     "category": "Mobile banking",
     "summary": "Nova Bank is a modern mobile banking application designed to help users manage their finances quickly, securely, and effortlessly. The app combines everyday banking features such as money transfers, bill payments, card management, and spending analytics into one intuitive experience.",
-    "role": "UX/UI & Product Designer",
+    "role": "Sole UX/UI & Product Designer",
     "context": [
       "Many mobile banking applications are overloaded with complex navigation and lengthy transaction flows, making common financial tasks slower than they should be. Users need fast access to their accounts, payments, and spending insights without sacrificing security."
     ],
@@ -145,14 +144,14 @@ export const projects: Project[] = [
   },
   {
     "slug": "fitness-app",
-    "team": "Lead designer, project manager, and developers.",
+    "team": "1 designer, a project manager, and developers.",
     "title": "Steady",
     "category": "Fitness",
     "summary": "A mobile fitness companion connecting approachable workouts, daily activity, nutrition, and AI guidance around sustainable habits.",
     "textOnly": true,
     "story": steadyStory,
     "headline": "A fitness app for daily routines",
-    "role": "UX/UI & Product Designer"
+    "role": "Sole UX/UI & Product Designer"
   }
 ];
 

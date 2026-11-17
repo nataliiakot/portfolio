@@ -78,7 +78,7 @@ export const cleanlyStory: CaseBlock[] = [
     "type": "image",
     "image": {
       "src": "cleanly-06.png",
-      "alt": "Cleanly request discovery, home dashboard and job details",
+      "alt": "Cleanly overview: request discovery, cleaner dashboard and job details",
       "width": 3840,
       "height": 1800
     }
@@ -106,6 +106,49 @@ export const cleanlyStory: CaseBlock[] = [
     "text": "I was the lead and sole designer, working with one developer and the project manager from research to implementation. I designed the flows, prototypes, mobile screens, and UI system. My main product proposal was a personal client network for each cleaner."
   },
   {
+    "type": "evidence",
+    "title": "The starting product scope",
+    "image": {
+      "src": "cleanly-product-definition.png",
+      "alt": "Original Cleanly product definition and responsibilities of manager, client and cleaner",
+      "width": 2120,
+      "height": 1344
+    }
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "Researching existing cleaning platforms"
+  },
+  {
+    "type": "paragraph",
+    "text": "I reviewed Swept, TaskTor, Clean Scheduler, and KleanFlo for scheduling, job lists, and client records. This comparison informed interface patterns; the interviews informed my proposal for the personal client network."
+  },
+  {
+    "type": "gallery",
+    "presentation": "comparison",
+    "images": [
+      {
+        "src": "cleanly-competitor-analysis.png",
+        "alt": "Cleanly competitor research: Swept, TaskTor, Clean Scheduler and KleanFlo",
+        "width": 2120,
+        "height": 2000
+      },
+      {
+        "src": "cleanly-competitor-table.png",
+        "alt": "Original competitive comparison from the Cleanly research",
+        "width": 2744,
+        "height": 3420
+      },
+      {
+        "src": "cleanly-positioning.png",
+        "alt": "Original positioning matrix comparing Cleanly with the reviewed products",
+        "width": 2120,
+        "height": 2168
+      }
+    ]
+  },
+  {
     "type": "heading",
     "level": 2,
     "text": "What the interviews changed"
@@ -119,34 +162,32 @@ export const cleanlyStory: CaseBlock[] = [
     "text": "My hypothesis was that this review step could give cleaners more confidence when taking work from someone new, while keeping jobs within their existing network straightforward. This was a design hypothesis, separate from the later timing measurement."
   },
   {
-    "type": "table",
-    "title": "Three roles, one shared request",
-    "columns": [
-      "Role",
-      "Core need",
-      "Design response"
-    ],
-    "rows": [
-      [
-        "Cleaner",
-        "Find work and understand who they will visit.",
-        "A personal client network, verification filters, job details, and clear request states."
-      ],
-      [
-        "Manager",
-        "Grant permission before a new client joins a cleaner’s network.",
-        "A review screen explaining the request and the effect of approval."
-      ],
-      [
-        "Client",
-        "Find a cleaner and confirm the job.",
-        "A connected request flow and communication linked to the assignment."
-      ]
-    ]
+    "type": "paragraph",
+    "text": "The interviews were with cleaners. I also created role profiles for the manager and client to map how their needs connect within the same request. These profiles guided design decisions; they do not represent additional interview participants."
   },
   {
-    "type": "paragraph",
-    "text": "The interviews were with cleaners. I used role maps to consider the manager who grants permission and the client looking for a cleaner. Their needs had to fit the same request without adding the same approval step to every job."
+    "type": "gallery",
+    "presentation": "comparison",
+    "images": [
+      {
+        "src": "cleanly-persona-cleaner.png",
+        "alt": "Alex: cleaner role profile with goals, concerns and request acceptance needs",
+        "width": 2088,
+        "height": 1040
+      },
+      {
+        "src": "cleanly-persona-manager.png",
+        "alt": "Marcus: manager role profile with approval and coordination needs",
+        "width": 2088,
+        "height": 1040
+      },
+      {
+        "src": "cleanly-persona-client.png",
+        "alt": "Sophia: client role profile with request creation and communication needs",
+        "width": 2088,
+        "height": 1040
+      }
+    ]
   },
   {
     "type": "heading",
@@ -163,8 +204,8 @@ export const cleanlyStory: CaseBlock[] = [
     "image": {
       "src": "cleanly-user-flows.png",
       "alt": "Original Cleanly user flows for cleaner requests and manager approval",
-      "width": 3840,
-      "height": 1800
+      "width": 5610,
+      "height": 3934
     }
   },
   {
@@ -181,8 +222,27 @@ export const cleanlyStory: CaseBlock[] = [
     "image": {
       "src": "cleanly-wireframes.png",
       "alt": "Cleanly wireframes for cleaner and manager workflows",
-      "width": 3840,
-      "height": 1800
+      "width": 7200,
+      "height": 4992
+    }
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "Support the flow with a shared visual system"
+  },
+  {
+    "type": "paragraph",
+    "text": "I reused buttons, cards, spacing, and status patterns across discovery, job details, approval, and communication. Blue supports actions and status; the glass-inspired direction connects the app with cleaning while keeping the job information readable."
+  },
+  {
+    "type": "evidence",
+    "title": "Visual references and interface direction",
+    "image": {
+      "src": "cleanly-visual-direction.png",
+      "alt": "Cleanly moodboard with app typography, palette and external visual references",
+      "width": 2984,
+      "height": 1846
     }
   },
   {
@@ -198,7 +258,7 @@ export const cleanlyStory: CaseBlock[] = [
     "type": "image",
     "image": {
       "src": "cleanly-02.png",
-      "alt": "Manager review with approved and rejected request outcomes",
+      "alt": "Manager review and the approved or rejected client-network request",
       "width": 3840,
       "height": 1800
     }
@@ -214,20 +274,20 @@ export const cleanlyStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "Applying for work does not mean the visit is confirmed. I designed waiting, approval, rejection, and sending-error states to explain what has happened and whether the cleaner should wait, continue, or retry."
+    "text": "Applying for work does not mean the visit is confirmed. I connected the request to a manager notification and clear approval or rejection outcomes, so the cleaner can follow the decision about adding a new client."
   },
   {
     "type": "image",
     "image": {
       "src": "cleanly-05.png",
-      "alt": "Cleanly approval confirmation, request review and error states",
+      "alt": "Manager notification, request review and client-network approval or rejection",
       "width": 3840,
       "height": 1800
     }
   },
   {
     "type": "paragraph",
-    "text": "A sending error and a rejection need different responses. The first offers another attempt; the second communicates a decision. Keeping them distinct was part of making the new-client flow understandable."
+    "text": "The notification brings the manager into the review. The outcome screens explain whether the client was added to the network and keep the job details visible, connecting the decision back to the original request."
   },
   {
     "type": "heading",
@@ -242,7 +302,7 @@ export const cleanlyStory: CaseBlock[] = [
     "type": "image",
     "image": {
       "src": "cleanly-01.png",
-      "alt": "Cleanly job information, location details and contextual chat",
+      "alt": "Job discovery, location details and the manager-approval notice for an unverified client",
       "width": 3840,
       "height": 1800
     }
@@ -261,15 +321,6 @@ export const cleanlyStory: CaseBlock[] = [
     "text": "I connected client verification filters with job discovery and kept new requests separate from active jobs. Approval and activity history show how a request moves forward. The network rule is visible throughout the journey, not only on the manager’s screen."
   },
   {
-    "type": "image",
-    "image": {
-      "src": "cleanly-04.png",
-      "alt": "Cleanly home, request filtering and job details screens",
-      "width": 3840,
-      "height": 1800
-    }
-  },
-  {
     "type": "heading",
     "level": 2,
     "text": "Keep the conversation in context"
@@ -279,52 +330,22 @@ export const cleanlyStory: CaseBlock[] = [
     "text": "After confirmation, the cleaner may still need to ask about access or cleaning instructions. I linked chat, photos, and calls to the assignment so both people can discuss the same job and return to its details."
   },
   {
-    "type": "heading",
-    "level": 2,
-    "text": "Support the flow with a shared visual system"
-  },
-  {
-    "type": "paragraph",
-    "text": "I reused buttons, cards, spacing, and status patterns across discovery, job details, approval, and communication. Blue supports actions and status; the glass-inspired direction connects the app with cleaning while keeping the job information readable."
-  },
-  {
-    "type": "evidence",
-    "title": "Visual references and interface direction",
-    "image": {
-      "src": "cleanly-visual-direction.png",
-      "alt": "Cleanly moodboard with app typography, palette and external visual references",
-      "width": 3840,
-      "height": 1800
-    }
-  },
-  {
-    "type": "heading",
-    "level": 2,
-    "text": "Supporting research and the complete journey"
-  },
-  {
-    "type": "paragraph",
-    "text": "I also reviewed Swept, TaskTor, Clean Scheduler, and KleanFlo for scheduling, job lists, and client records. This comparison informed interface patterns; the interviews informed my proposal for the personal client network."
-  },
-  {
-    "type": "evidence",
-    "title": "Competitive comparison",
-    "image": {
-      "src": "cleanly-competitor-table.png",
-      "alt": "Original competitive comparison from the Cleanly research",
-      "width": 3840,
-      "height": 1800
-    }
-  },
-  {
     "type": "evidence",
     "title": "The connected cleaner and manager journey",
     "image": {
       "src": "cleanly-annotated-flow.png",
       "alt": "Annotated final Cleanly flow showing cleaner and manager screens and state transitions",
-      "width": 3840,
-      "height": 1800
+      "width": 9836,
+      "height": 2902
     }
+  },
+  {
+    "type": "video",
+    "src": "/videos/cleanly-walkthrough.mp4",
+    "poster": "/videos/cleanly-walkthrough-poster.jpg",
+    "title": "Cleanly prototype walkthrough",
+    "width": 1418,
+    "height": 1566
   },
   {
     "type": "heading",
@@ -342,8 +363,8 @@ export const cleanlyStory: CaseBlock[] = [
   {
     "type": "image",
     "image": {
-      "src": "cleanly-03.png",
-      "alt": "Cleanly communication and connected request screens",
+      "src": "cleanly-04.png",
+      "alt": "Cleanly brand screen, cleaner dashboard and verified or unverified request filters",
       "width": 3840,
       "height": 1800
     }

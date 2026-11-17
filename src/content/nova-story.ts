@@ -63,7 +63,7 @@ export const novaStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "Opening a banking app often starts with a small question: can I send this amount, which card am I using, or what was that payment? The interface needs to answer quickly while keeping money and security details clear."
+    "text": "A banking customer may open the app to check a balance, send money, or find a payment. Each task needs clear account information and an obvious next step. I designed Nova Bank around these everyday decisions."
   },
   {
     "type": "heading",
@@ -72,7 +72,21 @@ export const novaStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "As the lead designer, I worked with developers and the project manager from research and wireframes to final screens and reusable components. I designed for adults aged 18–50, focusing on everyday payments, account control, and understanding spending."
+    "text": "As the sole designer, I worked with the project manager and developers from research and wireframes to final screens and reusable components. The product focused on adults aged 18–50 managing everyday payments, cards, and spending."
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "Use research to set the priorities"
+  },
+  {
+    "type": "paragraph",
+    "text": "I reviewed Monobank, Revolut, and Wise alongside user research into common banking tasks and navigation. I used this work to prioritise balances, transfers, history search, visible security controls, and spending information."
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "Connect the main banking tasks"
   },
   {
     "type": "table",
@@ -101,13 +115,8 @@ export const novaStory: CaseBlock[] = [
     ]
   },
   {
-    "type": "heading",
-    "level": 2,
-    "text": "Choose what needs to be clear first"
-  },
-  {
     "type": "paragraph",
-    "text": "I reviewed Monobank, Revolut, and Wise, alongside research focused on common tasks and navigation. I used that work to set priorities: show balances, make transfers easy to check, support history search, and keep card controls within reach."
+    "text": "I used the task priorities to organise the app and map transfers, bill payments, and card management before developing the final screens. The structure keeps daily actions easy to reach while giving account controls a predictable home."
   },
   {
     "type": "heading",
@@ -116,11 +125,11 @@ export const novaStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "The home screen had to balance an overview with quick access to a task. I expected a visible balance and payment shortcuts to offer a clearer starting point than a long list of banking features."
+    "text": "The home screen needed to answer two questions: what money is available, and what can I do next? I made the balance the first point of reference, followed by the main payment actions."
   },
   {
     "type": "paragraph",
-    "text": "I placed the balance above Send, Receive, Pay Bills, and Scan QR. Cards, spending, and recent transactions follow, so people can act first or continue into the details."
+    "text": "Send, Receive, Pay Bills, and Scan QR sit above cards, spending, and recent transactions. This gives a quick route into a task while keeping the wider account overview nearby."
   },
   {
     "type": "image",
@@ -138,11 +147,11 @@ export const novaStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "A transfer can be a short flow and still leave someone unsure who will receive the money. My hypothesis was that keeping the recipient and amount together would support a clearer final check."
+    "text": "Before sending money, the customer needs to check the recipient and amount together. I kept both visible during the transfer and repeated them in the Send button to support that final review."
   },
   {
     "type": "paragraph",
-    "text": "I placed saved recipients above the amount and repeated both in the Send button. After the payment, a separate history view offers search and filters for finding the transaction again."
+    "text": "Saved recipients provide a starting point for repeat transfers. After a payment, the separate history view offers search and filters so the customer can return to the transaction later."
   },
   {
     "type": "image",
@@ -160,11 +169,11 @@ export const novaStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "Card details are useful when they lead to an action. I grouped Freeze Card, View PIN, Spending Limits, and International Use under Accounts and Cards, beside the account information."
+    "text": "I placed Freeze Card, View PIN, Spending Limits, and International Use beside the account and card information. The customer can move from checking a card to managing it within the same area."
   },
   {
     "type": "paragraph",
-    "text": "I expected this grouping to make controls easier to find in context. Someone reviewing a card can move directly to its settings instead of searching through a general settings menu."
+    "text": "My hypothesis was that grouping these controls with the card would make them easier to find. Their placement supports account control without adding those settings to every payment step."
   },
   {
     "type": "image",
@@ -182,11 +191,11 @@ export const novaStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "Transaction history answers what happened to one payment. Understanding spending across a month needs a different view. I kept these as related but separate tasks."
+    "text": "Finding one payment and understanding a month of spending are different tasks. I kept transaction history focused on individual records and gave spending patterns a separate view."
   },
   {
     "type": "paragraph",
-    "text": "I added period filters, income and expense charts, category budgets, and short insight cards. My hypothesis was that this wider view could help people understand patterns that a transaction list alone does not explain."
+    "text": "Period filters, income and expense charts, category budgets, and short insight cards bring the wider picture together. These views help explain the information beyond a single transaction list."
   },
   {
     "type": "image",
@@ -235,7 +244,7 @@ export const novaStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "I delivered connected flows for sending money, paying bills, and managing cards, with one reusable UI system. My contribution was to keep the details needed for a decision close to the action. Each view supports a clear financial task, while shared navigation connects the experience."
+    "text": "I delivered connected flows for transfers, bill payments, and card management, supported by reusable components. My design contribution was to keep the information needed for a financial decision close to its action, with consistent navigation between related tasks."
   },
   {
     "type": "image",

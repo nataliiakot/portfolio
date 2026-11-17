@@ -21,7 +21,6 @@ export const hrTranslations: Record<string, string> = {
   "I mapped creating or copying a role, selecting permissions, and adding people now or later.": "Я пропрацювала створення або копіювання ролі, вибір доступів і додавання людей одразу або пізніше.",
   "I placed contact details and leave balances first, with tabs for actions, requests, reports, and comments.": "Я винесла контакти й баланс відпустки нагору та додала вкладки дій, запитів, звітів і коментарів.",
   "I separated templates from full processes and designed a picker with search, categories, and template types.": "Я відділила шаблони від повних процесів і спроєктувала вибір із пошуком, категоріями й типами.",
-  "I worked on research, navigation, user flows, web UI, the design system, and handoff. I also guided the design team across 450+ screens.": "Я працювала над дослідженням, навігацією, сценаріями, вебінтерфейсом, дизайн-системою й передачею в розробку. Також я координувала дизайн-команду в роботі над 450+ екранами.",
   "Keep employee tasks together": "Об’єднати завдання співробітника",
   "Keeping balances and requests in one profile could reduce switching between pages.": "Баланси й запити в одному профілі могли зменшити переходи між сторінками.",
   "Make role setup easier to follow": "Зробити налаштування ролей зрозумілим",
@@ -83,7 +82,7 @@ export const hrStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "As the lead designer, I worked with the project manager and four developers, and guided a team of three designers across 450+ screens. I connected research, information architecture, flows, and reusable UI through implementation."
+    "text": "As the sole designer, I worked with the project manager and four developers across 450+ screens. I connected research, information architecture, flows, and reusable UI through implementation."
   },
   {
     "type": "paragraph",
@@ -96,7 +95,7 @@ export const hrStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "I grouped feedback from 50 employees by product area and ranked possible improvements by priority and effort. HR managers also tested how easily and quickly they could complete tasks. Their workflows added context to the employee feedback."
+    "text": "I analysed feedback from 50 employees, grouped it by product area, and compared priorities with the effort needed to address them. HR managers also took part in usability and task-speed testing, adding context from their daily work."
   },
   {
     "type": "list",
@@ -108,7 +107,7 @@ export const hrStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "These findings shaped two priorities: bring related work into the platform, and keep each person’s view relevant to their responsibilities. The analysis board and HR requirements map below connect that direction to individual product areas."
+    "text": "The findings pointed to two connected needs: bring scattered work into one platform, then keep each workspace relevant to its role. I used the analysis and requirements map to connect those needs to the platform structure."
   },
   {
     "type": "gallery",
@@ -134,11 +133,11 @@ export const hrStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "I mapped employee information, recruitment, documents, requests, time tracking, and settings into a shared structure. This gave the team a way to connect work that had been spread across different tools."
+    "text": "Before designing individual pages, I mapped employee information, recruitment, documents, requests, time tracking, and settings. The shared structure connected tasks that HR had previously managed across separate tools."
   },
   {
     "type": "paragraph",
-    "text": "The broad map explained how the platform fits together. The detailed architecture placed pages and actions inside that structure, giving the designers and developers a common reference as the system grew."
+    "text": "I developed the broad map into a detailed architecture. This gave the project team a common reference for where information belongs and how people move between related tasks."
   },
   {
     "type": "gallery",
@@ -164,7 +163,7 @@ export const hrStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "Moving everything into one product could also bring too much into one view. I used access roles to define which information and actions each employee can see, so a shared platform does not mean an identical interface for everyone."
+    "text": "HR managers and employees use different sets of functions. I used roles and permissions to define which functions appear in each workspace, keeping the shared system focused on the work each person needs to do."
   },
   {
     "type": "table",
@@ -189,7 +188,7 @@ export const hrStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "The hypothesis was that role-based views could keep the platform manageable while still giving HR the reach needed for their work. I designed role setup as a clear sequence: create or copy a role, choose permissions, then assign employees now or later."
+    "text": "I expected role-based views to make the shared platform easier to navigate. I mapped role setup as a sequence: create or copy a role, choose permissions, then assign employees now or later."
   },
   {
     "type": "gallery",
@@ -210,7 +209,40 @@ export const hrStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "I kept permission setup separate from assigning people. That gives the person managing access a chance to review the rules first. The journey also covers temporary access and role removal, because access needs to change after the first setup."
+    "text": "I separated permission setup from assigning people so the rules can be reviewed first. The flow also covers temporary access and role removal, keeping later changes part of the design."
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "Map recurring processes before building the screens"
+  },
+  {
+    "type": "paragraph",
+    "text": "I also mapped how recurring HR processes use documents, surveys, and tasks. The map distinguishes a process from its reusable templates, giving the later interface a structure to follow."
+  },
+  {
+    "type": "gallery",
+    "images": [
+      {
+        "src": "hr-system-business-processes.png",
+        "alt": "Business processes and reusable survey, document, and HR task templates",
+        "width": 4192,
+        "height": 2400
+      }
+    ]
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "Help time tracking become a daily habit"
+  },
+  {
+    "type": "paragraph",
+    "text": "Employees told us they forgot to track their time. I added reminders, a calendar tracker on the dashboard, and rewards for regular tracking throughout the week."
+  },
+  {
+    "type": "paragraph",
+    "text": "The calendar brings tracking progress into the employee’s everyday workspace. My hypothesis was that reminders could prompt the action, while visible progress and weekly rewards could encourage a more regular habit."
   },
   {
     "type": "heading",
@@ -219,11 +251,11 @@ export const hrStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "For HR, bringing information together needed to be useful during actual work. I made the employee profile an entry point to contact details, balances, actions, requests, reports, and comments."
+    "text": "With the structure defined, I used the employee profile to connect HR’s recurring tasks. Contact details, leave balances, requests, reports, and comments sit within the same record, giving HR a clear place to begin."
   },
   {
     "type": "paragraph",
-    "text": "Contact details and leave balances appear first. Tabs keep the longer record within reach without placing all of it in the first view. HR can check the essentials, then open the related task from the same profile."
+    "text": "I placed contact details and leave balances first, with tabs for the longer record. HR can check the essentials and open a related task while keeping the employee context in view."
   },
   {
     "type": "gallery",
@@ -274,26 +306,15 @@ export const hrStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "The same approach extended to recurring HR processes. Onboarding and reviews can both involve documents, surveys, and tasks. I separated reusable templates from the process that puts them in order."
-  },
-  {
-    "type": "gallery",
-    "images": [
-      {
-        "src": "hr-system-business-processes.png",
-        "alt": "Business processes and reusable survey, document, and HR task templates",
-        "width": 4192,
-        "height": 2400
-      }
-    ]
+    "text": "The process map also shaped the final template picker. Onboarding and reviews can use documents, surveys, and tasks, so I kept reusable content separate from the sequence that puts it to work."
   },
   {
     "type": "paragraph",
-    "text": "The picker uses search, categories, and template types. The process defines the sequence; the template defines the content. My hypothesis was that these shared building blocks could support different HR routines without rebuilding the same content."
+    "text": "Search, categories, and template types help HR choose the content. The process defines the order. I expected this separation to support different routines while allowing the team to reuse the same building blocks."
   },
   {
     "type": "paragraph",
-    "text": "I reused UI patterns where the task was the same, while keeping layouts suited to their content: structured fields for assets, cards and filters for the knowledge base, and a searchable template picker. This helped the design team keep the growing platform consistent."
+    "text": "I reused UI patterns where the task was the same, while keeping layouts suited to their content: structured fields for assets, cards and filters for the knowledge base, and a searchable template picker. This helped me keep the growing platform consistent."
   },
   {
     "type": "image",
@@ -311,7 +332,7 @@ export const hrStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "The platform was implemented. After the first month of testing, project analytics recorded 45% less time spent on routine HR administration and 7% less time spent on onboarding."
+    "text": "The platform was implemented. After the first month of testing, project analytics recorded 45% less time spent on routine HR administration and 7% less time spent on onboarding, compared with the previous workflow across several systems, spreadsheets, and notes."
   },
   {
     "type": "paragraph",

@@ -21,7 +21,6 @@ export const fleetoTranslations: Record<string, string> = {
   "I combined fleet totals, a map, recent events, and a vehicle table on the dashboard.": "Я поєднала загальні показники, мапу, останні події й таблицю автомобілів на дашборді.",
   "I delivered a shared UI for live tracking, trip review, shifts, and permissions. Three roles use the same filters, statuses, and table patterns.": "Я створила спільний UI для моніторингу, перегляду поїздок, змін і доступів. Три ролі використовують однакові фільтри, статуси й патерни таблиць.",
   "I designed a role matrix, reusable permission profiles, and clear user status labels.": "Я спроєктувала матрицю ролей, повторювані профілі доступу й зрозумілі статуси користувачів.",
-  "I designed the navigation, task flows, dashboards, tables, and reusable UI. I also guided the design team and prepared screens for development.": "Я спроєктувала навігацію, сценарії, дашборди, таблиці й повторюваний UI. Також координувала дизайн-команду й готувала екрани для розробки.",
   "I placed a coverage heatmap and overtime chart above shifts linked to drivers and vehicles.": "Я розмістила теплову карту покриття й графік понаднормових годин над змінами з водіями й авто.",
   "Live tracking with a searchable vehicle list, status filters, and a map detail card.": "Моніторинг зі списком автомобілів, пошуком, фільтрами стану та карткою на мапі.",
   "Make access rules visible": "Зробити правила доступу видимими",
@@ -58,7 +57,7 @@ export const fleetoStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "A dot on a map tells a dispatcher where a vehicle is. It does not explain who is driving, which trip is active, or how recent the update is. To coordinate the next move, the team needs those details together."
+    "text": "A dispatcher can see a vehicle on the map and still lack the information needed to act. The driver, current trip, status, and last update all matter when deciding what to check next. Fleeto brings that context into one fleet workspace."
   },
   {
     "type": "heading",
@@ -67,7 +66,16 @@ export const fleetoStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "As the lead designer, I worked with developers and the project manager on navigation, flows, dashboards, and reusable UI. I also guided the design team and prepared the screens for development. My focus was the path from an overview to a specific operational decision."
+    "text": "As the sole designer, I worked with the project manager and developers on navigation, task flows, dashboards, and reusable UI. I prepared the screens for development, focusing on the route from overview to action."
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "Define the decisions before designing the views"
+  },
+  {
+    "type": "paragraph",
+    "text": "I structured the work around three responsibilities: dispatchers follow vehicles and trips, managers review fleet coverage, and administrators manage access. This role model guided the navigation and the information each view needs."
   },
   {
     "type": "table",
@@ -96,17 +104,21 @@ export const fleetoStory: CaseBlock[] = [
     ]
   },
   {
+    "type": "paragraph",
+    "text": "The core path moves from an overview to a selected vehicle and its trip. Weekly planning and access management support different decisions, so I gave them focused views within the shared workspace."
+  },
+  {
     "type": "heading",
     "level": 3,
     "text": "First, help the team know where to look"
   },
   {
     "type": "paragraph",
-    "text": "The dashboard needed to show the state of the fleet before asking operators to open individual records. I expected totals, recent events, and a map to help them choose what to investigate."
+    "text": "I started the interface with a fleet overview. Totals, recent events, and the map help an operator decide which vehicle or issue needs attention before opening a detailed record."
   },
   {
     "type": "paragraph",
-    "text": "I combined these with a vehicle table, giving the overview a direct route into the details. The dashboard is the starting point for work, rather than a separate reporting screen."
+    "text": "I connected that overview to a vehicle table. The dashboard gives the operator a starting point, and the table provides a route into the record they need to investigate."
   },
   {
     "type": "image",
@@ -124,11 +136,11 @@ export const fleetoStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "Once a dispatcher selects a vehicle, the next question is about the trip. I brought driver, speed, status, and current trip details into a map card, with search and filters to find the right vehicle."
+    "text": "After selecting a vehicle, the dispatcher needs to understand its trip. I placed the driver, speed, status, and current trip in a map card, with search and filters for finding the right vehicle."
   },
   {
     "type": "paragraph",
-    "text": "My hypothesis was that keeping this context beside the map would make tracking more useful. Shared identifiers and statuses connect the map with trip records, so the operator can follow the same vehicle across views."
+    "text": "I kept this context beside the location so the operator can review both together. Shared identifiers and statuses connect the map with trip records, carrying the same vehicle through the next step."
   },
   {
     "type": "image",
@@ -146,11 +158,11 @@ export const fleetoStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "A fleet manager has a different question: is there enough driver coverage across the week? A shift list gives detail, but makes the overall pattern harder to scan."
+    "text": "Fleet managers also need to plan beyond the current trip. I used a weekly coverage view to show the pattern across shifts, with the shift list available for individual details."
   },
   {
     "type": "paragraph",
-    "text": "I placed a coverage heatmap and overtime chart above the shifts. I expected this combination to make gaps easier to notice, with driver and vehicle records close enough to inspect the reason behind them."
+    "text": "I placed a coverage heatmap and overtime chart above the shifts. My hypothesis was that the overview could make gaps easier to spot, while nearby driver and vehicle records would help managers investigate them."
   },
   {
     "type": "image",
@@ -168,11 +180,11 @@ export const fleetoStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "The shared workspace also needed clear access rules across organizations. I designed a permission matrix, reusable role profiles, and visible account statuses so admins can compare what different roles can do."
+    "text": "For administrators, the key decision is who can access each part of the workspace. I designed a permission matrix, reusable role profiles, and visible account statuses so access can be reviewed before it changes."
   },
   {
     "type": "paragraph",
-    "text": "The goal was to make access a reviewable decision. An admin can check a role and account status before applying a change, rather than treating every user as the same kind of operator."
+    "text": "This keeps administration connected to the same role model used in the operational views. The administrator can compare permissions and check the account status before applying a change."
   },
   {
     "type": "image",
@@ -190,7 +202,7 @@ export const fleetoStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "I connected live tracking, trip review, shifts, and permissions through shared filters, statuses, and tables. Dispatchers can follow a vehicle, managers can review coverage, and admins can manage access. Each role has a clear entry point into the same operation."
+    "text": "I delivered connected views for tracking vehicles, reviewing trips, planning shifts, and managing access. Shared filters, statuses, and tables keep the operation consistent, while each role has a clear route to its next decision."
   },
   {
     "type": "image",

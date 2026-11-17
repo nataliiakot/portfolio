@@ -1,6 +1,6 @@
 # HR System — evidence and rework brief
 
-Status: source review complete; factual clarifications requested before rewriting the case.
+Status: HR narrative updated locally; role dashboard screenshots requested. Do not push or publish until the user asks.
 
 ## Available sources
 
@@ -45,7 +45,29 @@ The user clarified the following facts for the sequential HR System rewrite:
 - Employee feedback highlighted difficulty understanding parts of the prior system and forgetting to track time. The existing 50-person count remains employee quantitative research, separate from HR task/usability testing.
 - Nataliia’s central proposal was one shared system with role-based access defining what each employee sees, so consolidation does not overload every user with every feature.
 - The platform was implemented. The −45% routine administration and −7% onboarding outcomes were obtained through analytics after the first month of testing.
-- Detailed task boundaries, onboarding start/end points, and the comparison baseline remain questions to clarify. Do not invent them or attribute either percentage to a single feature.
-- The specific time-tracking intervention and a concrete employee-versus-HR access example are also pending. Do not add reminders, timers, notification schedules, or field-level permission claims without confirmation.
+- The comparison baseline was clarified in the follow-up below. Detailed task boundaries and onboarding start/end points were not supplied. Do not invent them or attribute either percentage to a single feature.
+- The time-tracking intervention was clarified in the follow-up below. Detailed notification schedules, reward types, and field-level permissions remain unspecified.
 
 The current narrative leads with tool consolidation and role-based views. Architecture, access flows, employee profiles, requests, and templates illustrate the design. All supplied research and product images are retained once; the case still ends with product screens. Only HR System is revised in this step; Cleanly and the other cases stay unchanged.
+
+## Follow-up — time tracking and baseline
+
+Confirmed by the user on 17 November 2026:
+
+- Nataliia added reminders and gamification: a calendar tracker on the dashboard and rewards for regular time tracking throughout the week.
+- HR managers and employees have different sets of available functions. The user can provide dashboard screenshots to illustrate the difference; those images have not yet been supplied. Do not create mock evidence or label an unrelated existing image as that comparison.
+- The first-month outcomes are compared with the former workflow across multiple systems, spreadsheets, and notes.
+- The user suggested inventing exact routine tasks and onboarding boundaries. The public case instead uses recurring task examples supported by existing screens (employee records, leave requests, onboarding processes) as illustrations, and leaves the measurement scope at the confirmed project-level description. No exact task bundle, onboarding start/end events, raw timings, or participant count is asserted.
+- The reminders, calendar tracker, and weekly rewards are design decisions; no separate measured improvement in tracking regularity has been provided.
+
+The user explicitly requested localhost-only work. Do not push changes or publish until they ask.
+
+
+## Editorial alignment — 17 November 2026 (local only)
+
+Revised the explanation of research, architecture and selected interface decisions in the accepted Cleanly writing style. Moved the business-process planning map before the finished interface examples. Retained all supplied images once, both Skills anchors, opening/final product images, confirmed research scope and outcomes.
+
+
+## Designer ownership correction — 17 November 2026
+
+The user confirmed she was the only designer on every project, including HR System. Earlier design-team headcounts and mentoring references are superseded. The case now records one designer, one project manager and four developers, with Nataliia responsible for the full 450+ screen design.

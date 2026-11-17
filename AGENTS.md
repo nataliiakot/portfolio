@@ -68,6 +68,8 @@ Preserve this stack. Add frameworks, UI libraries, server services, and dependen
 
 ## Workflow and Verification
 
+Current user instruction (17 November 2026): work locally and use localhost previews. Do not push to main, push another branch, or publish/deploy changes until the user explicitly asks. Earlier standing permission to push is revoked. Leave local changes reviewable. The user subsequently explicitly authorized pushing the reviewed case-study updates to main. This approval covers that batch; future changes remain local until requested.
+
 1. Before making changes, read the relevant files, `README.md`, and any existing task specifications.
 2. Complete the requested task within its scope while preserving Spec Kit files.
 3. For tasks using Spec Kit, read the relevant skill instructions in `.agents/skills/`. The constitution at `.specify/memory/constitution.md` is currently an unfilled template; its placeholders are not agreed project rules.
