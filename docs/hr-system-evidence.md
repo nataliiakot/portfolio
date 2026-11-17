@@ -36,3 +36,16 @@ Use the actual supplied journey/architecture/role-flow artifacts. Keep research 
 ## Confirmed research evidence — 5 November 2026
 
 The user supplied eight replacement research and architecture images. Quantitative research involved 50 employee users. The final supplied board documents processing the collected information, including grouped feedback and priority/time mapping. HR managers participated in usability and task-speed testing; their sample size is unspecified. The 50-person count applies to the quantitative employee research, not the HR usability tests. The 45% and 7% measurement tasks and baselines remain pending clarification.
+
+## Confirmed story — 17 November 2026
+
+The user clarified the following facts for the sequential HR System rewrite:
+
+- The new platform was built from scratch. HR managers had been working across two systems while also keeping spreadsheets and notes; information was lost and routine work took time.
+- Employee feedback highlighted difficulty understanding parts of the prior system and forgetting to track time. The existing 50-person count remains employee quantitative research, separate from HR task/usability testing.
+- Nataliia’s central proposal was one shared system with role-based access defining what each employee sees, so consolidation does not overload every user with every feature.
+- The platform was implemented. The −45% routine administration and −7% onboarding outcomes were obtained through analytics after the first month of testing.
+- Detailed task boundaries, onboarding start/end points, and the comparison baseline remain questions to clarify. Do not invent them or attribute either percentage to a single feature.
+- The specific time-tracking intervention and a concrete employee-versus-HR access example are also pending. Do not add reminders, timers, notification schedules, or field-level permission claims without confirmation.
+
+The current narrative leads with tool consolidation and role-based views. Architecture, access flows, employee profiles, requests, and templates illustrate the design. All supplied research and product images are retained once; the case still ends with product screens. Only HR System is revised in this step; Cleanly and the other cases stay unchanged.

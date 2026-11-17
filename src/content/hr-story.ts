@@ -70,32 +70,11 @@ export const hrStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "A leave request looks like one small HR task. To decide on it, a manager needs the employee’s balance, the requested dates, and the team schedule. A profile, a request list, and a calendar each hold part of the answer."
+    "text": "HR managers worked across two systems and still needed spreadsheets and notes alongside them. Information got lost between those places, and keeping everyday work up to date took time."
   },
   {
     "type": "paragraph",
-    "text": "That was the wider design challenge: make a large HR platform work around connected tasks. I focused on keeping the right employee context close while giving each task a clear place of its own."
-  },
-  {
-    "type": "table",
-    "title": "Two roles, one connected workspace",
-    "columns": [
-      "Role",
-      "Core need",
-      "Design response"
-    ],
-    "rows": [
-      [
-        "HR manager",
-        "Find employee information, review requests, and coordinate team availability.",
-        "An employee profile connecting details, balances, actions, and requests, supported by absence lists and a shared schedule."
-      ],
-      [
-        "Employee",
-        "Check leave balances, submit requests, and keep track of personal tasks and events.",
-        "A personal dashboard with balances, request creation, tasks, and upcoming events."
-      ]
-    ]
+    "text": "Employees faced a different kind of friction: parts of the old system were hard to understand, and people forgot to track their time. The brief was to build a new platform from scratch that brought HR and employees into one workspace."
   },
   {
     "type": "heading",
@@ -104,11 +83,11 @@ export const hrStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "As the lead designer, I worked with four developers and the project manager across research, flows, web UI, and handoff. I also guided the design team across 450+ screens, keeping shared patterns consistent as the product grew."
+    "text": "As the lead designer, I worked with the project manager and four developers, and guided a team of three designers across 450+ screens. I connected research, information architecture, flows, and reusable UI through implementation."
   },
   {
     "type": "paragraph",
-    "text": "My role was to connect the bigger structure with daily details. A familiar form, status, or table should help someone move between sections without learning the interface again."
+    "text": "My main design decision was to combine the work in one system while using roles and permissions to control what each person sees. A large platform still needed to feel focused during a small daily task."
   },
   {
     "type": "heading",
@@ -117,11 +96,19 @@ export const hrStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "I grouped feedback from 50 employees by product area and ranked possible improvements by priority and effort. Separately, HR managers tested how easily and quickly they could complete tasks. These were different sources of evidence, not one combined test."
+    "text": "I grouped feedback from 50 employees by product area and ranked possible improvements by priority and effort. HR managers also tested how easily and quickly they could complete tasks. Their workflows added context to the employee feedback."
+  },
+  {
+    "type": "list",
+    "items": [
+      "Employees did not understand some parts of the systems they already used.",
+      "Time tracking was easy to forget during the working day.",
+      "HR still depended on spreadsheets and notes outside the two systems, making information harder to keep together."
+    ]
   },
   {
     "type": "paragraph",
-    "text": "The analysis board helped me connect feedback to specific areas of the product. The HR requirements table showed the pages, sections, and actions those areas needed. Together, they gave the design work a more concrete starting point than a long feature list."
+    "text": "These findings shaped two priorities: bring related work into the platform, and keep each person’s view relevant to their responsibilities. The analysis board and HR requirements map below connect that direction to individual product areas."
   },
   {
     "type": "gallery",
@@ -143,15 +130,15 @@ export const hrStory: CaseBlock[] = [
   {
     "type": "heading",
     "level": 2,
-    "text": "Build the structure before the screens"
+    "text": "Bring the work together before designing the pages"
   },
   {
     "type": "paragraph",
-    "text": "The platform covered employee data, documents, recruitment, time tracking, and settings. I mapped these into navigation groups, then worked down to the pages and actions inside each one."
+    "text": "I mapped employee information, recruitment, documents, requests, time tracking, and settings into a shared structure. This gave the team a way to connect work that had been spread across different tools."
   },
   {
     "type": "paragraph",
-    "text": "This gave the team a common reference: where a task starts, which information it needs, and where it leads next. The two maps below show the overall structure and the detail behind it."
+    "text": "The broad map explained how the platform fits together. The detailed architecture placed pages and actions inside that structure, giving the designers and developers a common reference as the system grew."
   },
   {
     "type": "gallery",
@@ -172,83 +159,37 @@ export const hrStory: CaseBlock[] = [
   },
   {
     "type": "heading",
-    "level": 3,
-    "text": "Start with the person behind the task"
+    "level": 2,
+    "text": "Let the role define the workspace"
   },
   {
     "type": "paragraph",
-    "text": "I expected a connected employee profile to reduce the need to switch pages for basic context. But placing the entire record on one screen would make quick checks harder."
+    "text": "Moving everything into one product could also bring too much into one view. I used access roles to define which information and actions each employee can see, so a shared platform does not mean an identical interface for everyone."
   },
   {
-    "type": "paragraph",
-    "text": "I put contact details and leave balances first, then used tabs for actions, requests, reports, and comments. HR can start with the essentials and open the related work when they need it."
-  },
-  {
-    "type": "gallery",
-    "images": [
-      {
-        "src": "hr-system-employee-profile.png",
-        "alt": "Employee profile information architecture: personal details, actions, requests, reports, and comments",
-        "width": 4416,
-        "height": 3098
-      }
+    "type": "table",
+    "title": "One platform, different responsibilities",
+    "columns": [
+      "Role",
+      "Core need",
+      "Design response"
+    ],
+    "rows": [
+      [
+        "HR manager",
+        "Keep employee information and daily HR work together.",
+        "Connected employee profiles, requests, schedules, and processes, with access defined by role."
+      ],
+      [
+        "Employee",
+        "Understand where to complete personal tasks without a crowded interface.",
+        "A focused view of the information and actions available to their role."
+      ]
     ]
   },
   {
     "type": "paragraph",
-    "text": "The profile became an entry point to work about that employee, rather than only a place to store their details. Balances stay easy to find while the longer record remains available without filling the first view."
-  },
-  {
-    "type": "heading",
-    "level": 3,
-    "text": "A request also affects the team"
-  },
-  {
-    "type": "paragraph",
-    "text": "An individual request list explains who asked for leave. It does not show overlapping dates as clearly as a timeline. My hypothesis was that both views could support different parts of the same decision."
-  },
-  {
-    "type": "paragraph",
-    "text": "I designed a team schedule alongside request lists. Company structure and working-hour reports keep their own views, so team planning does not have to compete with every other HR detail."
-  },
-  {
-    "type": "image",
-    "image": {
-      "src": "hr-system-screen-2.png",
-      "alt": "HR System — company structure, schedule, and working time statistics",
-      "width": 9440,
-      "height": 2048
-    }
-  },
-  {
-    "type": "paragraph",
-    "text": "The distinction is deliberate: use the timeline to understand coverage, then use the request details to review a person’s case. Neither view needs to carry the whole decision alone."
-  },
-  {
-    "type": "paragraph",
-    "text": "I applied the same rule to tasks, calendar events, and mood reports. They belong to the same workspace, but each view should answer a clear question instead of mixing unrelated information."
-  },
-  {
-    "type": "image",
-    "image": {
-      "src": "hr-system-screen-3.png",
-      "alt": "HR System — projects and tasks, calendar, and employee mood statistics",
-      "width": 9440,
-      "height": 2048
-    }
-  },
-  {
-    "type": "heading",
-    "level": 3,
-    "text": "Make access changes clear before they apply"
-  },
-  {
-    "type": "paragraph",
-    "text": "Permissions are another kind of HR decision with consequences for someone else. I expected a step-by-step setup to make those rules easier to review before assigning people."
-  },
-  {
-    "type": "paragraph",
-    "text": "I mapped creating or copying a role, choosing permissions, and adding employees now or later. Admins can prepare the rules first and check them before they change access."
+    "text": "The hypothesis was that role-based views could keep the platform manageable while still giving HR the reach needed for their work. I designed role setup as a clear sequence: create or copy a role, choose permissions, then assign employees now or later."
   },
   {
     "type": "gallery",
@@ -269,11 +210,62 @@ export const hrStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "Copying a similar role offers a starting point; creating a new one supports a different set of needs. I kept both routes visible and allowed employees to be added later, rather than forcing every setup into one sequence."
+    "text": "I kept permission setup separate from assigning people. That gives the person managing access a chance to review the rules first. The journey also covers temporary access and role removal, because access needs to change after the first setup."
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "Keep the employee record close to the action"
   },
   {
     "type": "paragraph",
-    "text": "I also mapped temporary access and role removal. Designing only the creation flow would leave the later changes unexplained. The journey needed to cover how a role changes over time."
+    "text": "For HR, bringing information together needed to be useful during actual work. I made the employee profile an entry point to contact details, balances, actions, requests, reports, and comments."
+  },
+  {
+    "type": "paragraph",
+    "text": "Contact details and leave balances appear first. Tabs keep the longer record within reach without placing all of it in the first view. HR can check the essentials, then open the related task from the same profile."
+  },
+  {
+    "type": "gallery",
+    "images": [
+      {
+        "src": "hr-system-employee-profile.png",
+        "alt": "Employee profile information architecture: personal details, actions, requests, reports, and comments",
+        "width": 4416,
+        "height": 3098
+      }
+    ]
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "Give requests their team context"
+  },
+  {
+    "type": "paragraph",
+    "text": "A leave request is about one person, but the decision also depends on who else is away. I used request lists for individual details and a team timeline for overlapping dates. Each view supports a different part of the same decision."
+  },
+  {
+    "type": "image",
+    "image": {
+      "src": "hr-system-screen-2.png",
+      "alt": "HR System — company structure, schedule, and working time statistics",
+      "width": 9440,
+      "height": 2048
+    }
+  },
+  {
+    "type": "paragraph",
+    "text": "I kept tasks, calendar events, and mood reports in focused views within the shared workspace. Bringing information together did not require every type of information to appear on the same page."
+  },
+  {
+    "type": "image",
+    "image": {
+      "src": "hr-system-screen-3.png",
+      "alt": "HR System — projects and tasks, calendar, and employee mood statistics",
+      "width": 9440,
+      "height": 2048
+    }
   },
   {
     "type": "heading",
@@ -281,17 +273,8 @@ export const hrStory: CaseBlock[] = [
     "text": "Scale the system, not just the screen count"
   },
   {
-    "type": "heading",
-    "level": 3,
-    "text": "Reuse the building blocks, not every layout"
-  },
-  {
     "type": "paragraph",
-    "text": "Onboarding and reviews can both use documents, surveys, and assigned tasks. I expected reusable templates to support these processes without making HR rebuild the same content."
-  },
-  {
-    "type": "paragraph",
-    "text": "I separated a template from the full process and designed a picker with search, categories, and clear types. The template defines the content; the process defines how the pieces work together."
+    "text": "The same approach extended to recurring HR processes. Onboarding and reviews can both involve documents, surveys, and tasks. I separated reusable templates from the process that puts them in order."
   },
   {
     "type": "gallery",
@@ -306,11 +289,11 @@ export const hrStory: CaseBlock[] = [
   },
   {
     "type": "paragraph",
-    "text": "This distinction helped the design scale. A shared component could support several tasks, while the full process still had its own steps and responsibilities."
+    "text": "The picker uses search, categories, and template types. The process defines the sequence; the template defines the content. My hypothesis was that these shared building blocks could support different HR routines without rebuilding the same content."
   },
   {
     "type": "paragraph",
-    "text": "The screens below show where consistency helps and where a different layout is useful. Templates use search and types, assets need structured fields, and the knowledge base uses cards and filters. I shared patterns without forcing every task into the same view."
+    "text": "I reused UI patterns where the task was the same, while keeping layouts suited to their content: structured fields for assets, cards and filters for the knowledge base, and a searchable template picker. This helped the design team keep the growing platform consistent."
   },
   {
     "type": "image",
@@ -324,15 +307,15 @@ export const hrStory: CaseBlock[] = [
   {
     "type": "heading",
     "level": 2,
-    "text": "A connected platform for everyday HR work"
+    "text": "One implemented system for daily HR work"
   },
   {
     "type": "paragraph",
-    "text": "Project measurements recorded less time spent on routine HR administration and onboarding, with the reported figures shown at the start. Those outcomes are separate from employee research and the size of the screen collection."
+    "text": "The platform was implemented. After the first month of testing, project analytics recorded 45% less time spent on routine HR administration and 7% less time spent on onboarding."
   },
   {
     "type": "paragraph",
-    "text": "My design contribution was the structure behind the daily work: employee context close to the action, clear paths between related tasks, and reusable patterns the team could extend. The goal across the platform stayed the same: help HR move from information to a decision."
+    "text": "These are project-level outcomes, separate from the research with 50 employees and the count of 450+ designed screens. My contribution was a shared structure for information and workflows, with role-based access keeping each person’s view focused."
   },
   {
     "type": "image",

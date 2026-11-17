@@ -59,7 +59,7 @@ export const projects: Project[] = [
     "team": "3 designers, 1 project manager, 4 developers.",
     "title": "HR System",
     "category": "Human resources, Employee management",
-    "summary": "An HR management platform that centralizes employee information and supports everyday people operations. Users can manage employee profiles, recruitment and onboarding, attendance and leave, performance reviews, and company structure through a unified workspace.",
+    "summary": "An HR platform built from scratch to bring work from two systems, spreadsheets, and notes into one workspace. I led the design of connected employee records and HR workflows, with roles and permissions defining what each person sees.",
     "scope": "3 designers",
     "approach": [
       "Supervising and mentoring the design team",
@@ -74,13 +74,13 @@ export const projects: Project[] = [
       "Preparing designs for development"
     ],
     "results": [
-      "Reduced time spent on routine HR administration by 45% through centralized employee records and streamlined workflows.",
-      "Shortened employee onboarding time by 7%, helping HR teams support new hires more efficiently."
+      "Project analytics recorded 45% less time spent on routine HR administration after the first month of testing.",
+      "Project analytics recorded 7% less time spent on employee onboarding after the first month of testing."
     ],
     "textOnly": true,
     "story": hrStory,
 
-    "headline": "One workspace for daily HR tasks",
+    "headline": "One workspace, focused by role",
     "role": "UX/UI & Product Designer"
   },
   {

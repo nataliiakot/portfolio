@@ -17,10 +17,10 @@ export const caseHighlights: Record<string, CaseHighlights> = {
     ],
   },
   'hr-boost': {
-    contribution: t('I led the design of an HR platform across 450+ screens, connecting employee profiles, leave requests, and reusable workflows in one UI system.', 'Я об’єднала дані співробітників, запити й шаблони в єдину UI-систему та координувала дизайн-команду в роботі над 450+ екранами.'),
+    contribution: t('I led the design of an HR platform from scratch, bringing scattered workflows into one system with access based on each person’s role.', 'Я об’єднала дані співробітників, запити й шаблони в єдину UI-систему та координувала дизайн-команду в роботі над 450+ екранами.'),
     metrics: [
-      { value: '−45%', kind: outcome, label: t('Routine HR administration time', 'Час рутинного HR-адміністрування'), note: t('Recorded in project measurements.', 'За замірами проєкту.') },
-      { value: '−7%', kind: outcome, label: t('Employee onboarding time', 'Час онбордингу співробітників'), note: t('Recorded in project measurements.', 'За замірами проєкту.') },
+      { value: '−45%', kind: outcome, label: t('Routine HR administration time', 'Час рутинного HR-адміністрування'), note: t('Recorded in analytics after the first month of testing.', 'За аналітикою після першого місяця тестування.') },
+      { value: '−7%', kind: outcome, label: t('Employee onboarding time', 'Час онбордингу співробітників'), note: t('Recorded in analytics after the first month of testing.', 'За аналітикою після першого місяця тестування.') },
       { value: '450+', kind: scope, label: t('High-fidelity screens', 'Деталізованих екранів'), note: t('One consistent interface system.', 'Єдина узгоджена система інтерфейсу.') },
     ],
   },
