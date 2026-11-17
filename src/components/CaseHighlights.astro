@@ -10,8 +10,8 @@ const { highlights, facts } = Astro.props;
   </dl>
   <dl class:list={['case-highlight-metrics', { 'has-three': highlights.metrics.length === 3 }]}>
     {highlights.metrics.map(metric => <div class="case-highlight-metric">
-      <dt>{caseText(metric.label)}</dt>
-      <dd><strong>{metric.value}</strong>{metric.note && <p>{caseText(metric.note)}</p>}</dd>
+      <dt><strong>{metric.value}</strong></dt>
+      <dd><p>{caseText(metric.label)}</p>{metric.note && <p>{caseText(metric.note)}</p>}</dd>
     </div>)}
   </dl>
 </section>
@@ -23,7 +23,8 @@ const { highlights, facts } = Astro.props;
   .case-highlight-metric dt { display: flex; flex-direction: column; gap: 6px; font-size: 16px; line-height: 1.5; font-weight: 400; color: #414c55; }
   .case-highlight-metric dd { margin: 12px 0 0; }
   .case-highlight-metric strong { display: block; font-size: 42px; line-height: 1.1; letter-spacing: -.035em; font-weight: 700; color: #17242b; }
-  .case-highlight-metric p { font-size: 16px; line-height: 1.5; font-weight: 400; margin: 8px 0 0; color: #414c55; }
+  .case-highlight-metric p { font-size: 16px; line-height: 1.5; font-weight: 400; margin: 0; color: #414c55; }
+  .case-highlight-metric p + p { margin-top: 8px; }
   .case-highlights .case-facts { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 8px; margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; }
   .case-highlights .case-facts > div { display: flex; align-items: baseline; gap: 6px; min-width: 0; max-width: 100%; padding: 8px 14px; border: 1px solid #e3e3e3; border-radius: 999px; background: #fff; }
   .case-highlights .case-facts dt, .case-highlights .case-facts dd { font-size: 14px; line-height: 1.5; font-weight: 400; color: #23343e; margin: 0; }

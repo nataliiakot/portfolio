@@ -6,5 +6,5 @@ const { block } = Astro.props;
 ---
 <section class="case-outcomes" aria-label={caseText(block.title)}>
   <h3><span>{caseText(block.title)}</span></h3>
-  <dl class="case-metric-grid">{block.items.map(item => <div class="case-metric"><dt>{caseText(item.label)}</dt><dd><span class="case-metric-value">{item.value}</span><p>{caseText(item.detail)}</p></dd></div>)}</dl>
+  <dl class="case-metric-grid">{block.items.map(item => <div class="case-metric"><dt><span class="case-metric-value">{item.value}</span></dt><dd><p>{caseText(item.label)}</p><p>{caseText(item.detail)}</p></dd></div>)}</dl>
 </section>
