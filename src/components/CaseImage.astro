@@ -12,7 +12,7 @@ interface Props {
   fetchpriority?: 'high' | 'auto';
 }
 const { src, alt, ...props } = Astro.props;
-const full = await getImage({ src, format: 'webp', quality: 90 });
+const full = await getImage({ src, width: Math.min(src.width, 16000), format: 'webp', quality: 90 });
 ---
 <a class="case-image-link" href={full.src} data-case-image aria-label="Open image full screen">
   <Image src={src} alt={alt} {...props} />

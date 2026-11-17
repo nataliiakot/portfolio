@@ -17,7 +17,7 @@ export const caseHighlights: Record<string, CaseHighlights> = {
     ],
   },
   'hr-boost': {
-    contribution: t('I led the design of an HR platform from scratch, bringing scattered workflows into one system with access based on each person’s role.', 'Я самостійно спроєктувала HR-платформу з нуля: 450+ екранів, спільну структуру й доступ відповідно до ролі.'),
+    contribution: t('I designed one platform for employee records, HR workflows, and everyday employee tasks, with role-based access keeping each workspace focused.', 'Я самостійно спроєктувала HR-платформу з нуля: 450+ екранів, спільну структуру й доступ відповідно до ролі.'),
     metrics: [
       { value: '−45%', kind: outcome, label: t('Routine HR administration time', 'Час рутинного HR-адміністрування'), note: t('First-month analytics; compared with the previous workflow across multiple tools.', 'За аналітикою після першого місяця тестування.') },
       { value: '−7%', kind: outcome, label: t('Employee onboarding time', 'Час онбордингу співробітників'), note: t('First-month analytics; compared with the previous workflow across multiple tools.', 'За аналітикою після першого місяця тестування.') },

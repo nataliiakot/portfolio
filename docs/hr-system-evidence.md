@@ -71,3 +71,29 @@ Revised the explanation of research, architecture and selected interface decisio
 ## Designer ownership correction — 17 November 2026
 
 The user confirmed she was the only designer on every project, including HR System. Earlier design-team headcounts and mentoring references are superseded. The case now records one designer, one project manager and four developers, with Nataliia responsible for the full 450+ screen design.
+
+
+## Custom tags feature example — 17 November 2026 (local only)
+
+The user supplied a 18848 × 2872 knowledge-base UI board as an example of Custom tags. The two uploads depict the same feature sequence; included only the latest once as hr-system-custom-tags.png. The board shows tag filtering, existing labels, an empty state, adding a label, colour selection, editing/deleting, and attaching tags to articles. Added a short feature explanation among the finished UI examples before outcomes. No new research finding or measured improvement is asserted. Opening and closing visuals remain unchanged.
+
+Full-screen image generation caps source width at 16000 pixels so the extra-wide board remains within WebP encoder limits. The original supplied PNG is retained unchanged. No push or publication requested for this addition.
+
+
+## Mood tracking feature example — 17 November 2026 (local only)
+
+The user supplied a board showing an employee mood slider with five labelled states and a Save action, plus HR statistics with average mood, participation counts, a distribution chart, employee calendar, and employee/period/mood filters. Added the original once as hr-system-mood-tracking.png with two short screen-supported paragraphs among the finished UI examples before outcomes. No claims of anonymity, clinical assessment, automated alerts, improved wellbeing or measured engagement were added. Opening/final images and the earlier Custom tags example remain in place. No push or publication requested.
+
+
+## Absence management feature example — 17 November 2026 (local only)
+
+The user supplied a 6260 × 5388 board showing absence requests, archived decisions, department/type/status filters, leave balances, individual and bulk balance adjustments (add/subtract/set), and reports with preset/custom periods. Added the original once as hr-system-absence-management.png within the existing absence/team-context section, with two short paragraphs explaining the screen-supported workflow. Preserved the earlier overview collage and all other supplied visuals once. No new efficiency measurement or approval automation claim added. No push requested.
+
+
+## Product narrative restructure — 17 November 2026 (local only)
+
+The user found the accumulated feature examples confusing and supplied a screenshot of the company’s HR BOOST case describing the same product. Used that screenshot as context for the all-in-one product premise: connected HR functions, employee records, HR operations, and employee tasks. It is reference material, not a new portfolio image or a source of personal ownership claims.
+
+Rebuilt the narrative around the product problem, sole-designer contribution, research, three structural decisions, daily HR/employee workflows, reusable content/UI, and platform-level outcomes. Reduced the number of top-level feature headings and grouped the eight planning boards into four related pairs before the finished UI. Kept all 16 existing images exactly once, with opening and closing images unchanged. Preserved the Research and Scale heading anchors used by Skills.
+
+The company’s delivery/marketing perspective is separate from Nataliia’s design contribution. Did not import its unsupported statistics, legal/security/compliance guarantees, automatic workflow behaviours, or optional payroll/chatbot/AI/LMS suggestions as confirmed delivered design. The existing 50-employee research, separate HR usability testing, 450+ screens, sole designer, one PM/four developers, time-tracking intervention, and first-month −45%/−7% outcomes retain their previously confirmed boundaries. No push or publication requested.

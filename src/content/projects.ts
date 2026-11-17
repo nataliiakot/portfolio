@@ -60,7 +60,7 @@ export const projects: Project[] = [
     "team": "1 designer, 1 project manager, 4 developers.",
     "title": "HR System",
     "category": "Human resources, Employee management",
-    "summary": "An HR platform built from scratch to bring work from two systems, spreadsheets, and notes into one workspace. I led the design of connected employee records and HR workflows, with roles and permissions defining what each person sees.",
+    "summary": "An all-in-one HR platform built from scratch to replace work scattered across two systems, spreadsheets, and notes. As the sole designer, I connected employee records, HR processes, and daily employee tasks through a shared structure and role-based access.",
     "scope": "1 designer",
     "approach": [
             "UX research",
@@ -80,7 +80,7 @@ export const projects: Project[] = [
     "textOnly": true,
     "story": hrStory,
 
-    "headline": "One workspace, focused by role",
+    "headline": "An all-in-one platform for HR and employees",
     "role": "Sole UX/UI & Product Designer"
   },
   {
