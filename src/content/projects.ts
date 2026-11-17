@@ -33,7 +33,7 @@ export const projects: Project[] = [
     "team": "1 designer, 1 project manager, 1 developer.",
     "title": "Cleanly",
     "category": "Facility Services Management",
-    "summary": "A mobile service management platform and marketplace that connects cleaners, clients, and managers in one workflow. Cleaners can discover requests, review job and location details, manage assignments, and communicate with clients. Managers approve requests from unverified clients before assignment, keeping new client relationships under company control.",
+    "summary": "A cleaning service app designed from scratch. Interviews revealed concern about visiting unverified clients, so I proposed a personal client network with manager approval for new contacts. The app connects job discovery, confirmation, and communication.",
     "scope": "1 designer",
     "approach": [
       "UX research",
@@ -47,11 +47,11 @@ export const projects: Project[] = [
       "Preparing designs for development"
     ],
     "results": [
-      "In a comparison with other applications, a cleaner could find a job and receive confirmation 30% faster."
+      "First-month analytics recorded 30% less time from opening the app to client confirmation, compared with similar apps users had previously used."
     ],
     "textOnly": true,
     "story": cleanlyStory,
-    "headline": "Cleaning service management",
+    "headline": "A cleaning app built around client trust",
     "role": "UX/UI & Product Designer"
   },
   {

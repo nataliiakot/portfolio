@@ -10,9 +10,9 @@ t('My contribution', 'Мій внесок');
 t('Project highlights', 'Ключові показники проєкту');
 export const caseHighlights: Record<string, CaseHighlights> = {
   cleanly: {
-    contribution: t('I designed a mobile app connecting cleaners, managers, and clients, with clear steps from job search to client checks and approval.', 'Я пов’язала пошук роботи, перевірку клієнтів і погодження менеджером, щоб кожна роль бачила наступний крок.'),
+    contribution: t('I designed Cleanly from scratch and proposed a personal client network, with manager approval for adding new clients.', 'Я пов’язала пошук роботи, перевірку клієнтів і погодження менеджером, щоб кожна роль бачила наступний крок.'),
     metrics: [
-      { value: '−30%', kind: outcome, label: t('Time to find and confirm a job', 'Час пошуку й підтвердження роботи'), note: t('Reported comparison with other apps for this specific task.', 'Заявлене порівняння з іншими застосунками для цього сценарію.') },
+      { value: '−30%', kind: outcome, label: t('Time from opening the app to client confirmation', 'Час від відкриття застосунку до підтвердження клієнтом'), note: t('First-month analytics; compared with similar apps the users had used before.', 'Заявлене порівняння з іншими застосунками для цього сценарію.') },
       { value: '3', kind: scope, label: t('Roles connected in one workflow', 'Ролі в одному спільному сценарії'), note: t('Cleaner, manager, and client.', 'Клінер, менеджер і клієнт.') },
     ],
   },
