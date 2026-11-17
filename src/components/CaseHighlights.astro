@@ -6,7 +6,7 @@ const { highlights, facts } = Astro.props;
 <section class="case-highlights" aria-label="Project highlights">
   <dl class:list={['case-highlight-metrics', { 'has-three': highlights.metrics.length === 3 }]}>
     {highlights.metrics.map(metric => <div class="case-highlight-metric">
-      <dt><span class="case-highlight-kind">{metric.kind}</span><span>{metric.label}</span></dt>
+      <dt>{metric.label}</dt>
       <dd><strong>{metric.value}</strong>{metric.note && <p>{metric.note}</p>}</dd>
     </div>)}
   </dl>
@@ -21,7 +21,6 @@ const { highlights, facts } = Astro.props;
   .case-highlight-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 16px; margin: 0; padding: 0; }
   .case-highlight-metric { display: flex; flex-direction: column; min-width: 0; padding: 24px; border: 1px solid #dce2e8; border-radius: 24px; background: #f7f9fc; }
   .case-highlight-metric dt { display: flex; flex-direction: column; gap: 6px; font-size: 16px; line-height: 1.5; font-weight: 400; color: #414c55; }
-  .case-highlight-kind { font-size: 14px; line-height: 1.5; font-weight: 400; color: #52606c; }
   .case-highlight-metric dd { margin: 12px 0 0; }
   .case-highlight-metric strong { display: block; font-size: 42px; line-height: 1.1; letter-spacing: -.035em; font-weight: 700; color: #17242b; }
   .case-highlight-metric p { font-size: 16px; line-height: 1.5; font-weight: 400; margin: 8px 0 0; color: #414c55; }
