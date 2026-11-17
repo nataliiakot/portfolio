@@ -24,14 +24,12 @@ const { highlights, facts } = Astro.props;
   .case-highlight-metric dd { margin: 12px 0 0; }
   .case-highlight-metric strong { display: block; font-size: 42px; line-height: 1.1; letter-spacing: -.035em; font-weight: 700; color: #17242b; }
   .case-highlight-metric p { font-size: 16px; line-height: 1.5; font-weight: 400; margin: 8px 0 0; color: #414c55; }
-  .case-highlights .case-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; }
-  .case-highlights .case-facts > div { min-width: 0; padding: 14px 24px; border: 1px solid color-mix(in srgb, var(--tag-ink) 14%, transparent); border-radius: 999px; background: color-mix(in srgb, var(--tag-bg) 80%, white 20%); box-shadow: inset 0 1px 0 #ffffffb3; }
-  .case-highlights .case-facts dt { font-size: 14px; line-height: 1.5; font-weight: 600; color: var(--tag-ink); }
-  .case-highlights .case-facts dd { font-size: 16px; line-height: 1.5; font-weight: 400; color: var(--tag-ink); margin-top: 4px; }
-  @media (max-width: 800px) {
-    .case-highlights .case-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-    .case-facts > div:nth-child(3) { grid-column: 1 / -1; }
-  }
+  .case-highlights .case-facts { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 8px; margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; }
+  .case-highlights .case-facts > div { display: flex; align-items: baseline; gap: 6px; min-width: 0; max-width: 100%; padding: 8px 14px; border: 1px solid #e3e3e3; border-radius: 999px; background: #fff; }
+  .case-highlights .case-facts dt, .case-highlights .case-facts dd { font-size: 14px; line-height: 1.5; font-weight: 400; color: #23343e; margin: 0; }
+  .case-highlights .case-facts dt { flex-shrink: 0; }
+  .case-highlights .case-facts dt::after { content: ':'; }
+  .case-highlights .case-facts dd { min-width: 0; }
   @media (max-width: 720px) {
     .case-highlights { margin-block: 16px 24px; gap: 24px; }
     .case-highlight-metrics { gap: 12px; }
@@ -40,9 +38,8 @@ const { highlights, facts } = Astro.props;
     .has-three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .has-three > :last-child { grid-column: 1 / -1; }
     .case-highlights .case-facts { padding: 0; }
-    .case-highlights .case-facts > div { padding: 12px 20px; }
   }
   @media (max-width: 540px) {
-    .case-highlight-metrics, .has-three, .case-highlights .case-facts { grid-template-columns: minmax(0, 1fr); }
+    .case-highlight-metrics, .has-three { grid-template-columns: minmax(0, 1fr); }
   }
 </style>

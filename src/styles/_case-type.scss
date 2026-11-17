@@ -1,8 +1,6 @@
 @mixin styles {
   // One reading scale for every case, including diagrams and outcome panels.
   .case-study {
-    --tag-bg: #dceeff;
-    --tag-ink: #16436a;
     --case-title: 4rem;
     --case-section-title: 2rem;
     --case-subtitle: 1.375rem;
@@ -13,10 +11,6 @@
     font-family: 'Manrope Variable', sans-serif;
     color: #17242b;
   }
-  .case-hr-boost { --tag-bg: #f0f5bb; --tag-ink: #3b4409; }
-  .case-fleeto { --tag-bg: #ebe0ff; --tag-ink: #502191; }
-  .case-nova-bank { --tag-bg: #d5f3e7; --tag-ink: #15503b; }
-  .case-fitness-app { --tag-bg: #e7f5ad; --tag-ink: #344a0b; }
   .case-study :is(p, li, dd, dt, th, td, figcaption) {
     text-wrap: pretty;
     hyphens: none;
