@@ -72,6 +72,7 @@
   .case-narrative > figure { margin-block: 2.5rem; }
   .case-cleanly .case-narrative > figure { width: min(100%, 880px); margin-inline: auto; }
   .case-cleanly .case-evidence { max-width: 800px; }
+  .case-nova-bank .case-narrative > figure:is(:first-child, :last-child) { width: min(100%, 880px); margin-inline: auto; }
   .case-narrative > figure:first-child { margin-top: 0; }
   .case-narrative figcaption {
     margin-top: .75rem; padding: 0;
